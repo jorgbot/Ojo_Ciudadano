@@ -54,9 +54,9 @@ $active_record = true;
 
 $myserver = $_SERVER['SERVER_NAME'];
 
-    $db['default']['hostname'] = '162.243.82.214';
+    $db['default']['hostname'] = 'localhost';
     $db['default']['username'] = 'root';
-    $db['default']['password'] = 'kapPZ28A0H';
+    $db['default']['password'] = '';
     $db['default']['database'] = 'Ojo_Ciudadano';
     $db['default']['dbdriver'] = 'mysql';
     $db['default']['dbprefix'] = '';
