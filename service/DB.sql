@@ -61,13 +61,13 @@ CREATE TABLE IF NOT EXISTS `config` (
 --
 
 INSERT INTO `config` (`id`, `title`, `content`, `text`, `type`, `image`, `description`) VALUES
-(4, 'Login', '																																																																																										                                                                                                                                                                                                [{"name":"email","value":true},{"name":"Google","value":true,"appid":"dfdf","secret":"fdfdf"},{"name":"Facebook","value":true,"appid":"","secret":""},{"name":"twitter","value":false,"appid":"","secret":""},{"name":"instagram","value":true,"appid":"","secret":""}]                                                                                                                                                                																																																																											', '[{"name":"email","value":true},{"name":"Google","value":false,"appid":"","secret":""},{"name":"Facebook","value":false,"appid":"","secret":""},{"name":"twitter","value":false,"appid":"","secret":""},{"name":"instagram","value":false,"appid":"","secret":""}]', '2', '', '0'),
+(4, 'Inicias Sesion', '																																																																																										                                                                                                                                                                                                [{"name":"email","value":true},{"name":"Google","value":true,"appid":"dfdf","secret":"fdfdf"},{"name":"Facebook","value":true,"appid":"","secret":""},{"name":"twitter","value":false,"appid":"","secret":""},{"name":"instagram","value":true,"appid":"","secret":""}]                                                                                                                                                                																																																																											', '[{"name":"email","value":true},{"name":"Google","value":false,"appid":"","secret":""},{"name":"Facebook","value":false,"appid":"","secret":""},{"name":"twitter","value":false,"appid":"","secret":""},{"name":"instagram","value":false,"appid":"","secret":""}]', '2', '', '0'),
 (5, 'Blogs', '                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    want Blog1222ttgsd                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ', '[{"name":"cms","value":true},{"name":"wordpress","value":false,"appid":""},{"name":"tumblr","value":false,"appid":""}]', '1', '', '0'),
-(6, 'Gallery', '																																								Gallery Content                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                																																', 'true', '3', '', '0'),
+(6, 'Galleria', '																																								Gallery Content                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                																																', 'true', '3', '', '0'),
 (7, 'Videos', '																									want Video Gallery                                                                                                                                                                                                																				', 'true', '3', '', '0'),
-(8, 'Events', '										Event content  for evtn                                                                                                                                                                                                                                                                                           								', 'true', '3', '', '0'),
-(11, 'Contact Us', 'Plot no. 3, Flat no. A/30 Laxmi Nivas , 3rd Floor , Near Sadhana School , Sion (W) , Mumbai 400022.', '9819222221', 'info@wohlig.com', '', '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7543.043871128432!2d72.8626547!3d19.04077635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf2cc4000001%3A0xc683a42662527334!2sSadhana+English+Primary+School!5e0!3m2!1sen!2sin!4v1443430462486" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>'),
-(12, 'Social Feeds', '0', '[{"name":"facebookappid","value":"https://www.facebook.com/Facebook"},{"name":"twitterappid","value":"http://twitter.com/twitter"},{"name":"instagramappid","value":"https://instagram.com/instagram/"},{"name":"googleplusappid","value":"https://plus.google.com/+googleplus/"},{"name":"youtubeappid","value":"https://www.youtube.com/user/YouTube"},{"name":"tumblrappid","value":"https://www.tumblr.com/"}]', '0', '', '0');
+(8, 'Eventos', '										Event content  for evtn                                                                                                                                                                                                                                                                                           								', 'true', '3', '', '0'),
+(11, 'Contactanos', 'Plot no. 3, Flat no. A/30 Laxmi Nivas , 3rd Floor , Near Sadhana School , Sion (W) , Mumbai 400022.', '9819222221', 'info@wohlig.com', '', '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7543.043871128432!2d72.8626547!3d19.04077635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf2cc4000001%3A0xc683a42662527334!2sSadhana+English+Primary+School!5e0!3m2!1sen!2sin!4v1443430462486" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>'),
+(12, 'Redes Sociales', '0', '[{"name":"facebookappid","value":"https://www.facebook.com/Facebook"},{"name":"twitterappid","value":"http://twitter.com/twitter"},{"name":"instagramappid","value":"https://instagram.com/instagram/"},{"name":"googleplusappid","value":"https://plus.google.com/+googleplus/"},{"name":"youtubeappid","value":"https://www.youtube.com/user/YouTube"},{"name":"tumblrappid","value":"https://www.tumblr.com/"}]', '0', '', '0');
 
 -- --------------------------------------------------------
 
@@ -88,23 +88,23 @@ CREATE TABLE IF NOT EXISTS `linktype` (
 --
 
 INSERT INTO `linktype` (`id`, `name`, `status`, `order`, `link`) VALUES
-(1, 'Home', '1', '', 'home'),
-(2, 'Pages', '1', '', 'article'),
-(3, 'Event', '1', '', 'eventdetail'),
-(4, 'List of Events', '1', '', 'events'),
-(5, 'List of Image Gallery', '1', '', 'photogallerycategory'),
-(6, 'Image Gallery', '1', '', 'photogallery'),
-(7, 'List of Video Gallery', '1', '', 'videogallerycategory'),
-(8, 'Video Gallery', '1', '', 'videogallery'),
-(9, 'List of Blogs', '1', '', 'blogs'),
+(1, 'Inicio', '1', '', 'home'),
+(2, 'Pagina', '1', '', 'article'),
+(3, 'Evento', '1', '', 'eventdetail'),
+(4, 'Lista de Eventos', '1', '', 'events'),
+(5, 'Lista de Geleria de Imagenes', '1', '', 'photogallerycategory'),
+(6, 'Galeria de Imagenes', '1', '', 'photogallery'),
+(7, 'Lista de Galeria de Videos', '1', '', 'videogallerycategory'),
+(8, 'Geleria de Videos', '1', '', 'videogallery'),
+(9, 'Lista de Blogs', '1', '', 'blogs'),
 (10, 'Blog', '1', '', 'blogdetail'),
-(11, 'Social Feeds', '1', '', 'social'),
-(12, 'Contact Us', '1', '', 'contact'),
-(13, 'Notifications', '1', '', 'notification'),
-(14, 'Settings', '1', '', 'setting'),
-(15, 'Profile', '1', '', 'profile'),
-(17, 'External Link', '1', '', ''),
-(18, 'None', '1', '', '');
+(11, 'Redes Sociales', '1', '', 'social'),
+(12, 'Contactanos', '1', '', 'contact'),
+(13, 'Notificaciones', '1', '', 'notification'),
+(14, 'Configuracion', '1', '', 'setting'),
+(15, 'Perfil', '1', '', 'profile'),
+(17, 'Link Externo', '1', '', ''),
+(18, 'Ninguno', '1', '', '');
 
 -- --------------------------------------------------------
 
@@ -151,19 +151,19 @@ CREATE TABLE IF NOT EXISTS `menu` (
 --
 
 INSERT INTO `menu` (`id`, `name`, `description`, `keyword`, `url`, `linktype`, `parent`, `isactive`, `order`, `icon`) VALUES
-(1, 'Users', '', '', 'site/viewusers', 1, 0, 1, 1, ''),
-(2, 'Pages', '', '', 'site/viewarticles', 1, 0, 1, 7, ''),
-(3, 'Navigation', '', '', 'site/viewfrontmenu', 1, 0, 1, 6, ''),
-(4, 'Dashboard', '', '', 'site/index', 1, 0, 1, 0, ''),
-(5, 'Image Gallery', '', '', 'site/viewgallery', 1, 0, 1, 8, ''),
-(6, 'Config', '', '', 'site/viewconfig', 1, 0, 1, 12, ''),
-(7, 'Video Gallery', '', '', 'site/viewvideogallery', 1, 0, 1, 9, ''),
-(9, 'Events', '', '', 'site/viewevents', 1, 0, 1, 10, ''),
-(12, 'Enquiries', '', '', 'site/viewenquiry', 1, 0, 1, 11, ''),
-(13, 'Notifications', '', '', 'site/viewnotification', 1, 0, 1, 4, ''),
+(1, 'Usuarios', '', '', 'site/viewusers', 1, 0, 1, 1, ''),
+(2, 'Paginas', '', '', 'site/viewarticles', 1, 0, 1, 7, ''),
+(3, 'Navegacion', '', '', 'site/viewfrontmenu', 1, 0, 1, 6, ''),
+(4, 'Principal', '', '', 'site/index', 1, 0, 1, 0, ''),
+(5, 'Galeria de Imagenes', '', '', 'site/viewgallery', 1, 0, 1, 8, ''),
+(6, 'Configuracion', '', '', 'site/viewconfig', 1, 0, 1, 12, ''),
+(7, 'Galeria de Videos', '', '', 'site/viewvideogallery', 1, 0, 1, 9, ''),
+(9, 'Eventos', '', '', 'site/viewevents', 1, 0, 1, 10, ''),
+(12, 'Consultas', '', '', 'site/viewenquiry', 1, 0, 1, 11, ''),
+(13, 'Notificaciones', '', '', 'site/viewnotification', 1, 0, 1, 4, ''),
 (15, 'Blog', '', '', 'site/viewblog', 1, 0, 1, 5, ''),
-(18, 'Home Slides', '', '', 'site/viewslider', 1, 0, 1, 3, ''),
-(19, 'Home', '', '', 'site/home?id=1', 1, 0, 1, 2, '');
+(18, 'Slider', '', '', 'site/viewslider', 1, 0, 1, 3, ''),
+(19, 'Inicio', '', '', 'site/home?id=1', 1, 0, 1, 2, '');
 
 -- --------------------------------------------------------
 
@@ -245,8 +245,8 @@ CREATE TABLE IF NOT EXISTS `statuses` (
 --
 
 INSERT INTO `statuses` (`id`, `name`) VALUES
-(1, 'Enable'),
-(2, 'Disable');
+(1, 'Habilitar'),
+(2, 'Desabilitar');
 
 -- --------------------------------------------------------
 
@@ -264,8 +264,8 @@ CREATE TABLE IF NOT EXISTS `type` (
 --
 
 INSERT INTO `type` (`id`, `name`) VALUES
-(1, 'Text'),
-(2, 'File');
+(1, 'Texto'),
+(2, 'Archivo');
 
 -- --------------------------------------------------------
 
