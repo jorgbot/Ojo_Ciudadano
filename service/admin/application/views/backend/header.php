@@ -30,7 +30,7 @@
 				<ul id="slide-out" class="side-nav fixed">
 					<li class="sub-menu logo">
 						<a id="logo-container" href="<?php echo site_url(); ?>" class="align-center blue-text text-darken-4" style="font-size: 28px;">
-                            Business<span style="font-weight: 400;">App</span>
+                            Ojo<span style="font-weight: 400;">Ciudadano</span>
 						</a>
 					</li>
 					<?php
@@ -121,7 +121,7 @@
 						<a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
 					</div>
 					<div class="col s6 offset-l6 m6 l6 search">
-						<a href="<?php echo site_url('login/logout'); ?>" class="waves-effect waves-light btn red" style="float:right; margin: 7px 0 0;"><i class="material-icons left">power_settings_new</i> Logout</a>
+						<a href="<?php echo site_url('login/logout'); ?>" class="waves-effect waves-light btn red" style="float:right; margin: 7px 0 0;"><i class="material-icons left">power_settings_new</i> Salir</a>
 					</div>
 				</div>
 		</nav>
