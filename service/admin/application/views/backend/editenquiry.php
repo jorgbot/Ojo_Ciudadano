@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col s12">
-    <h4 class="pad-left-15">Edit Enquiry</h4>
+    <h4 class="pad-left-15">Editar Consulta</h4>
     </div>
 </div>
 <div class="row">
@@ -10,12 +10,12 @@
          <div class="row">
             <div class="input-field col s12 m6">
                 <?php echo form_dropdown('user', $user, set_value('user', $before->user)); ?>
-                 <label>User</label>
+                 <label>Usuario</label>
             </div>
         </div>
             <div class="row">
             <div class="input-field col s12 m6">
-                <label>Name</label>
+                <label>Nombre</label>
                 <input type="text" name="name" value="<?php echo set_value('name', $before->name);?>">
             </div>
         </div>
@@ -29,27 +29,27 @@
 
         <div class="row">
             <div class="input-field col s12 m6">
-                <label for="title">Subject</label>
+                <label for="title">Asunto</label>
                 <input type="text" id="title" name="title" value="<?php echo set_value('title', $before->title);?>">
             </div>
         </div>
            <div class="row">
             <div class="input-field col s12 m6">
-                <label for="timestamp">Timestamp</label>
+                <label for="timestamp">Fecha</label>
                 <input type="text" readonly="true" id="timestamp" name="timestamp" value="<?php echo set_value('timestamp', $before->timestamp);?>">
             </div>
         </div>
            <div class="row">
                  <div class="col s12 m6">
-                       <label>Comment</label>
-                        <textarea name="content" placeholder="Enter text ..."><?php echo set_value('content', $before->content);?></textarea>
+                       <label>Comentario</label>
+                        <textarea name="content" placeholder="Ingrese texto ..."><?php echo set_value('content', $before->content);?></textarea>
                  </div>
 
             </div>
 <div class="row">
     <div class="col s12 m6">
         <div class=" form-group">
-                <a href="<?php echo site_url('site/viewEnquiry'); ?>" class="btn btn-secondary waves-effect waves-light blue darken-4">Back</a>
+                <a href="<?php echo site_url('site/viewEnquiry'); ?>" class="btn btn-secondary waves-effect waves-light blue darken-4">Atras</a>
             </div>
     </div>
 </div>

@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col s12">
-    <h4 class="pad-left-15">Edit Blogs</h4>
+    <h4 class="pad-left-15">Editar Blogs</h4>
     </div>
 </div>
 <div class="row">
@@ -9,14 +9,14 @@
 
             <div class="row">
             <div class="input-field col s12 m6">
-                <label>Title</label>
+                <label>Titulo</label>
                 <input type="text" name="title" value="<?php echo set_value('title', $before->title);?>">
             </div>
         </div>
                <div class="row">
                  <div class="col ss12 m6">
 
-               <label>Content</label>
+               <label>Contenido</label>
                   <textarea id="some-textarea" name="content" placeholder="Enter text ..."><?php echo set_value('content', $before->content);?></textarea>
             </div>
               </div>
@@ -30,7 +30,7 @@
 } ?></span>
 
                 <div class="btn blue darken-4">
-                    <span>Image</span>
+                    <span>Imagen</span>
                     <input name="image" type="file" multiple>
                 </div>
                 <div class="file-path-wrapper">
@@ -41,14 +41,14 @@
                     <?php
 } ?>
                 </div>
-                 <div class="md4"><a class="waves-effect waves-light btn red clearimg input-field ">Clear Image</a></div>
+                 <div class="md4"><a class="waves-effect waves-light btn red clearimg input-field ">Limpiar Imagen</a></div>
             </div>
 
         </div>
 
                <div class="row">
             <div class="input-field col s12 m6">
-                <label>Timestamp</label>
+                <label>Tiempo</label>
                 <input type="text" name="timestamp" readonly="true" value="<?php echo set_value('timestamp', $before->timestamp);?>">
             </div>
         </div>
@@ -57,8 +57,8 @@
            <div class=" form-group">
             <label class="col-sm-2 control-label">&nbsp;</label>
             <div class="col-sm-4">
-                <button type="submit" class="btn btn-primary jsonsubmit waves-effect waves-light blue darken-4">Save</button>
-                <a href="<?php echo site_url('site/viewBlog'); ?>" class="btn btn-secondary waves-effect waves-light red">Cancel</a>
+                <button type="submit" class="btn btn-primary jsonsubmit waves-effect waves-light blue darken-4">Guardar</button>
+                <a href="<?php echo site_url('site/viewBlog'); ?>" class="btn btn-secondary waves-effect waves-light red">Cancelar</a>
             </div>
         </div>
     </div>
