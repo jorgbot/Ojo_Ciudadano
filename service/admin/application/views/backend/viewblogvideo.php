@@ -2,7 +2,7 @@
     <div class="col s12">
         <div class="row">
             <div class="col s12 drawchintantable">
-               <?php $this->chintantable->createsearch('List of Blog Videos');?>
+               <?php $this->chintantable->createsearch('Lista de Blogs con Videos');?>
                 <table class="highlight responsive-table">
                     <thead>
                         <tr>

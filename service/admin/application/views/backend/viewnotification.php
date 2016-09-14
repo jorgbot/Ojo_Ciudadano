@@ -2,7 +2,7 @@
     <div class="col s12">
         <div class="row">
             <div class="col s12 drawchintantable">
-               <?php $this->chintantable->createsearch('List of Notifications');?>
+               <?php $this->chintantable->createsearch('Lista de  Notificaciones');?>
                 <table class="highlight responsive-table">
                     <thead>
                         <tr>
