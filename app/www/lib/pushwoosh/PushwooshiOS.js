@@ -50,7 +50,7 @@ function registerPushwooshIOS() {
             onPushwooshiOSInitialized(deviceToken);
         },
         function (status) {
-            console.warn('failed to register : ' + JSON.stringify(status));
+            console.warn('Error al registrar : ' + JSON.stringify(status));
             //alert(JSON.stringify(['failed to register ', status]));
         }
     );
@@ -64,10 +64,10 @@ function onPushwooshiOSInitialized(pushToken) {
     //retrieve the tags for the device
     pushNotification.getTags(
         function (tags) {
-            console.warn('tags for the device: ' + JSON.stringify(tags));
+            console.warn('Etiqueta para el dispositivo: ' + JSON.stringify(tags));
         },
         function (error) {
-            console.warn('get tags error: ' + JSON.stringify(error));
+            console.warn('Error al obtener Etiqueta: ' + JSON.stringify(error));
         }
     );
 

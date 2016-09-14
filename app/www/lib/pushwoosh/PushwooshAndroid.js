@@ -29,7 +29,7 @@ function registerPushwooshAndroid() {
 
             //dump custom data to the console if it exists
             if (typeof (userData) != "undefined") {
-                console.warn('user data: ' + JSON.stringify(userData));
+                console.warn('datos de usuario: ' + JSON.stringify(userData));
             }
 
             //and show alert
@@ -54,8 +54,8 @@ function registerPushwooshAndroid() {
             onPushwooshAndroidInitialized(token);
         },
         function (status) {
-            console.log("failed to register: " + status);
-            console.warn(JSON.stringify(['failed to register ', status]));
+            console.log("Registro a Fallado: " + status);
+            console.warn(JSON.stringify(['Registro a Fallado ', status]));
         }
     );
 }
@@ -82,10 +82,10 @@ function onPushwooshAndroidInitialized(pushToken) {
 
     pushNotification.getTags(
         function (tags) {
-            console.warn('tags for the device: ' + JSON.stringify(tags));
+            console.warn('Etiqueta de Dispositivo: ' + JSON.stringify(tags));
         },
         function (error) {
-            console.warn('get tags error: ' + JSON.stringify(error));
+            console.warn('Error al obtener etiqueta: ' + JSON.stringify(error));
         }
     );
 
@@ -108,14 +108,14 @@ function onPushwooshAndroidInitialized(pushToken) {
 
     //settings tags
     pushNotification.setTags({
-            deviceName: "hello",
+            deviceName: "Hola",
             deviceId: 10
         },
         function (status) {
-            console.warn('setTags success');
+            console.warn('Fijado de Etiqueta Exitoso');
         },
         function (status) {
-            console.warn('setTags failed');
+            console.warn('Fijado de Etiqueta Fallido');
         }
     );
 

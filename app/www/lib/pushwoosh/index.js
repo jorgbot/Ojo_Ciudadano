@@ -36,7 +36,7 @@ function initPushwoosh() {
             if (notification != null) {
                 console.log(JSON.stringify(notification));
             } else {
-                console.log("No launch notification");
+                console.log("No lanzada las notificaciones");
             }
         }
     );
@@ -71,6 +71,6 @@ var app = {
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
 
-        console.log('Received Event: ' + id);
+        console.log('Evento recivido: ' + id);
     }
 };
