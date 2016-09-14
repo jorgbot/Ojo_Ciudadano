@@ -1,4 +1,4 @@
-<ion-view view-title="My Account">
+<ion-view view-title="Mi Cuenta">
     <ion-content>
         <div class="side-image">
             <figure>
@@ -6,7 +6,7 @@
                     <img ng-src="{{userdetails.userimage | serverimage}}" ng-if="userdetails.userimage">
                     <img src="img/user.png" ng-if="!userdetails.userimage">
                 </a>
-                <figcaption>Ana Todurie</figcaption>
+                <figcaption></figcaption>
             </figure>
             <div class="profile-set">
                 <a href="#/app/setting" menu-close> <i class="icon ln-gear2 "></i>
@@ -14,31 +14,31 @@
             </div>
         </div>
         <div class="user-from">
-            <h4>My account</h4>
+            <h4>Mi cuenta</h4>
             <div class="list">
                 <label class="item item-input item-floating-label">
-                    <span class="input-label">Full name</span>
-                    <i class="icon ln-user"><input type="text" placeholder="Full name" ng-model="profile.name"></i>
+                    <span class="input-label">Nombre Completo</span>
+                    <i class="icon ln-user"><input type="text" placeholder="Nombre Completo" ng-model="profile.name"></i>
                 </label>
                 <label class="item item-input item-floating-label">
                     <span class="input-label">Email</span>
                     <i class="icon ln-envelope"><input type="email" placeholder="Email" ng-model="profile.email"></i>
                 </label>
                 <label class="item item-input item-floating-label">
-                    <span class="input-label">Password</span>
-                    <i class="icon ln-lock"><input type="password" placeholder="Password" ng-model="profile.password"></i>
+                    <span class="input-label">Contraseña</span>
+                    <i class="icon ln-lock"><input type="password" placeholder="Contraseña" ng-model="profile.password"></i>
                 </label>
                 <label class="item item-input item-floating-label">
-                    <span class="input-label">Date of birth</span>
-                    <i class="icon ln-gift"><input type="text" onfocus="(this.type='date')" placeholder="Birth Date" ng-model="profile.dob"></i>
+                    <span class="input-label">Fecha de Cumpleaños</span>
+                    <i class="icon ln-gift"><input type="text" onfocus="(this.type='date')" placeholder="Fecha de Cumpleaños" ng-model="profile.dob"></i>
                 </label>
                 <label class="item item-input item-floating-label">
-                    <span class="input-label">Phone</span>
-                    <i class="icon ln-lock"><input type="number" placeholder="Phone number" ng-model="profile.contact"></i>
+                    <span class="input-label">Telefono</span>
+                    <i class="icon ln-lock"><input type="number" placeholder="Numero de Telefono" ng-model="profile.contact"></i>
                 </label>
             </div>
             <button class="button button-block button-positive" ng-click="profilesubmit(profile);">
-                Submit
+                Guardar Cambios
             </button>
         </div>
     </ion-content>
