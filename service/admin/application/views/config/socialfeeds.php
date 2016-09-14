@@ -1,6 +1,6 @@
 <div class="row offset-s3">
     <div class="col s12">
-        <h4 class="pad-left-15">Config -> Social Feeds</h4>
+        <h4 class="pad-left-15">Configuracion -> Redes Sociales</h4>
     </div>
 
     <div class="col s12 m6">
@@ -9,7 +9,7 @@
         <div class="logintype facebookLogin">
             <div class="row">
                 <div class="input-field col s12">
-                    <label for="fbappid">Facebook Page Url</label>
+                    <label for="fbappid">Facebook Pagina Url</label>
                     <input type="text" id="fbappid" name="facebookappid">
                 </div>
             </div>
@@ -18,7 +18,7 @@
         <div class="logintype twitterLogin">
             <div class="row">
                 <div class="input-field col s12">
-                    <label for="tappid">Twitter Page Url</label>
+                    <label for="tappid">Twitter Pagina Url</label>
                     <input type="text" id="tappid" name="twitterappid">
                 </div>
             </div>
@@ -27,7 +27,7 @@
         <div class="logintype instagramLogin">
             <div class="row">
                 <div class="input-field col s12">
-                    <label for="iappid">Instagram Page Url</label>
+                    <label for="iappid">Instagram Pagina Url</label>
                     <input type="text" id="iappid" name="instagramappid">
                 </div>
             </div>
@@ -36,7 +36,7 @@
         <div class="logintype googleplusLogin">
             <div class="row">
                 <div class="input-field col s12">
-                    <label for="appid">Google+ Page Url</label>
+                    <label for="appid">Google+ Pagina Url</label>
                     <input type="text" id="appid" name="googleplusappid">
                 </div>
             </div>
@@ -47,7 +47,7 @@
         <div class="logintype youtubeLogin">
             <div class="row">
                 <div class="input-field col s12">
-                    <label for="yappid">Youtube Page Url</label>
+                    <label for="yappid">Youtube Pagina Url</label>
                     <input type="text" id="yappid" name="youtubeappid">
                 </div>
             </div>
@@ -56,7 +56,7 @@
         <div class="logintype tumblrLogin">
             <div class="row">
                 <div class="input-field col s12">
-                    <label for="tuappid">Tumblr Page Url</label>
+                    <label for="tuappid">Tumblr Pagina Url</label>
                     <input type="text" id="tuappid" name="tumblrappid">
                 </div>
             </div>
@@ -73,13 +73,13 @@
             	<div class="row" style="display:none">
 				<div class="input-field col s12">
 					<textarea name="text" class="materialize-textarea logindata" id="textid"><?php echo set_value( 'text',$before->text);?></textarea>
-					<label>Text</label>
+					<label>Texto</label>
 				</div>
 			</div>
            
             <div class="row">
                 <div class="submitlogin">
-                    <button class="btn blue darken-4 waves-effect waves-light loginsubmit" name="action">Save
+                    <button class="btn blue darken-4 waves-effect waves-light loginsubmit" name="action">Guardar
                     </button>
                 </div>
             </div>

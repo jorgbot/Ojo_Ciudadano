@@ -1,6 +1,6 @@
 <section class="row offset-s4">
     <div class="col s12">
-        <h4 class="pad-left-15">Config -> Blog</h4>
+        <h4 class="pad-left-15">Configuracion -> Blog</h4>
     </div>
     <div class="col s12 m6">
         <div class="logintype cms">
@@ -11,9 +11,9 @@
                 <div class="col s6">
                     <div class="switch">
                         <label>
-                            Off
+                            No
                             <input type="checkbox" name="cms">
-                            <span class="lever"></span> On
+                            <span class="lever"></span> Si
                         </label>
                     </div>
                 </div>
@@ -27,16 +27,16 @@
                 <div class="col s6">
                     <div class="switch">
                         <label>
-                            Off
+                            No
                             <input type="checkbox" name="wordpress">
-                            <span class="lever"></span> On
+                            <span class="lever"></span> Si
                         </label>
                     </div>
                 </div>
             </div>
             <div class="sublogintype" style=" min-height: 110px;">
                 <div class="input-field col s12">
-                    <label for="appid">Wordpress User Name</label>
+                    <label for="appid">Wordpress Nombre Usuario</label>
                     <input type="text" id="appid" name="appid">
                 </div>
             </div>
@@ -49,9 +49,9 @@
                 <div class="col s6">
                     <div class="switch">
                         <label>
-                            Off
+                            No
                             <input type="checkbox" name="wordpressself">
-                            <span class="lever"></span> On
+                            <span class="lever"></span> Si
                         </label>
                     </div>
                 </div>
@@ -74,16 +74,16 @@
                 <div class="col s6">
                     <div class="switch">
                         <label>
-                            Off
+                            No
                             <input type="checkbox" name="tumblr">
-                            <span class="lever"></span> On
+                            <span class="lever"></span> Si
                         </label>
                     </div>
                 </div>
             </div>
             <div class="sublogintype" style=" min-height: 110px;">
                 <div class="input-field col s12">
-                    <label for="appid">Tumblr User Name</label>
+                    <label for="appid">Tumblr Nombre Usuario</label>
                     <input type="text" id="appid" name="appid">
                 </div>
             </div>
@@ -96,13 +96,13 @@
                 <input type="hidden" id="normal-field" class="form-control" name="id" value="<?php echo set_value('id',$before->id);?>" style="display:none;">
 
                 <div class="form-group" style="display:none">
-                    <label class="col-sm-2 control-label" for="normal-field">Title</label>
+                    <label class="col-sm-2 control-label" for="normal-field">Titulo</label>
                     <div class="col-sm-4">
                         <input type="text" id="normal-field" class="form-control" name="title" value='<?php echo set_value(' title ',$before->title);?>'>
                     </div>
                 </div>
                 <div class=" form-group" style="display:none">
-                    <label class="col-sm-2 control-label" for="normal-field">Content</label>
+                    <label class="col-sm-2 control-label" for="normal-field">Contenido</label>
                     <div class="col-sm-8">
                         <textarea name="content" id="" cols="20" rows="10" class="form-control tinymce">
                             <?php echo set_value( 'content',$before->content);?>
@@ -111,7 +111,7 @@
                 </div>
 
                 <div class=" form-group" style="display:none">
-                    <label class="col-sm-2 control-label" for="normal-field">Text</label>
+                    <label class="col-sm-2 control-label" for="normal-field">Texto</label>
                     <div class="col-sm-8">
                         <textarea name="text" class="logindata" id="textid" cols="20" rows="10" class="form-control tinymce">
                             <?php echo set_value( 'text',$before->text);?>
@@ -120,7 +120,7 @@
                 </div>
 
                 <div class=" form-group" style="display:none">
-                    <label class="col-sm-2 control-label" for="normal-field">Type</label>
+                    <label class="col-sm-2 control-label" for="normal-field">Tipo</label>
                     <div class="col-sm-4">
                         <?php echo form_dropdown( "type",$type,set_value( 'type',$before->type));?>
                     </div>
@@ -128,7 +128,7 @@
                 <div class="row">
                     <div class="input-field col s6">
                         <div class="submitlogin">
-                            <button class="btn waves-effect waves-light blue darken-4 loginsubmit" type="submit" name="action">Save
+                            <button class="btn waves-effect waves-light blue darken-4 loginsubmit" type="submit" name="action">Guardar
                             </button>
                         </div>
                     </div>

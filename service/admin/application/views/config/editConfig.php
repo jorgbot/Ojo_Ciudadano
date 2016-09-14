@@ -1,13 +1,13 @@
 
 <div class="row">
 	<div class="col s12">
-		<h4 class="pad-left-15">Config -> Notification</h4></div>
+		<h4 class="pad-left-15">Configuracion -> Notificaciones</h4></div>
 	<form class="col s12" method="post" action="<?php echo site_url('site/editconfigsubmit');?>" enctype="multipart/form-data">
 		<input type="hidden" id="normal-field" class="form-control" name="id" value="<?php echo set_value('id',$before->id);?>" style="display:none;">
 
 		<div class="row" style="display:none">
 			<div class="input-field col m6 s12">
-				<label for="title">Title</label>
+				<label for="title">Titulo</label>
 				<input type="text" id="title" name="title" value="<?php echo set_value('title',$before->title);?>">
 			</div>
 		</div>
@@ -22,7 +22,7 @@
            	<div class="row">
 			<div class="file-field input-field col m6 s12">
 				<div class="btn blue darken-4">
-					<span>APNS File Upload</span>
+					<span>APNS Subir archivo</span>
 					<input name="image" type="file" multiple>
 				</div>
 				<div class="file-path-wrapper">
@@ -41,8 +41,8 @@
 		<div class=" form-group">
 			<div class="row">
 				<div class="col m6 s12">
-					<button type="submit" class="btn btn-primary waves-effect waves-light blue darken-4">Save</button>
-					<a href="<?php echo site_url('site/viewConfig'); ?>" class="btn btn-secondary waves-effect waves-light red">Cancel</a>
+					<button type="submit" class="btn btn-primary waves-effect waves-light blue darken-4">Guardar</button>
+					<a href="<?php echo site_url('site/viewConfig'); ?>" class="btn btn-secondary waves-effect waves-light red">Cancelar</a>
 				</div>
 			</div>
 		</div>

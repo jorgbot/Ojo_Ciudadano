@@ -1,20 +1,20 @@
 <div class="row offset-s3">
 	<div class="col s12">
-		<h4 class="pad-left-15">Config -> Login</h4>
+		<h4 class="pad-left-15">Configuracion -> Iniciar sesión</h4>
 	</div>
 
 	<div class="col s12 m6">
 		<div class="logintype normalLogin">
 			<div class="row checkbox">
 				<div class="col s6 m6">
-					<label for="filled-in-box" class="form-checkbox">Email and Password Login</label>
+					<label for="filled-in-box" class="form-checkbox">Correo electrónico y contraseña Usuario</label>
 				</div>
 				<div class="col s6 m6">
 					<div class="switch">
 						<label>
-							Off
+							No
 							<input type="checkbox" name="email">
-							<span class="lever"></span> On
+							<span class="lever"></span> Si
 						</label>
 
 					</div>
@@ -24,14 +24,14 @@
 		<div class="logintype googleLogin">
 			<div class="row checkbox">
 				<div class="col s6 m6">
-					<label for="filled-in-box" class="form-checkbox">Google Login</label>
+					<label for="filled-in-box" class="form-checkbox">Iniciar sesión Google</label>
 				</div>
 				<div class="col s6 m6">
 					<div class="switch">
 						<label>
-							Off
+							No
 							<input type="checkbox" name="Google">
-							<span class="lever"></span> On
+							<span class="lever"></span> Si
 						</label>
 					</div>
 				</div>
@@ -58,14 +58,14 @@
 		<div class="logintype facebookLogin">
 			<div class="row checkbox">
 				<div class="col s6">
-					<label for="filled-in-box" class="form-checkbox">Facebook Login</label>
+					<label for="filled-in-box" class="form-checkbox">Iniciar sesión Facebook</label>
 				</div>
 				<div class="col s6">
 					<div class="switch">
 						<label>
-							Off
+							No
 							<input type="checkbox" name="Facebook">
-							<span class="lever"></span> On
+							<span class="lever"></span> Si
 						</label>
 					</div>
 				</div>
@@ -89,14 +89,14 @@
 		<div class="logintype twitterLogin">
 			<div class="row checkbox">
 				<div class="col s6">
-					<label for="filled-in-box" class="form-checkbox">Twitter Login</label>
+					<label for="filled-in-box" class="form-checkbox">Iniciar sesión Twitter</label>
 				</div>
 				<div class="col s6">
 					<div class="switch">
 						<label>
-							Off
+							No
 							<input type="checkbox" name="twitter">
-							<span class="lever"></span> On
+							<span class="lever"></span> Si
 						</label>
 					</div>
 				</div>
@@ -120,14 +120,14 @@
 		<div class="logintype instagramLogin">
 			<div class="row checkbox">
 				<div class="col s6">
-					<label for="filled-in-box" class="form-checkbox">Instagram Login</label>
+					<label for="filled-in-box" class="form-checkbox">Iniciar sesión Instagram</label>
 				</div>
 				<div class="col s6">
 					<div class="switch">
 						<label>
-							Off
+							No
 							<input type="checkbox" name="instagram">
-							<span class="lever"></span> On
+							<span class="lever"></span> Si
 						</label>
 					</div>
 				</div>
@@ -152,7 +152,7 @@
 
 			<div class="row" style="display:none">
 				<div class="input-field col s6">
-					<label for="title">Title</label>
+					<label for="title">Titulo</label>
 					<input type="text" id="title" name="title" value="<?php echo set_value('title',$before->title);?>">
 				</div>
 			</div>
@@ -161,7 +161,7 @@
 					<textarea name="content" class="materialize-textarea">
 						<?php echo set_value( 'content',$before->content);?>
 					</textarea>
-					<label>Content</label>
+					<label>Contenido</label>
 				</div>
 			</div>
 			<div class="row" style="display:none">
@@ -169,7 +169,7 @@
 					<textarea name="text" class="materialize-textarea logindata" id="textid">
 						<?php echo set_value( 'text',$before->text);?>
 					</textarea>
-					<label>Text</label>
+					<label>Texto</label>
 				</div>
 			</div>
 
@@ -180,7 +180,7 @@
 			</div>
 			<div class="row">
 				<div class="submitlogin">
-					<button class="btn blue darken-4 waves-effect waves-light loginsubmit" name="action">Save
+					<button class="btn blue darken-4 waves-effect waves-light loginsubmit" name="action">Guardar
 					</button>
 				</div>
 			</div>
