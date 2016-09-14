@@ -1,30 +1,30 @@
 <div class="row">
 	<div class="col s12">
-		<h4 class="pad-left-15">Create User</h4>
+		<h4 class="pad-left-15">Crear Usuario</h4>
 	</div>
 	<form class="col s12" method="post" action="<?php echo site_url('site/createUserSubmit');?>" enctype="multipart/form-data">
 		<div class="row">
 			<div class="input-field col m6 s12">
-				<label for="name">Name</label>
+				<label for="name">Nombre</label>
 				<input type="text" id="name" name="name" value="<?php echo set_value('name');?>">
 			</div>
 		</div>
 		<div class="row">
 			<div class="input-field col m6 s12">
-				<label for="email">Email</label>
+				<label for="email">Email/Correo</label>
 				<input type="email" id="email" class="form-control" name="email" value="<?php echo set_value('email');?>">
 			</div>
 		</div>
 		<div class="row">
 			<div class="input-field col m6 s12">
 				<input type="password" name="password" value="" id="password">
-				<label for="password">Password</label>
+				<label for="password">Contraseña</label>
 			</div>
 		</div>
 		<div class="row">
 			<div class="input-field col m6 s12">
 				<input type="password" name="confirmpassword" value="" id="confirmpassword">
-				<label for="confirmpassword">Confirm Password</label>
+				<label for="confirmpassword">Repetir Contraseña</label>
 			</div>
 		</div>
 		<div class="row">
@@ -35,7 +35,7 @@
 		</div>
 		<div class="row">
 			<div class="input-field col m6 s12">
-				<label for="contact">Contact</label>
+				<label for="contact">Contacto</label>
 				<input type="text" id="contact" name="contact" value="<?php echo set_value('contact');?>">
 			</div>
 		</div>
@@ -48,19 +48,19 @@
 			    <option value="Twitter">Twitter</option>
 			    <option value="Instagram">Instagram</option>
 			</select>
-				<label for="logintype">Login Type</label>
+				<label for="logintype">Tipo de Login</label>
 			</div>
 		</div>
 		<div class="row">
 			<div class="input-field col m6 s12">
 				<?php echo form_dropdown('status', $status, set_value('status')); ?>
-					<label>Status</label>
+					<label>Estado</label>
 			</div>
 		</div>
 		<div class="row">
 			<div class="file-field input-field col m6 s12">
 				<div class="btn blue darken-4">
-					<span>Image</span>
+					<span>Imagen</span>
 					<input name="image" type="file" multiple>
 				</div>
 				<div class="file-path-wrapper">
@@ -71,7 +71,7 @@
 		<div class="row">
 			<div class="file-field input-field col m6 s12">
 				<div class="btn blue darken-4">
-					<span>Cover Image</span>
+					<span>Imagen Cover</span>
 					<input name="coverimage" type="file" multiple>
 				</div>
 				<div class="file-path-wrapper">
@@ -82,18 +82,18 @@
 		<div class="row">
 			<div class="input-field col m6 s12">
 				<?php echo form_dropdown('accesslevel', $accesslevel, set_value('accesslevel')); ?>
-					<label>Access Level</label>
+					<label>Nivel de Acceso</label>
 			</div>
 		</div>
 		<div class="row">
 			<div class="input-field col m6 s12">
 				<textarea name="address" class="materialize-textarea" length="120"><?php echo set_value('address');?></textarea>
-				<label>Address</label>
+				<label>Direccion</label>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col m3 s6">
-				<label for="filled-in-box" class="form-checkbox">Event Notification</label>
+				<label for="filled-in-box" class="form-checkbox">Notificacion sobre Eventos</label>
 			</div>
 			<div class="col m3 s6">
 				<div class="switch">
@@ -108,7 +108,7 @@
 
 		<div class="row">
 			<div class="col m3 s6">
-				<label for="filled-in-box" class="form-checkbox">Photo Notification</label>
+				<label for="filled-in-box" class="form-checkbox">Notificacion sobre Fotos</label>
 			</div>
 			<div class="col m3 s6">
 				<div class="switch">
@@ -123,7 +123,7 @@
 
 		<div class="row">
 			<div class="col m3 s6">
-				<label for="filled-in-box" class="form-checkbox">Video Notification</label>
+				<label for="filled-in-box" class="form-checkbox">Notificacion sobre Videos</label>
 			</div>
 			<div class="col m3 s6">
 				<div class="switch">
@@ -138,7 +138,7 @@
 
 		<div class="row">
 			<div class="col m3 s6">
-				<label for="filled-in-box" class="form-checkbox">Blog Notification</label>
+				<label for="filled-in-box" class="form-checkbox">Notificacion sobre Blogs</label>
 			</div>
 			<div class="col m3 s6">
 				<div class="switch">
@@ -154,8 +154,8 @@
 		<div class=" form-group">
 			<div class="row">
 				<div class="col m6 s12">
-					<button type="submit" class="btn btn-primary waves-effect waves-light blue darken-4">Save</button>
-					<a href="<?php echo site_url('site/viewUsers'); ?>" class="waves-effect waves-light btn red">Cancel</a>
+					<button type="submit" class="btn btn-primary waves-effect waves-light blue darken-4">Guardar</button>
+					<a href="<?php echo site_url('site/viewUsers'); ?>" class="waves-effect waves-light btn red">Cancelar</a>
 				</div>
 			</div>
 		</div>

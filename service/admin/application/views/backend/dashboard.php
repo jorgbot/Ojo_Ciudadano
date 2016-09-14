@@ -4,7 +4,7 @@
             <div class="card red darken-1">
                 <div class="card-content white-text text-center">
                     <i class="large material-icons block">people</i>
-                    <span class="card-title"><?php echo $usercount;?> Users</span>
+                    <span class="card-title"><?php echo $usercount;?> Usuarios</span>
                 </div>
             </div>
         </div>
@@ -13,7 +13,7 @@
             <div class="card red darken-1">
                 <div class="card-content white-text text-center">
                     <i class="large material-icons block">speaker_notes</i>
-                    <span class="card-title"><?php echo $enquirycount;?> Enquiries</span>
+                    <span class="card-title"><?php echo $enquirycount;?> Consultas</span>
                 </div>
             </div>
         </div>
@@ -25,7 +25,7 @@
                     <div class="panel-body">
                         <div class="row">
                             <div class="col m6 l6">
-                                <h5 class="panel-title">Latest Enquiries</h5>
+                                <h5 class="panel-title">Lista de Notificaciones</h5>
                             </div>
 
                         </div>
@@ -34,10 +34,10 @@
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Name</th>
+                                <th>Nombre</th>
                                 <th>Email</th>
-                                <th>Timestamp</th>
-                                <th>Action</th>
+                                <th>Fecha</th>
+                                <th>Accion</th>
                             </tr>
                         </thead>
                         <tbody>

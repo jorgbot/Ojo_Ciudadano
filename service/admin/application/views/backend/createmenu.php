@@ -2,30 +2,30 @@
 	<div class="col-lg-12">
 	    <section class="panel">
 		    <header class="panel-heading">
-				 Menu Details
+				 Detalles de Menu
 			</header>
 			<div class="panel-body">
 			    <form class="form-horizontal tasi-form" method="post" action="<?php echo site_url('menu/createMenuSubmit');?>">
 				    <div class="form-group">
-						<label class="col-sm-2 control-label">Name</label>
+						<label class="col-sm-2 control-label">Nombre</label>
 						<div class="col-sm-4">
 						  <input type="text" id="normal-field" class="form-control" name="name" value="<?php echo set_value('name');?>">
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="col-sm-2 control-label">Icon</label>
+						<label class="col-sm-2 control-label">Icono</label>
 						<div class="col-sm-4">
 						  <input type="text" id="normal-field" class="form-control" name="icon" value="<?php echo set_value('icon');?>" >
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="col-sm-2 control-label">Description</label>
+						<label class="col-sm-2 control-label">Descripcion</label>
 						<div class="col-sm-4">
 						  <input type="text" id="normal-field" class="form-control" name="description" value="<?php echo set_value('description');?>" >
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="col-sm-2 control-label">Keyword</label>
+						<label class="col-sm-2 control-label">Palabra Clave</label>
 						<div class="col-sm-4">
 						  <input type="text" id="" name="keyword" class="form-control" value="<?php echo set_value('keyword'); ?>">
 						</div>
@@ -37,7 +37,7 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="col-sm-2 control-label">Link Type</label>
+						<label class="col-sm-2 control-label">Tipo de Menu</label>
 						<div class="col-sm-4">
 						  <?php
 							$linktype= array(
@@ -52,7 +52,7 @@
 					<div class=" form-group">
 					  <label class="col-sm-2 control-label">Parent Menu</label>
 					  <div class="col-sm-4">
-						<?php 	 echo form_dropdown('parentmenu',$parentmenu,set_value('parentmenu')');
+						<?php 	 echo form_dropdown('parentmenu',$parentmenu,set_value('parentmenu'));
 						?>
 					  </div>
 					</div>
@@ -63,7 +63,7 @@
 					  </div>
 					</div>
 					<div class=" form-group">
-					  <label class="col-sm-2 control-label">Is active</label>
+					  <label class="col-sm-2 control-label">Esta Activo</label>
 					  <div class="col-sm-4">
 						<?php
 						$isactive = array(
@@ -75,7 +75,7 @@
 					  </div>
 					</div>
 					<div class=" form-group">
-					  <label class="col-sm-2 control-label">Order</label>
+					  <label class="col-sm-2 control-label">Orden</label>
 					  <div class="col-sm-4">
 						<input type="number" name="order" class="form-control" value="<?php echo set_value('order'); ?>">
 					  </div>
@@ -83,7 +83,7 @@
 					<div class="form-group">
 						<label class="col-sm-2 control-label">&nbsp;</label>
 						<div class="col-sm-4">
-							<button type="submit" class="btn btn-info">Submit</button>
+							<button type="submit" class="btn btn-info">Enviar</button>
 						</div>
 					</div>
 				</form>
