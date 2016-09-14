@@ -4,10 +4,10 @@
             <div class="col s12 dragable">
                 <div class="row">
                     <div class="col m6 l6">
-                        <h5 class="panel-title">List of Video Gallery</h5>
+                        <h5 class="panel-title">Lista Galeria de Videos</h5>
                     </div>
                     <div class="col m6 l6">
-                        <a href="#" class="saveOrdering blue darken-4 btn waves-effect waves-light" style="float: right;margin-top: 15px;"><i class='material-icons left'>save</i> Save</a>
+                        <a href="#" class="saveOrdering blue darken-4 btn waves-effect waves-light" style="float: right;margin-top: 15px;"><i class='material-icons left'>save</i> Guardar</a>
                     </div>
                 </div>
                 <div class="row">

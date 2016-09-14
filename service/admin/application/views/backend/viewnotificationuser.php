@@ -7,9 +7,9 @@
                     <thead>
                         <tr>
                           <th data-field="id">ID</th>
-                          <th data-field="notification">Notification</th>
-                          <th data-field="user">User</th>
-                          <th data-field="timestamp">Timestamp</th>
+                          <th data-field="notification">Notificacion</th>
+                          <th data-field="user">Usuario</th>
+                          <th data-field="timestamp">Fecha</th>
                           <th data-field="action">Action</th>
                         </tr>
                     </thead>

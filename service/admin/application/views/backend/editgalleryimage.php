@@ -9,18 +9,18 @@
           <div class="row">
             <div class="input-field col s6">
                 <?php echo form_dropdown('gallery', $gallery, set_value('gallery', $before->gallery)); ?>
-                 <label>Gallery</label>
+                 <label>Galeria</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s6">
-                <label for="order">Order</label>
+                <label for="order">Orden</label>
                 <input type="text" id="order" name="order" value="<?php echo set_value('order', $before->order);?>">
             </div>
         </div>
            <div class="row">
             <div class="input-field col s6">
-                <label for="alt">alt</label>
+                <label for="alt">Descripcion Corta</label>
                 <input type="text" id="alt" name="alt" value="<?php echo set_value('alt', $before->alt);?>">
             </div>
         </div>
@@ -28,7 +28,7 @@
         <div class="row">
             <div class="input-field col s6">
                 <?php echo form_dropdown('status', $status, set_value('status', $before->status)); ?>
-                 <label>Status</label>
+                 <label>Estado</label>
             </div>
         </div>
 
@@ -42,11 +42,11 @@
     ?>" > <?php
 } ?></span>
                 <div class="btn  blue darken-4">
-                    <span>Image</span>
+                    <span>Imagen</span>
                     <input name="image" type="file" multiple>
                 </div>
                 <div class="file-path-wrapper">
-                    <input class="file-path validate image1" type="text" placeholder="Upload one or more files" value="<?php echo set_value('image', $before->image);?>">
+                    <input class="file-path validate image1" type="text" placeholder="Subir imagen o archivo" value="<?php echo set_value('image', $before->image);?>">
                     <?php if ($before->image == '') {
 } else {
     ?>
@@ -62,8 +62,8 @@
                       <div class=" form-group">
             <label class="col-sm-2 control-label">&nbsp;</label>
             <div class="col-sm-4">
-                <button type="submit" class="btn btn-primary waves-effect waves-light  blue darken-4">Save</button>
-                <a href="<?php echo site_url('site/viewGalleryImage?id=').$this->input->get('galleryid'); ?>" class="btn btn-secondary waves-effect waves-light red">Cancel</a>
+                <button type="submit" class="btn btn-primary waves-effect waves-light  blue darken-4">Guardar</button>
+                <a href="<?php echo site_url('site/viewGalleryImage?id=').$this->input->get('galleryid'); ?>" class="btn btn-secondary waves-effect waves-light red">Cancelar</a>
             </div>
         </div>
             </div>
@@ -75,7 +75,7 @@
 <script>
     $(document).ready(function () {
         $(".clearimg").click(function () {
-            if (confirm("Are you sure want to clear Image!") == true) {
+            if (confirm("Seguro que quieres borrar la imagen!") == true) {
                 $.get("<?php echo site_url('site/clearGalleryImage1?id='.$before->id);?>", function (data) {
                     $("input.image1").val("");
                     $("span.image1").html("");

@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col s12">
-    <h4 class="pad-left-15">Edit Notificationuser</h4>
+    <h4 class="pad-left-15">Editar Notificaciones</h4>
     </div>
 </div>
 <div class="row">
@@ -21,21 +21,21 @@
 
                <div class="row">
             <div class="input-field col s6">
-                <label for="timestamp">Timestamp</label>
+                <label for="timestamp">Fecha</label>
                 <input type="text" id="timestamp" name="timestamp" value="<?php echo set_value('timestamp', $before->timestamp);?>">
             </div>
         </div>
              <div class="row">
             <div class="input-field col s6">
-                <label for="timestamp_receive">Timestamp received</label>
+                <label for="timestamp_receive">Fecha recivido</label>
                 <input type="text" id="timestamp_receive" name="timestamp_receive" value="<?php echo set_value('timestamp_receive', $before->timestamp_receive);?>">
             </div>
         </div>
         <div class=" form-group">
             <label class="col-sm-2 control-label">&nbsp;</label>
             <div class="col-sm-4">
-                <button type="submit" class="btn btn-primary waves-effect waves-light green">Save</button>
-                <a href="<?php echo site_url('site/viewNotificationUser?id=').$this->input->get('notificationid'); ?>" class="btn btn-secondary waves-effect waves-light red">Cancel</a>
+                <button type="submit" class="btn btn-primary waves-effect waves-light green">Guardar</button>
+                <a href="<?php echo site_url('site/viewNotificationUser?id=').$this->input->get('notificationid'); ?>" class="btn btn-secondary waves-effect waves-light red">Cancelar</a>
             </div>
         </div>
     </form>

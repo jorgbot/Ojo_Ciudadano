@@ -2,13 +2,13 @@
 	<div class="col-lg-12">
 	    <section class="panel">
 		    <header class="panel-heading">
-				 Menu Details
+				 Detalles de Menu
 			</header>
 			<div class="panel-body">
 			    <form class="form-horizontal tasi-form" method="post" action="<?php echo site_url('menu/editMenuSubmit');?>">
 				    <input type="hidden" id="normal-field" class="form-control" name="id" value="<?php echo set_value('id', $before['menu']->id);?>" style="display:none;">
 					<div class="form-group">
-						<label class="col-sm-2 control-label">Name</label>
+						<label class="col-sm-2 control-label">Nombre</label>
 						<div class="col-sm-4">
 						  <input type="text" id="normal-field" class="form-control" name="name" value="<?php echo set_value('name', $before['menu']->name);?>">
 						</div>
@@ -20,7 +20,7 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="col-sm-2 control-label">Description</label>
+						<label class="col-sm-2 control-label">Descripcion</label>
 						<div class="col-sm-4">
 						  <input type="text" id="normal-field" class="form-control" name="description" value="<?php echo set_value('description', $before['menu']->description);?>" >
 						</div>
@@ -51,20 +51,20 @@
 						</div>
 					</div>
 					<div class=" form-group">
-					  <label class="col-sm-2 control-label">Parent Menu</label>
+					  <label class="col-sm-2 control-label">Menu Padre</label>
 					  <div class="col-sm-4">
 						<?php      echo form_dropdown('parentmenu', $parentmenu, set_value('parentmenu', $before['menu']->parent));
                         ?>
 					  </div>
 					</div>
 					<div class=" form-group">
-					  <label class="col-sm-2 control-label">Menu Access</label>
+					  <label class="col-sm-2 control-label">Acceso al Menu</label>
 					  <div class="col-sm-4">
 						<?php   echo form_multiselect('menuaccess[]', $accesslevel, set_value('menuaccess', $before['menuaccess']), 'id="select2" class=" myselect2 form-control populate placeholder select2-offscreen" ');     ?>
 					  </div>
 					</div>
 					<div class=" form-group">
-					  <label class="col-sm-2 control-label">Is active</label>
+					  <label class="col-sm-2 control-label">Activo</label>
 					  <div class="col-sm-4">
 						<?php
                         $isactive = array(
@@ -76,7 +76,7 @@
 					  </div>
 					</div>
 					<div class=" form-group">
-					  <label class="col-sm-2 control-label">Order</label>
+					  <label class="col-sm-2 control-label">Orden</label>
 					  <div class="col-sm-4">
 						<input type="number" name="order" class="form-control" value="<?php echo set_value('order', $before['menu']->order); ?>">
 					  </div>
@@ -84,7 +84,7 @@
 					<div class="form-group">
 						<label class="col-sm-2 control-label">&nbsp;</label>
 						<div class="col-sm-4">
-							<button type="submit" class="btn btn-info">Submit</button>
+							<button type="submit" class="btn btn-info">Guardar</button>
 						</div>
 					</div>
 				</form>

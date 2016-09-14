@@ -6,8 +6,8 @@
                 <table class="highlight responsive-table">
                     <thead>
                         <tr>
-                                        <th data-field="title">Title</th>
-                                        <th data-field="action">Action</th>
+                                        <th data-field="title">Titulo</th>
+                                        <th data-field="action">Accion</th>
 
                         </tr>
                     </thead>

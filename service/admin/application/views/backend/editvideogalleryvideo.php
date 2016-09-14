@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col s12">
-        <h4 class="pad-left-15">Edit Video Gallery Video</h4>
+        <h4 class="pad-left-15">Editar Video Galeria Video</h4>
     </div>
 </div>
 <div class="row">
@@ -10,13 +10,13 @@
         <div class="row">
             <div class="input-field col s6">
                 <?php echo form_dropdown('videogallery', $videogallery, set_value('videogallery', $before->videogallery)); ?>
-                 <label>Video Gallery</label>
+                 <label>Galeria de Video</label>
             </div>
         </div>
 
         <div class="row">
             <div class="input-field col s6">
-                <label for="alt">Title</label>
+                <label for="alt">Titulo</label>
                 <input type="text" id="alt" name="alt" value="<?php echo set_value('alt', $before->alt);?>">
             </div>
         </div>
@@ -28,7 +28,7 @@
         </div>
         <div class="row">
             <div class="input-field col s6">
-                <label for="order">order</label>
+                <label for="order">orden</label>
                 <input type="text" id="order" name="order" value="<?php echo set_value('order', $before->order);?>">
             </div>
         </div>
@@ -36,7 +36,7 @@
         <div class="row">
             <div class="input-field col s6">
                 <?php echo form_dropdown('status', $status, set_value('status', $before->status)); ?>
-                 <label>Status</label>
+                 <label>Estado</label>
             </div>
         </div>
 <div class="row">
@@ -44,8 +44,8 @@
           <div class=" form-group">
             <label class="col-sm-2 control-label">&nbsp;</label>
             <div class="col-sm-4">
-                <button type="submit" class="btn btn-primary waves-effect waves-light blue darken-4">Save</button>
-                <a href="<?php echo site_url('site/viewVideoGalleryVideo?id=').$this->input->get('videoid');?>" class="btn btn-secondary waves-effect waves-light red">Cancel</a>
+                <button type="submit" class="btn btn-primary waves-effect waves-light blue darken-4">Guardar</button>
+                <a href="<?php echo site_url('site/viewVideoGalleryVideo?id=').$this->input->get('videoid');?>" class="btn btn-secondary waves-effect waves-light red">Cancelar</a>
             </div>
         </div>
     </div>

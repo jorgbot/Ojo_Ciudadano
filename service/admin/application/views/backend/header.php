@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <title>
 	<?php echo $title;?> - Ojo Ciudadano</title>
-
+	<meta charset="utf-8">
 <head>
 	<link rel="shortcut icon" href="<?php echo base_url('assets').'/';?>img/favicon.png" type="image/png" />
 	<link rel="stylesheet" href="<?php echo base_url('assets').'/';?>css/materialize.min.css">

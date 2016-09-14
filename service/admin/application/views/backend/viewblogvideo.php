@@ -8,7 +8,7 @@
                         <tr>
                              <th data-field="id">ID</th>
                                         <th data-field="blog">Blog</th>
-                                        <th data-field="status">Status</th>
+                                        <th data-field="status">Estado</th>
             <!--                                    <th data-field="order">Order</th>-->
                                         <th data-field="video">Video</th>
                                         <th data-field="action">Action</th>

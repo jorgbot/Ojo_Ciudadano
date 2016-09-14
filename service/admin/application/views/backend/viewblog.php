@@ -7,8 +7,8 @@
                     <thead>
                         <tr>
                             <th data-field="id" data-selectall='true' data-delete-selected="<?php echo $deleteselected;?>">Id</th>
-                            <th data-field="title">Title</th>
-                            <th data-field="timestamp">Timestamp</th>
+                            <th data-field="title">Titulo</th>
+                            <th data-field="timestamp">Fecha</th>
                             <th data-field="action">Action</th>
                         </tr>
                     </thead>
