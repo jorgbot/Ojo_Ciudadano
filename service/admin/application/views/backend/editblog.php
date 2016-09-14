@@ -34,7 +34,7 @@
                     <input name="image" type="file" multiple>
                 </div>
                 <div class="file-path-wrapper">
-                    <input class="file-path validate image1" type="text" placeholder="Upload one or more files" value="<?php echo set_value('image', $before->image);?>">
+                    <input class="file-path validate image1" type="text" placeholder="Sube uno o más archivos" value="<?php echo set_value('image', $before->image);?>">
                     <?php if ($before->image == '') {
 } else {
     ?>
