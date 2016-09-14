@@ -634,12 +634,12 @@
 
     // LOCALES
 
-    var defaultLocaleMonths = 'January_February_March_April_May_June_July_August_September_October_November_December'.split('_');
+    var defaultLocaleMonths = 'Enero_Febrero_Marzo_Abril_Mayo_Junio_Julio_Agosto_Septiembre_Octubre_Noviembre_Diciembre'.split('_');
     function localeMonths (m) {
         return this._months[m.month()];
     }
 
-    var defaultLocaleMonthsShort = 'Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec'.split('_');
+    var defaultLocaleMonthsShort = 'Ene_Feb_Mar_Abr_May_Jun_Jul_Ago_Sep_Oct_Nov_Dic'.split('_');
     function localeMonthsShort (m) {
         return this._monthsShort[m.month()];
     }
@@ -2608,8 +2608,8 @@
     }
 
     var defaultCalendar = {
-        sameDay : '[Today at] LT',
-        nextDay : '[Tomorrow at] LT',
+        sameDay : '[Hoy a las] LT',
+        nextDay : '[Mañana a las] LT',
         nextWeek : 'dddd [at] LT',
         lastDay : '[Yesterday at] LT',
         lastWeek : '[Last] dddd [at] LT',
@@ -2645,7 +2645,7 @@
         return this._longDateFormat[key];
     }
 
-    var defaultInvalidDate = 'Invalid date';
+    var defaultInvalidDate = 'Fecha Invalida';
 
     function invalidDate () {
         return this._invalidDate;
@@ -2663,19 +2663,19 @@
     }
 
     var defaultRelativeTime = {
-        future : 'in %s',
-        past   : '%s ago',
-        s  : 'a few seconds',
-        m  : 'a minute',
-        mm : '%d minutes',
-        h  : 'an hour',
-        hh : '%d hours',
-        d  : 'a day',
-        dd : '%d days',
-        M  : 'a month',
-        MM : '%d months',
-        y  : 'a year',
-        yy : '%d years'
+        future : 'dentro de %s',
+        past   : '%s hace',
+        s  : 'en pocos segundos',
+        m  : 'un minuto',
+        mm : '%d minutos',
+        h  : 'una hora',
+        hh : '%d horas',
+        d  : 'un dia',
+        dd : '%d dias',
+        M  : 'un mes',
+        MM : '%d meses',
+        y  : 'un año',
+        yy : '%d años'
     };
 
     function relative__relativeTime (number, withoutSuffix, string, isFuture) {
