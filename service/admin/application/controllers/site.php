@@ -51,7 +51,7 @@ class Site extends CI_Controller
     {
         $accesslevel = $this->session->userdata('accesslevel');
         if (!in_array($accesslevel, $access)) {
-            redirect(base_url().'index.php/site?alerterror=You do not have access to this page. ', 'refresh');
+            redirect(base_url().'index.php/site?alerterror=No tienes acceso a esta pagina. ', 'refresh');
         }
     }
 
@@ -65,7 +65,7 @@ class Site extends CI_Controller
         $data['base_url'] = site_url('site/viewEnquiryJson');
         $data['usercount'] = $this->user_model->getUserCount();
         $data['enquirycount'] = $this->enquiry_model->total();
-        $data['title'] = 'Dashboard';
+        $data['title'] = 'Inicio';
         $this->load->view('template', $data);
     }
 
@@ -87,7 +87,7 @@ class Site extends CI_Controller
 
         $data['page'] = 'createuser';
         $data['activemenu'] = 'users';
-        $data['title'] = 'Create User';
+        $data['title'] = 'Crear Usuario';
         $this->load->view('template', $data);
     }
 
@@ -153,7 +153,7 @@ class Site extends CI_Controller
                 $this->load->library('image_lib', $config_r);
                 $this->image_lib->initialize($config_r);
                 if (!$this->image_lib->resize()) {
-                    $data['alerterror'] = 'Failed.'.$this->image_lib->display_errors();
+                    $data['alerterror'] = 'Ha fallado.'.$this->image_lib->display_errors();
 
                     // return false;
                 } else {
@@ -189,7 +189,7 @@ class Site extends CI_Controller
                 $this->load->library('image_lib', $config_r);
                 $this->image_lib->initialize($config_r);
                 if (!$this->image_lib->resize()) {
-                    $data['alerterror'] = 'Failed.'.$this->image_lib->display_errors();
+                    $data['alerterror'] = 'Ha fallado.'.$this->image_lib->display_errors();
 
                     // return false;
                 } else {
@@ -204,9 +204,9 @@ class Site extends CI_Controller
             }
 
             if ($this->user_model->create($name, $email, $password, $accesslevel, $status, $socialid, $logintype, $image, $json, $contact, $address, $eventnotification, $photonotification, $videonotification, $blognotification, $coverimage) == 0) {
-                $data['alerterror'] = 'New User Could Not Be Created.';
+                $data['alerterror'] = 'Nuevo usuario no se pudo crear.';
             } else {
-                $data['alertsuccess'] = 'User Created Successfully.';
+                $data['alertsuccess'] = 'El usuario se ha creado correctamente.';
             }
             $data['redirect'] = 'site/viewUsers';
             $this->load->view('redirect', $data);
@@ -223,7 +223,7 @@ class Site extends CI_Controller
         $data['base_url'] = site_url('site/viewUsersJson');
         $data['deleteselected'] = site_url('site/deleteSelectedUsers');
         $data['activemenu'] = 'users';
-        $data['title'] = 'View Users';
+        $data['title'] = 'Usuarios';
         $this->load->view('template', $data);
     }
 
@@ -250,12 +250,12 @@ class Site extends CI_Controller
         $elements[1] = new stdClass();
         $elements[1]->field = '`user`.`name`';
         $elements[1]->sort = '1';
-        $elements[1]->header = 'Name';
+        $elements[1]->header = 'Nombre';
         $elements[1]->alias = 'name';
         $elements[2] = new stdClass();
         $elements[2]->field = '`user`.`email`';
         $elements[2]->sort = '1';
-        $elements[2]->header = 'Email';
+        $elements[2]->header = 'Correo';
         $elements[2]->alias = 'email';
         $elements[3] = new stdClass();
         $elements[3]->field = '`user`.`socialid`';
@@ -265,7 +265,7 @@ class Site extends CI_Controller
         $elements[4] = new stdClass();
         $elements[4]->field = '`user`.`logintype`';
         $elements[4]->sort = '1';
-        $elements[4]->header = 'Login Type';
+        $elements[4]->header = 'Tipo inicio';
         $elements[4]->alias = 'logintype';
         $elements[5] = new stdClass();
         $elements[5]->field = '`user`.`json`';
@@ -275,7 +275,7 @@ class Site extends CI_Controller
         $elements[6] = new stdClass();
         $elements[6]->field = '`accesslevel`.`name`';
         $elements[6]->sort = '1';
-        $elements[6]->header = 'Access Level';
+        $elements[6]->header = 'Nivel Acceso';
         $elements[6]->alias = 'accesslevelname';
         $elements[7] = new stdClass();
         $elements[7]->field = '`statuses`.`name`';
@@ -316,7 +316,7 @@ class Site extends CI_Controller
         $data['before'] = $this->user_model->beforeEdit($this->input->get('id'));
         $data['page'] = 'edituser';
         $data['activemenu'] = 'users';
-        $data['title'] = 'Edit User';
+        $data['title'] = 'Editar Usuario';
         $this->load->view('template', $data);
     }
 
@@ -387,7 +387,7 @@ class Site extends CI_Controller
                 $this->load->library('image_lib', $config_r);
                 $this->image_lib->initialize($config_r);
                 if (!$this->image_lib->resize()) {
-                    $data['alerterror'] = 'Failed.'.$this->image_lib->display_errors();
+                    $data['alerterror'] = 'Ha fallado.'.$this->image_lib->display_errors();
 
                     // return false;
                 } else {
@@ -431,7 +431,7 @@ class Site extends CI_Controller
                 $this->load->library('image_lib', $config_r);
                 $this->image_lib->initialize($config_r);
                 if (!$this->image_lib->resize()) {
-                    $data['alerterror'] = 'Failed.'.$this->image_lib->display_errors();
+                    $data['alerterror'] = 'Ha fallado.'.$this->image_lib->display_errors();
 
                     // return false;
                 } else {
@@ -454,9 +454,9 @@ class Site extends CI_Controller
             }
 
             if ($this->user_model->edit($id, $name, $email, $password, $accesslevel, $status, $socialid, $logintype, $image, $json, $contact, $address, $eventnotification, $photonotification, $videonotification, $blognotification, $coverimage) == 0) {
-                $data['alerterror'] = 'User Editing Was Unsuccesful';
+                $data['alerterror'] = 'Usuario editar fue infructuoso';
             } else {
-                $data['alertsuccess'] = 'User Edited Successfully.';
+                $data['alertsuccess'] = 'Usuario editado correctamente.';
             }
             $data['redirect'] = 'site/viewUsers';
 
@@ -476,7 +476,7 @@ class Site extends CI_Controller
 
         //		$data['table']=$this->user_model->viewUsers();
 
-        $data['alertsuccess'] = 'User Deleted Successfully';
+        $data['alertsuccess'] = 'Usuario eliminado con éxito';
         $data['redirect'] = 'site/viewUsers';
 
         // $data['other']="template=$template";
@@ -494,7 +494,7 @@ class Site extends CI_Controller
 
         //		$data['table']=$this->user_model->viewUsers();
 
-        $data['alertsuccess'] = 'Status Changed Successfully';
+        $data['alertsuccess'] = 'El estado ha cambiado con éxito';
         $data['redirect'] = 'site/viewUsers';
         $data['other'] = "template=$template";
         $this->load->view('redirect', $data);
@@ -617,9 +617,9 @@ class Site extends CI_Controller
             }
 
             if ($this->articles_model->create($status, $title, $json, $content, $image) == 0) {
-                $data['alerterror'] = 'New Page Could Not Be Created.';
+                $data['alerterror'] = 'Nueva página no se pudo crear.';
             } else {
-                $data['alertsuccess'] = 'Page Created Successfully.';
+                $data['alertsuccess'] = 'Página creada con éxito.';
             }
             $data['redirect'] = 'site/viewArticles';
             $this->load->view('redirect', $data);
@@ -635,7 +635,7 @@ class Site extends CI_Controller
         $data['page'] = 'editarticles';
         $data['activemenu'] = 'home';
         $data['status'] = $this->user_model->getStatusDropDown();
-        $data['title'] = 'Edit Home';
+        $data['title'] = 'Editar Inicio';
         $data['before'] = $this->articles_model->beforeEdit(1);
         $this->load->view('template', $data);
     }
@@ -698,9 +698,9 @@ class Site extends CI_Controller
             }
 
             if ($this->articles_model->edit($id, $status, $title, $json, $content, $timestamp, $image) == 0) {
-                $data['alerterror'] = 'New Page Could Not Be Updated.';
+                $data['alerterror'] = 'Nueva página no se pudo actualizar.';
             } else {
-                $data['alertsuccess'] = 'Page Updated Successfully.';
+                $data['alertsuccess'] = 'Página actualizado correctamente.';
             }
             if ($id != 1) {
                 $data['redirect'] = 'site/viewArticles';
@@ -881,9 +881,9 @@ class Site extends CI_Controller
             }
 
             if ($this->frontmenu_model->create($order, $parent, $status, $name, $json, $image, $linktype, $icon, $event, $blog, $video, $article, $gallery, $typeid) == 0) {
-                $data['alerterror'] = 'New Navigation could not be created.';
+                $data['alerterror'] = 'Nueva navegación no se pudo crear.';
             } else {
-                $data['alertsuccess'] = 'Navigation created Successfully.';
+                $data['alertsuccess'] = 'Navegación creado con éxito.';
             }
             $data['redirect'] = 'site/viewFrontmenu';
             $this->load->view('redirect', $data);
@@ -973,9 +973,9 @@ class Site extends CI_Controller
             }
 
             if ($this->frontmenu_model->edit($id, $order, $parent, $status, $name, $json, $image, $linktype, $icon, $event, $blog, $video, $article, $gallery, $typeid) == 0) {
-                $data['alerterror'] = 'New Navigation Could Not Be Updated.';
+                $data['alerterror'] = 'Nueva navegación no se pudo actualizar.';
             } else {
-                $data['alertsuccess'] = 'Navigation Updated Successfully.';
+                $data['alertsuccess'] = 'Navegación actualizado correctamente.';
             }
             $data['redirect'] = 'site/viewFrontmenu';
             $this->load->view('redirect', $data);
@@ -1117,9 +1117,9 @@ class Site extends CI_Controller
                 $uploaddata = $this->upload->data();
                 $image = $uploaddata['file_name'];
                 if ($this->gallery_model->create($order, $status, $name, $json, $image) == 0) {
-                    $data['alerterror'] = 'New Image Gallery could not be created.';
+                    $data['alerterror'] = 'Nueva Galería de imágenes no se pudo crear.';
                 } else {
-                    $data['alertsuccess'] = 'Image Gallery created Successfully.';
+                    $data['alertsuccess'] = 'Galería de imágenes creado con éxito.';
                 }
                
                 $data['redirect'] = 'site/viewGallery';
@@ -1196,9 +1196,9 @@ class Site extends CI_Controller
             }
 
             if ($this->gallery_model->edit($id, $order, $status, $name, $json, $timestamp, $image) == 0) {
-                $data['alerterror'] = 'New Image Gallery Could Not Be Updated.';
+                $data['alerterror'] = 'Nueva Galería de imágenes no se pudo actualizar.';
             } else {
-                $data['alertsuccess'] = 'Image Gallery Updated Successfully.';
+                $data['alertsuccess'] = 'Galería de imágenes actualizado correctamente.';
             }
             $data['redirect'] = 'site/viewGallery';
             $this->load->view('redirect', $data);
@@ -1360,7 +1360,7 @@ class Site extends CI_Controller
                 $this->load->library('image_lib', $config_r);
                 $this->image_lib->initialize($config_r);
                 if (!$this->image_lib->resize()) {
-                    $data['alerterror'] = 'Failed.'.$this->image_lib->display_errors();
+                    $data['alerterror'] = 'Ha fallado.'.$this->image_lib->display_errors();
 
                     // return false;
                 } else {
@@ -1373,15 +1373,15 @@ class Site extends CI_Controller
                     // return false;
                 }
                 if ($this->galleryimage_model->create($gallery, $order, $status, $image, $alt) == 0) {
-                $data['alerterror'] = 'New Image Gallery Image could not be created.';
+                $data['alerterror'] = 'Nueva Galería de imágenes La imagen no se ha podido crear.';
             } else {
-                $data['alertsuccess'] = 'Image Gallery Image created Successfully.';
+                $data['alertsuccess'] = 'Galería de imágenes Imagen creada con éxito.';
             }
             $data['redirect'] = 'site/viewGalleryImage?id='.$gallery;
             $this->load->view('redirect2', $data);
             }
             else{
-            $data['alerterror'] = 'Image Upload is Mandatory.';
+            $data['alerterror'] = 'Cargar imagen es obligatorio.';
             $data['redirect'] = 'site/createGalleryImage?id='.$gallery;
             $this->load->view('redirect2', $data);
             }
@@ -1458,7 +1458,7 @@ class Site extends CI_Controller
                 $this->load->library('image_lib', $config_r);
                 $this->image_lib->initialize($config_r);
                 if (!$this->image_lib->resize()) {
-                    $data['alerterror'] = 'Failed.'.$this->image_lib->display_errors();
+                    $data['alerterror'] = 'Ha fallado.'.$this->image_lib->display_errors();
 
                     // return false;
                 } else {
@@ -1481,9 +1481,9 @@ class Site extends CI_Controller
             }
 
             if ($this->galleryimage_model->edit($id, $gallery, $order, $status, $image, $alt) == 0) {
-                $data['alerterror'] = 'New Image Gallery Image Could Not Be Updated.';
+                $data['alerterror'] = 'Nueva Galería de imágenes no se pudo actualizar.';
             } else {
-                $data['alertsuccess'] = 'Image Gallery Image Updated Successfully.';
+                $data['alertsuccess'] = 'Galería de Imágenes actualizado correctamente.';
             }
             $data['redirect'] = 'site/viewGalleryImage?id='.$gallery;
             $this->load->view('redirect2', $data);
@@ -1613,9 +1613,9 @@ class Site extends CI_Controller
             $json = $this->input->get_post('json');
             $subtitle = $this->input->get_post('subtitle');
             if ($this->videogallery_model->create($order, $status, $name, $json, $subtitle) == 0) {
-                $data['alerterror'] = 'New Video Gallery could not be created.';
+                $data['alerterror'] = 'Nueva galeria no se pudo crear.';
             } else {
-                $data['alertsuccess'] = 'Video Gallery created Successfully.';
+                $data['alertsuccess'] = 'Galería de vídeo creado con éxito.';
             }
             $data['redirect'] = 'site/viewVideoGallery';
             $this->load->view('redirect', $data);
@@ -1668,9 +1668,9 @@ class Site extends CI_Controller
             $timestamp = $this->input->get_post('timestamp');
             $subtitle = $this->input->get_post('subtitle');
             if ($this->videogallery_model->edit($id, $order, $status, $name, $json, $timestamp, $subtitle) == 0) {
-                $data['alerterror'] = 'New Video Gallery Could Not Be Updated.';
+                $data['alerterror'] = 'Nueva galeria no se pudo actualizar.';
             } else {
-                $data['alertsuccess'] = 'Video Gallery Updated Successfully.';
+                $data['alertsuccess'] = 'Galería de vídeo actualizado correctamente.';
             }
             $data['redirect'] = 'site/viewVideoGallery';
             $this->load->view('redirect', $data);
@@ -1807,9 +1807,9 @@ class Site extends CI_Controller
             $url = $this->input->get_post('url');
             $alt = $this->input->get_post('alt');
             if ($this->videogalleryvideo_model->create($order, $status, $videogallery, $url, $alt) == 0) {
-                $data['alerterror'] = 'New Video Gallery Video Could Not Be created.';
+                $data['alerterror'] = 'Nuevo video galeria no se pudo crear.';
             } else {
-                $data['alertsuccess'] = 'Video Gallery Video created Successfully.';
+                $data['alertsuccess'] = 'Video Galería de vídeo creado con éxito.';
             }
             $data['redirect'] = 'site/viewVideoGalleryVideo?id='.$videogallery;
             $this->load->view('redirect2', $data);
@@ -1861,9 +1861,9 @@ class Site extends CI_Controller
             $url = $this->input->get_post('url');
             $alt = $this->input->get_post('alt');
             if ($this->videogalleryvideo_model->edit($id, $order, $status, $videogallery, $url, $alt) == 0) {
-                $data['alerterror'] = 'New Video Gallery Video Could Not Be Updated.';
+                $data['alerterror'] = 'Nuevo video galeria no se pudo actualizar.';
             } else {
-                $data['alertsuccess'] = 'Video Gallery Video Updated Successfully.';
+                $data['alertsuccess'] = 'Galería de videos Video Actualizado con éxito.';
             }
             $data['redirect'] = 'site/viewVideoGalleryVideo?id='.$videogallery;
             $this->load->view('redirect2', $data);
@@ -1997,15 +1997,15 @@ class Site extends CI_Controller
                 $uploaddata = $this->upload->data();
                 $image = $uploaddata['file_name'];
                 if ($this->events_model->create($status, $title, $timestamp, $content, $venue, $image, $startdate, $starttime) == 0) {
-                $data['alerterror'] = 'New Event could not be created.';
+                $data['alerterror'] = 'Nuevo Evento no se pudo crear.';
             } else {
-                $data['alertsuccess'] = 'Event created Successfully.';
+                $data['alertsuccess'] = 'Evento creado con éxito.';
             }
             $data['redirect'] = 'site/viewEvents';
             $this->load->view('redirect', $data);
             }
             else{
-            $data['alerterror'] = 'Image upload is mandatory!';
+            $data['alerterror'] = 'Carga de imágenes es obligatorio!';
             $data['redirect'] = 'site/createEventsSubmit';
             $this->load->view('redirect', $data);
             }
@@ -2082,9 +2082,9 @@ class Site extends CI_Controller
             }
 
             if ($this->events_model->edit($id, $status, $title, $timestamp, $content, $venue, $image, $startdate, $starttime) == 0) {
-                $data['alerterror'] = 'New Event Could Not Be Updated.';
+                $data['alerterror'] = 'Nuevo Evento no pudo actualizarse.';
             } else {
-                $data['alertsuccess'] = 'Event Updated Successfully.';
+                $data['alertsuccess'] = 'Evento actualizado correctamente.';
             }
             $data['redirect'] = 'site/viewEvents';
             $this->load->view('redirect', $data);
@@ -2231,9 +2231,9 @@ class Site extends CI_Controller
             $order = $this->input->get_post('order');
             $url = $this->input->get_post('url');
             if ($this->eventvideo_model->create($event, $videogallery, $status, $order, $url) == 0) {
-                $data['alerterror'] = 'New Event Video could not be created.';
+                $data['alerterror'] = 'Nuevo vídeo del evento no se ha podido crear.';
             } else {
-                $data['alertsuccess'] = 'Event Video created Successfully.';
+                $data['alertsuccess'] = 'Evento de vídeo creado con éxito.';
             }
             $data['redirect'] = 'site/viewEventVideo?id='.$event;
             $this->load->view('redirect2', $data);
@@ -2288,9 +2288,9 @@ class Site extends CI_Controller
             $order = $this->input->get_post('order');
             $url = $this->input->get_post('url');
             if ($this->eventvideo_model->edit($id, $event, $videogallery, $status, $order, $url) == 0) {
-                $data['alerterror'] = 'New Event Video Could Not Be Updated.';
+                $data['alerterror'] = 'Nuevo video de eventos no se pudo actualizar.';
             } else {
-                $data['alertsuccess'] = 'Event Video Updated Successfully.';
+                $data['alertsuccess'] = 'Evento Video Actualizado con éxito.';
             }
             $data['redirect'] = 'site/viewEventVideo?id='.$event;
             $this->load->view('redirect2', $data);
@@ -2447,7 +2447,7 @@ class Site extends CI_Controller
                 $this->load->library('image_lib', $config_r);
                 $this->image_lib->initialize($config_r);
                 if (!$this->image_lib->resize()) {
-                    $data['alerterror'] = 'Failed.'.$this->image_lib->display_errors();
+                    $data['alerterror'] = 'Ha fallado.'.$this->image_lib->display_errors();
 
                     // return false;
                 } else {
@@ -2457,9 +2457,9 @@ class Site extends CI_Controller
 
                     $image = $this->image_lib->dest_image;
                      if ($this->eventimages_model->create($event, $status, $order, $image) == 0) {
-                    $data['alerterror'] = 'New Event Images could not be created.';
+                    $data['alerterror'] = 'Nuevas Imágenes del evento no pudieron ser creados.';
                     } else {
-                        $data['alertsuccess'] = 'Event Image created Successfully.';
+                        $data['alertsuccess'] = 'Imagen de evento creado con éxito.';
                     }
                     $data['redirect'] = 'site/viewEventImages?id='.$event;
                     $this->load->view('redirect2', $data);
@@ -2467,7 +2467,7 @@ class Site extends CI_Controller
                 }
             }
             else{
-                $data['alerterror'] = 'Images Field is Mandatory!';
+                $data['alerterror'] = 'Imágenes de campo es obligatorio!';
                 $data['redirect'] = 'site/createEventImagesSubmit?id='.$event;
                 $this->load->view('redirect2', $data);
             }
@@ -2542,7 +2542,7 @@ class Site extends CI_Controller
                 $this->load->library('image_lib', $config_r);
                 $this->image_lib->initialize($config_r);
                 if (!$this->image_lib->resize()) {
-                    $data['alerterror'] = 'Failed.'.$this->image_lib->display_errors();
+                    $data['alerterror'] = 'Ha fallado.'.$this->image_lib->display_errors();
 
                     // return false;
                 } else {
@@ -2565,9 +2565,9 @@ class Site extends CI_Controller
             }
 
             if ($this->eventimages_model->edit($id, $event, $status, $order, $image) == 0) {
-                $data['alerterror'] = 'New Event Image Could Not Be Updated.';
+                $data['alerterror'] = 'Nueva imagen de evento no se pudo actualizar.';
             } else {
-                $data['alertsuccess'] = 'Event Images Updated Successfully.';
+                $data['alertsuccess'] = 'Imágenes del evento actualizado correctamente.';
             }
             $data['redirect'] = 'site/viewEventImages?id='.$event;
             $this->load->view('redirect2', $data);
@@ -2693,9 +2693,9 @@ class Site extends CI_Controller
             $timestamp = $this->input->get_post('timestamp');
             $content = $this->input->get_post('content');
             if ($this->enquiry_model->create($user, $name, $email, $title, $timestamp, $content) == 0) {
-                $data['alerterror'] = 'New enquiry could not be created.';
+                $data['alerterror'] = 'Nueva consulta no se pudo crear.';
             } else {
-                $data['alertsuccess'] = 'enquiry created Successfully.';
+                $data['alertsuccess'] = 'Encuesta creada con éxito.';
             }
             $data['redirect'] = 'site/viewEnquiry';
             $this->load->view('redirect', $data);
@@ -2745,9 +2745,9 @@ class Site extends CI_Controller
             $timestamp = $this->input->get_post('timestamp');
             $content = $this->input->get_post('content');
             if ($this->enquiry_model->edit($id, $user, $name, $email, $title, $timestamp, $content) == 0) {
-                $data['alerterror'] = 'New enquiry Could Not Be Updated.';
+                $data['alerterror'] = 'Nueva consulta no se pudo actualizar.';
             } else {
-                $data['alertsuccess'] = 'enquiry Updated Successfully.';
+                $data['alertsuccess'] = 'Consulta actualizado correctamente.';
             }
             $data['redirect'] = 'site/viewEnquiry';
             $this->load->view('redirect', $data);
@@ -2885,7 +2885,7 @@ class Site extends CI_Controller
             $this->load->library('image_lib', $config_r);
             $this->image_lib->initialize($config_r);
             if (!$this->image_lib->resize()) {
-                $data['alerterror'] = 'Failed.'.$this->image_lib->display_errors();
+                $data['alerterror'] = 'Ha fallado.'.$this->image_lib->display_errors();
 
                 // return false;
             } else {
@@ -2900,9 +2900,9 @@ class Site extends CI_Controller
         }
 
         if ($this->notification_model->create($linktype, $event, $video, $gallery, $article, $status, $blog, $link, $content, $image) == 0) {
-            $data['alerterror'] = 'New notification could not be created.';
+            $data['alerterror'] = 'Nueva notificación no se ha podido crear.';
         } else {
-            $data['alertsuccess'] = 'notification created Successfully.';
+            $data['alertsuccess'] = 'Notificación creado con éxito.';
         }
         $data['redirect'] = 'site/viewNotification';
         $this->load->view('redirect', $data);
@@ -2996,7 +2996,7 @@ class Site extends CI_Controller
                 $this->load->library('image_lib', $config_r);
                 $this->image_lib->initialize($config_r);
                 if (!$this->image_lib->resize()) {
-                    $data['alerterror'] = 'Failed.'.$this->image_lib->display_errors();
+                    $data['alerterror'] = 'Ha fallado.'.$this->image_lib->display_errors();
 
                     // return false;
                 } else {
@@ -3019,9 +3019,9 @@ class Site extends CI_Controller
             }
 
             if ($this->notification_model->edit($id, $linktype, $event, $video, $gallery, $article, $status, $blog, $link, $content, $image, $timestamp) == 0) {
-                $data['alerterror'] = 'New notification Could Not Be Updated.';
+                $data['alerterror'] = 'Notificación de nuevo no pudo actualizarse.';
             } else {
-                $data['alertsuccess'] = 'notification Updated Successfully.';
+                $data['alertsuccess'] = 'Notificación actualizado correctamente.';
             }
             $data['redirect'] = 'site/viewNotification';
             $this->load->view('redirect', $data);
@@ -3148,9 +3148,9 @@ class Site extends CI_Controller
             $timestamp = $this->input->get_post('timestamp');
             $timestamp_receive = $this->input->get_post('timestamp_receive');
             if ($this->notificationuser_model->create($notification, $user, $timestamp, $timestamp_receive) == 0) {
-                $data['alerterror'] = 'New Notificationuser could not be created.';
+                $data['alerterror'] = 'Nuevo Usuario notificación no se ha podido crear.';
             } else {
-                $data['alertsuccess'] = 'Notificationuser created Successfully.';
+                $data['alertsuccess'] = 'Notificación de usuario creado con éxito.';
             }
             $data['redirect'] = 'site/viewNotificationUser?id='.$notification;
             $this->load->view('redirect2', $data);
@@ -3202,9 +3202,9 @@ class Site extends CI_Controller
             $timestamp = $this->input->get_post('timestamp');
             $timestamp_receive = $this->input->get_post('timestamp_receive');
             if ($this->notificationuser_model->edit($id, $notification, $user, $timestamp, $timestamp_receive) == 0) {
-                $data['alerterror'] = 'New notificationuser Could Not Be Updated.';
+                $data['alerterror'] = 'Nueva notificación del usuario no se pudo actualizar.';
             } else {
-                $data['alertsuccess'] = 'notificationuser Updated Successfully.';
+                $data['alertsuccess'] = 'Notificación actualizado correctamente.';
             }
             $data['redirect'] = 'site/viewNotificationUser?id='.$notification;
             $this->load->view('redirect2', $data);
@@ -3341,7 +3341,7 @@ class Site extends CI_Controller
                 $this->load->library('image_lib', $config_r);
                 $this->image_lib->initialize($config_r);
                 if (!$this->image_lib->resize()) {
-                    $data['alerterror'] = 'Failed.'.$this->image_lib->display_errors();
+                    $data['alerterror'] = 'Ha fallado.'.$this->image_lib->display_errors();
 
                     // return false;
                 } else {
@@ -3356,9 +3356,9 @@ class Site extends CI_Controller
             }
 
             if ($this->blog_model->create($title, $json, $content, $url, $image) == 0) {
-                $data['alerterror'] = 'New blog could not be created.';
+                $data['alerterror'] = 'Nuevo blog no se pudo crear.';
             } else {
-                $data['alertsuccess'] = 'blog created Successfully.';
+                $data['alertsuccess'] = 'blog creado con éxito.';
             }
             $data['redirect'] = 'site/viewBlog';
             $this->load->view('redirect', $data);
@@ -3428,7 +3428,7 @@ class Site extends CI_Controller
                 $this->load->library('image_lib', $config_r);
                 $this->image_lib->initialize($config_r);
                 if (!$this->image_lib->resize()) {
-                    $data['alerterror'] = 'Failed.'.$this->image_lib->display_errors();
+                    $data['alerterror'] = 'Ha fallado.'.$this->image_lib->display_errors();
 
                     // return false;
                 } else {
@@ -3451,9 +3451,9 @@ class Site extends CI_Controller
             }
 
             if ($this->blog_model->edit($id, $title, $json, $content, $timestamp, $url, $image) == 0) {
-                $data['alerterror'] = 'New blog Could Not Be Updated.';
+                $data['alerterror'] = 'Nuevo blog no se pudo actualizar.';
             } else {
-                $data['alertsuccess'] = 'blog Updated Successfully.';
+                $data['alertsuccess'] = 'Blog actualizado con éxito.';
             }
             $data['redirect'] = 'site/viewBlog';
             $this->load->view('redirect', $data);
@@ -3579,9 +3579,9 @@ class Site extends CI_Controller
             $order = $this->input->get_post('order');
             $video = $this->input->get_post('video');
             if ($this->blogvideo_model->create($blog, $status, $order, $video) == 0) {
-                $data['alerterror'] = 'New blogvideo could not be created.';
+                $data['alerterror'] = 'Video Blog  no se pudo crear.';
             } else {
-                $data['alertsuccess'] = 'blogvideo created Successfully.';
+                $data['alertsuccess'] = 'Video Blog creado con éxito.';
             }
             $data['redirect'] = 'site/viewBlogVideo?id='.$blog;
             $this->load->view('redirect', $data);
@@ -3632,9 +3632,9 @@ class Site extends CI_Controller
             $order = $this->input->get_post('order');
             $video = $this->input->get_post('video');
             if ($this->blogvideo_model->edit($id, $blog, $status, $order, $video) == 0) {
-                $data['alerterror'] = 'New blogvideo Could Not Be Updated.';
+                $data['alerterror'] = 'Nuevo video del blog no se pudo actualizar.';
             } else {
-                $data['alertsuccess'] = 'blogvideo Updated Successfully.';
+                $data['alertsuccess'] = 'Vídeo Blog actualizado correctamente.';
             }
             $data['redirect'] = 'site/viewBlogVideo?id='.$blog;
             $this->load->view('redirect2', $data);
@@ -3781,7 +3781,7 @@ class Site extends CI_Controller
                 $this->load->library('image_lib', $config_r);
                 $this->image_lib->initialize($config_r);
                 if (!$this->image_lib->resize()) {
-                    $data['alerterror'] = 'Failed.'.$this->image_lib->display_errors();
+                    $data['alerterror'] = 'Ha fallado.'.$this->image_lib->display_errors();
 
                     // return false;
                 } else {
@@ -3796,9 +3796,9 @@ class Site extends CI_Controller
             }
 
             if ($this->blogimages_model->create($blog, $status, $order, $image) == 0) {
-                $data['alerterror'] = 'New blogimages could not be created.';
+                $data['alerterror'] = 'Nuevas imágenes del blog no pudieron ser creados.';
             } else {
-                $data['alertsuccess'] = 'blogimages created Successfully.';
+                $data['alertsuccess'] = 'Imágenes en el blog creado con éxito.';
             }
             $data['redirect'] = 'site/viewBlogImages?id='.$blog;
             $this->load->view('redirect2', $data);
@@ -3870,7 +3870,7 @@ class Site extends CI_Controller
                 $this->load->library('image_lib', $config_r);
                 $this->image_lib->initialize($config_r);
                 if (!$this->image_lib->resize()) {
-                    $data['alerterror'] = 'Failed.'.$this->image_lib->display_errors();
+                    $data['alerterror'] = 'Ha fallado.'.$this->image_lib->display_errors();
 
                     // return false;
                 } else {
@@ -3893,9 +3893,9 @@ class Site extends CI_Controller
             }
 
             if ($this->blogimages_model->edit($id, $blog, $status, $order, $image) == 0) {
-                $data['alerterror'] = 'New blogimages Could Not Be Updated.';
+                $data['alerterror'] = 'Nuevas imágenes del blog no se pudo actualizar.';
             } else {
-                $data['alertsuccess'] = 'blogimages Updated Successfully.';
+                $data['alertsuccess'] = 'Imágenes blog actualizado con éxito.';
             }
             $data['redirect'] = 'site/viewBlogImages?id='.$blog;
             $this->load->view('redirect2', $data);
@@ -4030,16 +4030,16 @@ class Site extends CI_Controller
                 
                 
                 if ($this->slider_model->create($alt, $status, $order, $image) == 0) {
-                    $data['alerterror'] = 'New slider could not be created.';
+                    $data['alerterror'] = 'Nuevo control deslizante no se pudo crear.';
                 } else {
-                    $data['alertsuccess'] = 'slider created Successfully.';
+                    $data['alertsuccess'] = 'Deslizador creado con éxito.';
                 }
                 $data['redirect'] = 'site/viewSlider';
                 $this->load->view('redirect', $data);
             }
             else
             {
-                $data['alerterror'] ='Image Upload is Mandatory!';
+                $data['alerterror'] ='Cargar imagen es obligatorio!';
                  $data['redirect'] = 'site/createSliderSubmit';
                 $this->load->view('redirect', $data);
             }
@@ -4107,9 +4107,9 @@ class Site extends CI_Controller
             }
 
             if ($this->slider_model->edit($id, $alt, $status, $order, $image) == 0) {
-                $data['alerterror'] = 'New slider Could Not Be Updated.';
+                $data['alerterror'] = 'Nuevo control deslizante no se pudo actualizar.';
             } else {
-                $data['alertsuccess'] = 'slider Updated Successfully.';
+                $data['alertsuccess'] = 'Deslizador actualizado correctamente.';
             }
             $data['redirect'] = 'site/viewSlider';
             $this->load->view('redirect', $data);
@@ -4221,9 +4221,9 @@ class Site extends CI_Controller
             $type = $this->input->get_post('type');
             $content = $this->input->get_post('content');
             if ($this->config_model->create($title, $content, $text, $type) == 0) {
-                $data['alerterror'] = 'New config could not be created.';
+                $data['alerterror'] = 'Nueva configuración no se ha podido crear.';
             } else {
-                $data['alertsuccess'] = 'config created Successfully.';
+                $data['alertsuccess'] = 'Configuración creado con éxito.';
             }
             $data['redirect'] = 'site/viewConfig';
             $this->load->view('redirect', $data);
@@ -4478,9 +4478,9 @@ class Site extends CI_Controller
             } else {
                 $image = $preimage;
                 if ($this->config_model->edit($id, $title, $content, $text, $image, $type, $description) == 0) {
-                    $data['alerterror'] = 'New config Could Not Be Updated.';
+                    $data['alerterror'] = 'Nueva configuración no se pudo actualizar.';
                 } else {
-                    $data['alertsuccess'] = 'config Updated Successfully.';
+                    $data['alertsuccess'] = 'Configuración actualizado correctamente.';
                 }
                 $data['redirect'] = 'site/viewConfig';
                 $this->load->view('redirect', $data);
@@ -4488,9 +4488,9 @@ class Site extends CI_Controller
         }
        
             if ($this->config_model->edit($id, $title, $content, $text, $image, $type, $description) == 0) {
-                $data['alerterror'] = 'New config Could Not Be Updated.';
+                $data['alerterror'] = 'Nueva configuración no se pudo actualizar.';
             } else {
-                $data['alertsuccess'] = 'config Updated Successfully.';
+                $data['alertsuccess'] = 'Configuración actualizado correctamente.';
             }
             $data['redirect'] = 'site/viewConfig';
             $this->load->view('redirect', $data);
@@ -4532,9 +4532,9 @@ class Site extends CI_Controller
         $id = $this->input->get_post('id');
         $content = $this->input->get_post('content');
         if ($this->slider_model->editHome($id, $content) == 0) {
-            $data['alerterror'] = 'New home Could Not Be Updated.';
+            $data['alerterror'] = 'Nuevo hogar no se pudo actualizar.';
         } else {
-            $data['alertsuccess'] = 'home Updated Successfully.';
+            $data['alertsuccess'] = 'Casa actualizado correctamente.';
         }
         $data['redirect'] = 'site/editHome';
         $this->load->view('redirect2', $data);
