@@ -3,7 +3,7 @@
         <ul id="nav-mobile">
             <li><a class="waves-effect waves-light <?php if ($this->uri->segment(2) == 'editBlog') {
     echo 'active';
-} ?>"  href="<?php echo site_url('site/editBlog?id=').$before1; ?>">Blog Details</a></li>
+} ?>"  href="<?php echo site_url('site/editBlog?id=').$before1; ?>">Detalles del Blog</a></li>
             <li><a class="waves-effect waves-light <?php if ($this->uri->segment(2) == 'viewBlogVideo') {
     echo 'active';
 } ?>" href="<?php echo site_url('site/viewBlogVideo?id=').$before2; ?>">Blog Video</a></li>

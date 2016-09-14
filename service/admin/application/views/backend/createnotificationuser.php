@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col s12">
-        <h4 class="pad-left-15">Create Notificationuser</h4>
+        <h4 class="pad-left-15">Enviar notifiacion a usuario</h4>
     </div>
     <form class="col s12" method="post" action="<?php echo site_url('site/createNotificationUserSubmit');?>" enctype="multipart/form-data">
 
@@ -18,8 +18,8 @@
         <div class=" form-group">
             <label class="col-sm-2 control-label">&nbsp;</label>
             <div class="col-sm-4">
-                <button type="submit" class="btn btn-primary waves-effect waves-light green">Save</button>
-                <a href="<?php echo site_url('site/viewNotificationUser?id=').$this->input->get('id'); ?>" class="btn btn-secondary waves-effect waves-light red">Cancel</a>
+                <button type="submit" class="btn btn-primary waves-effect waves-light green">Guardar</button>
+                <a href="<?php echo site_url('site/viewNotificationUser?id=').$this->input->get('id'); ?>" class="btn btn-secondary waves-effect waves-light red">Cancelar</a>
             </div>
         </div>
     </form>

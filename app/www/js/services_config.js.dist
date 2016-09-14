@@ -1,0 +1,18 @@
+var adminbase = "http://businessapp.wohlig.com/admin/";
+
+var adminurl = adminbase + "index.php/json/";
+var adminimage = adminbase + "uploads/";
+var adminhauth = adminbase + "index.php/hauth/";
+var imgpath = adminimage + "image?name=";
+
+var foods = [];
+
+//FOR WORDPRESS INTEGRATION
+var Wordpress_UserName = "en.blog.wordpress.com";
+
+var WORDPRESS_API_URL = 'https://public-api.wordpress.com/rest/v1.1/';
+var WORDPRESS_self_API_URL = 'wp-json/wp/v2/posts';
+
+//for tumblr
+var Tumblr_UserName = "";
+var TUBMLR_API_URL = 'http://wohlig.co.in/tumblr/?url=http://api.tumblr.com/v2/blog/' + Tumblr_UserName + '/posts';

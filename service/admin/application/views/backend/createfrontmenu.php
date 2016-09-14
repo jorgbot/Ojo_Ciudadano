@@ -1,17 +1,17 @@
 <div class="row">
 	<div class="col 12">
-		<h4 class="pad-left-15">Create Navigation</h4>
+		<h4 class="pad-left-15">Crear Navegacion</h4>
 	</div>
 	<form class="col s12" method="post" action="<?php echo site_url('site/createFrontMenusubmit');?>" enctype="multipart/form-data">
 		<div class="row">
 			<div class="input-field col m6 s12">
-				<label for="name">Name</label>
+				<label for="name">Nombre</label>
 				<input type="text" id="name" name="name" value="<?php echo set_value('name');?>">
 			</div>
 		</div>
 		<div class="row">
 			<div class="input-field col m6 s12">
-				<label for="order">Order</label>
+				<label for="order">Orden</label>
 				<input type="text" id="order" name="order" value="<?php echo set_value('order');?>">
 			</div>
 		</div>
@@ -20,14 +20,14 @@
 		<div class="row">
 			<div class="input-field col m6 s12">
 				<?php echo form_dropdown('status', $status, set_value('status')); ?>
-					<label>Status</label>
+					<label>Estado</label>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="input-field col m6 s12">
 				<?php echo form_dropdown('linktype', $linktype, set_value('linktype')); ?>
-					<label>Link Type</label>
+					<label>Tipo de Link</label>
 			</div>
 		</div>
 
@@ -35,7 +35,7 @@
 		<div class="row drop">
 			<div class="input-field col m6 s12">
 				<?php echo form_dropdown('event', $event, set_value('event')); ?>
-					<label>Event</label>
+					<label>Evento</label>
 			</div>
 		</div>
 
@@ -52,7 +52,7 @@
 		<div class="row drop">
 			<div class="input-field col m6 s12">
 				<?php echo form_dropdown('video', $video, set_value('video')); ?>
-					<label>Video Gallery</label>
+					<label>Galeria de Videos</label>
 
 			</div>
 		</div>
@@ -61,7 +61,7 @@
 		<div class="row drop">
 			<div class="input-field col m6 s12">
 				<?php echo form_dropdown('gallery', $gallery, set_value('gallery')); ?>
-					<label>Image Gallery</label>
+					<label>Galeria de Imagenes</label>
 
 			</div>
 		</div>
@@ -70,22 +70,22 @@
 		<div class="row drop">
 			<div class="input-field col m6 s12">
 				<?php echo form_dropdown('article', $article, set_value('article')); ?>
-					<label>Page</label>
+					<label>Pagina</label>
 
 			</div>
 		</div>
 		<div class="row">
 			<div class="input-field col m6 s12">
 				<?php echo form_dropdown('icon', $icon, set_value('icon'), 'class="linear-icon form-control" data-placeholder="Choose a Accesslevel..."'); ?>
-					<label>Select Icon</label>
+					<label>Seleccionar Icono</label>
 			</div>
 		</div>
 		<div class="fieldjson"></div>
 		<div class=" form-group">
 			<div class="row">
 				<div class="col s12">
-					<button type="submit" class="btn btn-primary jsonsubmit waves-effect waves-light blue darken-4">Save</button>
-					<a href="<?php echo site_url('site/viewFrontmenu'); ?>" class="btn btn-secondary waves-effect waves-light red">Cancel</a>
+					<button type="submit" class="btn btn-primary jsonsubmit waves-effect waves-light blue darken-4">Cancelar</button>
+					<a href="<?php echo site_url('site/viewFrontmenu'); ?>" class="btn btn-secondary waves-effect waves-light red">Guardar</a>
 				</div>
 			</div>
 		</div>

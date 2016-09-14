@@ -15,7 +15,7 @@
          ?>
 				<div class="row">
 					<div class="input-field col s12 m6">
-						<label>Title</label>
+						<label>Titulo</label>
 						<input type="text" name="title" value="<?php echo set_value('title', $before->title);
          ?>">
 					</div>
@@ -33,14 +33,14 @@
 								<div class="input-field col s12 m6">
 									<?php echo form_dropdown('status', $status, set_value('status', $before->status));
          ?>
-										<label>Status</label>
+										<label>Estado</label>
 								</div>
 							</div>
 							<?php
      } ?>
 								<div class="row">
 									<div class="col s12 m6">
-										<label>Content</label>
+										<label>Contenido</label>
 										<textarea id="some-textarea" name="content" placeholder="Enter text ...">
 											<?php echo set_value('content', $before->content);?>
 										</textarea>
@@ -50,7 +50,7 @@
 
 								<div class="row hidden" >
 									<div class="input-field col s12 m6">
-										<label>Timestamp</label>
+										<label>Fecha</label>
 										<input type="text" readonly="true" name="timestamp" value="<?php echo set_value('timestamp', $before->timestamp);?>">
 									</div>
 								</div>
@@ -72,7 +72,7 @@
 }
          ?></span>
 										<div class="btn blue darken-4">
-											<span>Image</span>
+											<span>Imagen</span>
 											<input name="image" type="file" multiple>
 										</div>
 										<div class="file-path-wrapper">
@@ -85,7 +85,7 @@
 }
          ?>
 										</div>
-										 <div class="md4"><a class="waves-effect waves-light btn red clearimg input-field ">Clear Image</a></div>
+										 <div class="md4"><a class="waves-effect waves-light btn red clearimg input-field ">Eliminar Imagen</a></div>
 									</div>
 
 								</div>
@@ -93,7 +93,7 @@
      } ?>
 								<div class="row">
 									<div class=" form-group col s12 m6">
-											<button type="submit" class="btn btn-primary jsonsubmit waves-effect waves-light blue darken-4">Save</button>
+											<button type="submit" class="btn btn-primary jsonsubmit waves-effect waves-light blue darken-4">Guardar</button>
 											<?php if ($before->id == 1) {
     ?>
 
@@ -101,7 +101,7 @@
 } else {
          ?>
 													<a href="<?php echo site_url('site/viewArticles');
-         ?>" class="btn btn-secondary waves-effect waves-light red">Cancel</a>
+         ?>" class="btn btn-secondary waves-effect waves-light red">Cancelar</a>
 													<?php
      } ?>
 														<!--                <a href="<?php echo site_url('site/viewArticles'); ?>" class="btn btn-secondary waves-effect waves-light red">Cancel</a>-->
