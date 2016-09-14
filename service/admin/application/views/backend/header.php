@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <title>
-	<?php echo $title;?> - BusinessApp</title>
+	<?php echo $title;?> - Ojo Ciudadano</title>
 
 <head>
 	<link rel="shortcut icon" href="<?php echo base_url('assets').'/';?>img/favicon.png" type="image/png" />
@@ -30,7 +30,7 @@
 				<ul id="slide-out" class="side-nav fixed">
 					<li class="sub-menu logo">
 						<a id="logo-container" href="<?php echo site_url(); ?>" class="align-center blue-text text-darken-4" style="font-size: 28px;">
-                            Ojo<span style="font-weight: 400;">Ciudadano</span>
+                            Ojo<span style="font-weight: 400;"> Ciudadano</span>
 						</a>
 					</li>
 					<?php

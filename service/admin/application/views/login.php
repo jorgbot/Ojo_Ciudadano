@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="Wohlig">
-  <title>BusinessApp</title>
+  <title>Ojo Ciudadano</title>
   <link rel="shortcut icon" href="<?php echo base_url('assets').'/';?>img/favicon.png" type="image/png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
 
@@ -89,7 +89,7 @@
 -->
           <div class="blue-grey darken-3">
             <div class="card-content white-text">
-              <span class="card-title">Sign In</span>
+              <span class="card-title">Iniciar sesión</span>
             </div>
           </div>
 
@@ -97,18 +97,18 @@
             <div class="row">
               <div class="input-field col s12">
                 <input id="email" type="email" name="username" class="validate">
-                <label for="email">Email</label>
+                <label for="email">Correo</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
                 <input id="password" type="password" name="password" class="validate">
-                <label for="password">Password</label>
+                <label for="password">Contraseña</label>
               </div>
             </div>
             <div class="row">
               <div class="col s12">
-                <button class="btn waves-effect waves-light red darken-1 right" type="submit">Login</button>
+                <button class="btn waves-effect waves-light red darken-1 right" type="submit">Ingresar</button>
                 <!--                                <a href="">Forgot password?</a>-->
               </div>
             </div>
