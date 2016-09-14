@@ -1,9 +1,9 @@
-<ion-view view-title="My Profile">
+<ion-view view-title="Mi Perfil">
     <ion-content>
         <div class="relative profile-banner" ng-style="user.newcoverimage">
-            <button class="button button-dark button-small pull-right dark-transparent w-full" ng-click="picImageForCover()" ng-if="edit==true;">Edit Image</button>
+            <button class="button button-dark button-small pull-right dark-transparent w-full" ng-click="picImageForCover()" ng-if="edit==true;">Cambiar Imagen</button>
             <div class="image-adjust" ng-style="user.newimage">
-                <button class="button button-dark button-small dark-transparent w-full" ng-click="picFromGallery()" ng-if="edit==true;">Edit</button>
+                <button class="button button-dark button-small dark-transparent w-full" ng-click="picFromGallery()" ng-if="edit==true;">Editar</button>
             </div>
             <div class="gradient-hold full">
                 <h3 class="light">{{user.name}}</h3>
@@ -23,7 +23,7 @@
             <div class="list list-icon">
                 <label class="item item-input">
                     <span class="input-label"><i class="icon ln-user"></i></span>
-                    <input type="text" placeholder="Name" ng-model="user.name">
+                    <input type="text" placeholder="Nombre" ng-model="user.name">
                 </label>
                 <label class="item item-input">
                     <span class="input-label"><i class="icon ln-envelope"></i></span>
@@ -31,37 +31,37 @@
                 </label>
                 <label class="item item-input">
                     <span class="input-label"><i class="icon ln-phone"></i></span>
-                    <input type="tel" placeholder="Phone No." ng-model="user.contact">
+                    <input type="tel" placeholder="Numero de Telefono" ng-model="user.contact">
                 </label>
                 <label class="item item-input">
                     <span class="input-label"><i class="icon ln-map-marker"></i></span>
-                    <input type="text" placeholder="Location" ng-model="user.location">
+                    <input type="text" placeholder="Ciudad" ng-model="user.location">
                 </label>
                 <label class="item item-input">
                     <span class="input-label"><i class="icon ln-calendar2"></i></span>
-                    <input type="date" placeholder="Birth Date" ng-model="user.dob">
+                    <input type="date" placeholder="Fecha de Nacimiento" ng-model="user.dob">
                 </label>
             </div>
             <div class="padding-horizontal padding-bottom">
-                <button class="button button-positive button-block" ng-click="saveProfile();">Save</button>
+                <button class="button button-positive button-block" ng-click="saveProfile();">Guardar</button>
             </div>
             <div class="list list-icon">
-                <div class="item item-divider">Change Password</div>
+                <div class="item item-divider">Cambiar Contraseña</div>
                 <label class="item item-input">
                     <span class="input-label"><i class="icon ln-user"></i></span>
-                    <input type="password" placeholder="Old password" ng-model="password.oldpassword" ng-class="allvalidation[0].validation">
+                    <input type="password" placeholder="Fecha de Nacimiento" ng-model="password.oldpassword" ng-class="allvalidation[0].validation">
                 </label>
                 <label class="item item-input">
                     <span class="input-label"><i class="icon ln-envelope"></i></span>
-                    <input type="password" placeholder="New password" ng-model="password.newpassword" ng-class="allvalidation[1].validation">
+                    <input type="password" placeholder="Nueva Contraseña" ng-model="password.newpassword" ng-class="allvalidation[1].validation">
                 </label>
                 <label class="item item-input">
                     <span class="input-label"><i class="icon ln-phone"></i></span>
-                    <input type="password" placeholder="Confirm password" ng-model="password.confirmpassword" ng-class="allvalidation[2].validation">
+                    <input type="password" placeholder="Confirmar Contraseña" ng-model="password.confirmpassword" ng-class="allvalidation[2].validation">
                 </label>
             </div>
             <div class="padding-horizontal">
-                <button class="button button-positive button-block" ng-click="changePassword();">Change password</button>
+                <button class="button button-positive button-block" ng-click="changePassword();">Cambiar Contraseña</button>
             </div>
         </div>
         </ion-item>

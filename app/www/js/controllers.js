@@ -247,7 +247,7 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 	MyServices.getarticle($stateParams.id, function (data) {
 		$scope.article = data;
 		if (data == '') {
-			$scope.msg = "Blank Article.";
+			$scope.msg = "Articulo en Blanco.";
 		}
 		addanalytics(data.title);
 		$ionicLoading.hide();
@@ -394,8 +394,8 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 	$scope.showPopupsignupsuccess = function () {
 
 		var myPopup = $ionicPopup.show({
-			template: '<p class="text-center">Successfully registered!</p>',
-			title: 'Congrats!',
+			template: '<p class="text-center">Registro Exitoso</p>',
+			title: 'Exito!',
 			scope: $scope,
 
 		});
@@ -405,7 +405,7 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 	};
 	$scope.showPopupsignupfailure = function () {
 		var myPopup = $ionicPopup.show({
-			template: '<p class="text-center">User already exist</p>',
+			template: '<p class="text-center">Usuario ya existe</p>',
 			title: 'Oops!',
 			scope: $scope,
 
@@ -422,8 +422,8 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 			$.jStorage.set("user", data);
 			user = data;
 			var myPopup = $ionicPopup.show({
-				template: '<p class="text-center">Signed up successfully!</p>',
-				title: 'Congrats!',
+				template: '<p class="text-center">Registrado correctamente!</p>',
+				title: 'Exito!',
 				scope: $scope,
 
 			});
@@ -443,7 +443,7 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 		$ionicLoading.hide();
 		var myPopup = $ionicPopup.show({
 			template: '<p class="text-center">' + msg + '</p>',
-			title: 'Login',
+			title: 'Iniciar Sesion',
 			scope: $scope,
 
 		});
@@ -474,7 +474,7 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 				$location.url("/access/offline");
 			});
 		} else {
-			msgforall("Fill all data");
+			msgforall("Llenar todos los datos");
 			$ionicLoading.hide();
 		}
 
@@ -493,8 +493,8 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 		} else {
 
 			var alertPopup = $ionicPopup.alert({
-				title: 'Login failed!',
-				template: 'Wrong username or password!'
+				title: 'Inicio Sesion Fallido!',
+				template: '¡Nombre de usuario o contraseña incorrectos!'
 			});
 		}
 	}
@@ -513,7 +513,7 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 				$location.url("/access/offline");
 			});
 		} else {
-			msgforall("Fill all data");
+			msgforall("Llenar todos los datos");
 			$ionicLoading.hide();
 		}
 
@@ -557,8 +557,8 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 
 	$scope.showPopup2 = function () {
 		var myPopup = $ionicPopup.show({
-			template: '<p class="text-center">Your password is updated!</p>',
-			title: 'Password updated!',
+			template: '<p class="text-center">Tu Contraseña se a actualizado!</p>',
+			title: 'Contraseña Actualizada!',
 			scope: $scope,
 
 		});
@@ -570,8 +570,8 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 	$scope.showPopup3 = function () {
 
 		var myPopup = $ionicPopup.show({
-			template: '<p class="text-center">Your passwords do not match!</p>',
-			title: 'Sorry!',
+			template: '<p class="text-center">¡Tus contraseñas no coinciden!</p>',
+			title: 'Disculpa!',
 			scope: $scope,
 
 		});
@@ -583,8 +583,8 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 	$scope.showPopup4 = function () {
 
 		var myPopup = $ionicPopup.show({
-			template: '<p class="text-center">Something went wrong!</p>',
-			title: 'Oops! Try again.',
+			template: '<p class="text-center">¡Algo salió mal!</p>',
+			title: 'Oops! Vuelve a intentarlo.',
 			scope: $scope,
 
 		});
@@ -607,7 +607,7 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 			$scope.showPopup3();
 		}
 	}
-
+z
 	$scope.changepassword = function (password) {
 		$ionicLoading.show();
 
@@ -628,7 +628,7 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 				$location.url("/access/offline");
 			});
 		} else {
-			msgforall("Fill all data");
+			msgforall("Llenar todos los datos");
 			$ionicLoading.hide();
 		}
 
@@ -637,7 +637,7 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 })
 
 .controller('ForgotPasswordCtrl', function ($scope, $ionicLoading, $timeout, MyServices, $location, $ionicPopup) {
-	addanalytics("Forgot password");
+	addanalytics("Olvide la Contraseña");
 	// loader
 	$scope.showloading = function () {
 		$ionicLoading.show({
@@ -652,8 +652,8 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 		$ionicLoading.hide();
 		if (data == "true") {
 			var myPopup = $ionicPopup.show({
-				template: '<p class="text-center">Please check your email, an email has been send to your id.</p>',
-				title: 'Email sent!',
+				template: '<p class="text-center">Por favor, consultar su correo electrónico , un correo electrónico ha sido enviado a su ID .</p>',
+				title: 'Correo Enviado!',
 				scope: $scope,
 
 			});
@@ -664,8 +664,8 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 
 		} else {
 			var myPopup = $ionicPopup.show({
-				template: '<p class="text-center">Not a valid email.</p>',
-				title: 'Oops! Try again.',
+				template: '<p class="text-center">Email no valido.</p>',
+				title: 'Oops! Vuelve a intentarlo.',
 				scope: $scope,
 
 			});
@@ -687,7 +687,7 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 })
 
 .controller('HomeCtrl', function ($scope, $location, $window, MyServices, $ionicLoading, $timeout, $sce, $ionicSlideBoxDelegate) {
-	addanalytics("Home page");
+	addanalytics("Pagina de Inicio");
 	configreload.onallpage();
 	var showloading = function () {
 		$ionicLoading.show({
@@ -809,8 +809,8 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 	});
 	$scope.showPopup1 = function () {
 		var myPopup = $ionicPopup.show({
-			template: '<p class="text-center">Your profile is updated!</p>',
-			title: 'Thank you!',
+			template: '<p class="text-center">Tu perfil esta actualizado!</p>',
+			title: 'Gracias!',
 			scope: $scope,
 
 		});
@@ -834,7 +834,7 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 	$scope.passwordpopup = function (msg) {
 		var myPopup = $ionicPopup.show({
 			template: '<p class="text-center">' + msg + '</p>',
-			title: 'Forgot Password!',
+			title: 'Olvidaste Contraseña!',
 			scope: $scope,
 
 		});
@@ -861,11 +861,11 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 		if (check) {
 			MyServices.changepassword($scope.password, function (data) {
 				if (data == -1) {
-					$scope.passwordpopup("Both the passwords does not match");
+					$scope.passwordpopup("Las contraseñas no coinciden");
 				} else if (data == 0) {
-					$scope.passwordpopup("Old password does not match");
+					$scope.passwordpopup("La contraseña actual no es correcta");
 				} else {
-					$scope.passwordpopup("Password changed successfully");
+					$scope.passwordpopup("Contraseña cambiado con exito");
 				}
 				console.log(data);
 			}, function (err) {
@@ -873,7 +873,7 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 			});
 		} else {
 			$ionicLoading.hide();
-			$scope.passwordpopup("Please enter all the fields.");
+			$scope.passwordpopup("Por favor, llene todos los campos");
 		}
 
 
@@ -931,7 +931,7 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 	$scope.pageno = 1;
 	$scope.events = [];
 	$scope.keepscrolling = true;
-	$scope.msg = "Loading....";
+	$scope.msg = "Cargando....";
 	$scope.showloading = function () {
 		$ionicLoading.show({
 			template: '<ion-spinner class="spinner-positive"></ion-spinner>'
@@ -946,7 +946,7 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 		data.startdate = $filter('date')(item.startdate, 'dd MMM, yyyy');
 		data.starttime = $filter('convertto12')(item.starttime);
 		data.image = $filter('serverimage')(item.image);
-		window.plugins.socialsharing.share('Checkout "' + item.title + '" starting on ' + data.startdate + ', ' + data.starttime, null, data.image + 'At ' + item.venue);
+		window.plugins.socialsharing.share('Revisado "' + item.title + '" a partir de la ' + data.startdate + ', ' + data.starttime, null, data.image + 'en ' + item.venue);
 	}
 
 	$scope.loadevents = function (pageno) {
@@ -957,7 +957,7 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 			});
 
 			if ($scope.events.length == 0) {
-				$scope.msg = "No data found.";
+				$scope.msg = "Datos no encontrados.";
 			} else {
 				$scope.msg = "";
 			}
@@ -995,7 +995,7 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 		}, 5000);
 	};
 
-	$scope.msg = "Loading...";
+	$scope.msg = "Cargando...";
 	$scope.video = {};
 	$scope.image = {};
 
@@ -1043,7 +1043,7 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 	$scope.id = $stateParams.id;
 	var getsingleeventscallback = function (data, status) {
 		if (data == "") {
-			$scope.msg = "No data found";
+			$scope.msg = "Datos no encontrados";
 			addanalytics("Event detail page");
 		} else {
 			$scope.msg = "";
@@ -1069,7 +1069,7 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 	$ionicLoading.show();
 	$scope.pageno = 1;
 	$scope.keepscrolling = true;
-	$scope.msg = "Loading...";
+	$scope.msg = "Cargando...";
 	// loader
 
 	$scope.getblogdetailscms = function (id) {
@@ -1109,7 +1109,7 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 			if ($scope.blogs.length != 0) {
 				$scope.msg = "";
 			} else {
-				$scope.msg = "No data found";
+				$scope.msg = "Datos no encontrados";
 			}
 		}, function (err) {
 			$location.url("/access/offline");
@@ -1140,7 +1140,7 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 				$scope.msg = "";
 				$scope.blogs = data.response.posts;
 			} else {
-				$scope.msg = "No blog data or Invalid blog";
+				$scope.msg = "No hay datos blog o el blog no válido";
 			}
 		});
 	} else if ($.jStorage.get("blogType") && $.jStorage.get("blogType").name.toLowerCase() == "cms") {
@@ -1172,7 +1172,7 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 
 	configreload.onallpage();
 	$ionicLoading.hide();
-	$scope.msg = "Loading....";
+	$scope.msg = "Cargando....";
 	var getsingleblogsuccess = function (data, status) {
 		console.log(data);
 		$ionicLoading.hide();
@@ -1180,7 +1180,7 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 		$scope.details = data;
 		addanalytics(data.title);
 		if (data == '') {
-			$scope.msg = "No such blog";
+			$scope.msg = "Blog no existe";
 		} else {
 			$scope.msg = "";
 		}
@@ -1219,7 +1219,7 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 	addanalytics("Photo gallery");
 	configreload.onallpage();
 	$ionicLoading.show();
-	$scope.msg = "Loading....";
+	$scope.msg = "Cargando....";
 	$scope.pageno = 1;
 	$scope.photos = [];
 	$scope.keepscrolling = true;
@@ -1249,7 +1249,7 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 			}
 
 			if ($scope.photos.length == 0) {
-				$scope.msg = "The gallery is empty.";
+				$scope.msg = "La galeria esta vacia.";
 			} else {
 				$scope.msg = "";
 			}
@@ -1273,7 +1273,7 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 	addanalytics("Photo gallery Details");
 	configreload.onallpage();
 	$ionicLoading.show();
-	$scope.msg = "Loading....";
+	$scope.msg = "Cargando....";
 	$scope.keepscrolling = true;
 	$scope.photos = [];
 	$scope.pageno = 1;
@@ -1305,7 +1305,7 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 			}
 
 			if ($scope.photos.length == 0) {
-				$scope.msg = "The gallery is empty.";
+				$scope.msg = "La galeria esta vacia.";
 			} else {
 				$scope.msg = "";
 			}
@@ -1331,7 +1331,7 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 	$scope.videos = [];
 	$scope.keepscrolling = true;
 	$scope.pageno = 1;
-	$scope.msg = "Loading....";
+	$scope.msg = "Cargando....";
 	// loader
 	$scope.showloading = function () {
 		$ionicLoading.show({
@@ -1354,7 +1354,7 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 			}
 
 			if ($scope.videos.length == 0) {
-				$scope.msg = "The gallery is empty.";
+				$scope.msg = "La Galeria esta vacia.";
 			} else {
 				$scope.msg = "";
 			}
@@ -1381,7 +1381,7 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 	$scope.pageno = 1;
 	$scope.videos = [];
 	$scope.keepscrolling = true;
-	$scope.msg = "Loading....";
+	$scope.msg = "Cargando....";
 
 	$scope.share = function (item) {
 		console.log(item);
@@ -1412,7 +1412,7 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 			}
 
 			if ($scope.videos.length == 0) {
-				$scope.msg = "The gallery is empty.";
+				$scope.msg = "Galeria no contiene imagenes.";
 			} else {
 				$scope.msg = "";
 			}
@@ -1507,8 +1507,8 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 	$scope.showPopup1 = function () {
 
 		var myPopup = $ionicPopup.show({
-			template: '<p class="text-center">Your profile is created!</p>',
-			title: 'Thank you!',
+			template: '<p class="text-center">Perfil Creado!</p>',
+			title: 'Gracias!',
 			scope: $scope,
 		});
 		$timeout(function () {
@@ -1589,7 +1589,7 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 
 	$scope.goSocial = function (link) {
 		console.log(link);
-		console.log("dfasdf");
+		console.log("goSocial");
 		if (typeof cordova != 'undefined') {
 			cordova.InAppBrowser.open(link, '_blank', 'location=yes');
 		} else {
@@ -1606,7 +1606,7 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 	$scope.notify = [];
 	$scope.pageno = 1;
 	$scope.user = MyServices.getuser();
-	$scope.msg = "Loading...";
+	$scope.msg = "Cargando...";
 
 
 
@@ -1665,7 +1665,7 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 			});
 
 			if ($scope.notify.length == 0) {
-				$scope.msg = "No notifications.";
+				$scope.msg = "No Existe Notificaiones.";
 			} else {
 				$scope.msg = "";
 			}
@@ -1710,7 +1710,7 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 		$ionicLoading.hide();
 		var myPopup = $ionicPopup.show({
 			template: '<p class="text-center">' + msg + '</p>',
-			title: 'Contact Us',
+			title: 'Contactanos',
 			scope: $scope,
 
 		});
@@ -1731,8 +1731,8 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 
 	$scope.showPopupcontact = function () {
 		var myPopup = $ionicPopup.show({
-			template: '<p class="text-center">Successfully submitted!</p>',
-			title: 'Thank you!',
+			template: '<p class="text-center">Envio Exitoso</p>',
+			title: 'Gracias!',
 			scope: $scope,
 		});
 		$timeout(function () {
@@ -1742,8 +1742,8 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 	$scope.showPopupcontactfailure = function () {
 
 		var myPopup = $ionicPopup.show({
-			template: '<p class="text-center">Try again!</p>',
-			title: 'Sorry!',
+			template: '<p class="text-center">Vuelve a intentarlo!</p>',
+			title: 'Disculpa!',
 			scope: $scope,
 		});
 		$timeout(function () {
@@ -1771,7 +1771,7 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 				$location.url("/access/offline");
 			});
 		} else {
-			msgforall('Fill all data');
+			msgforall('Rellene todos los datos');
 			$ionicLoading.hide();
 		}
 
