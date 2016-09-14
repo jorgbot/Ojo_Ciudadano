@@ -11,7 +11,7 @@
 		</div>
 		<div class="row">
 			<div class="input-field col m6 s12">
-				<label for="email">Email/Correo</label>
+				<label for="email">Correo</label>
 				<input type="email" id="email" class="form-control" name="email" value="<?php echo set_value('email');?>">
 			</div>
 		</div>
@@ -29,7 +29,7 @@
 		</div>
 		<div class="row">
 			<div class="input-field col m6 s12">
-				<label for="socialid">Social Id</label>
+				<label for="socialid">Id Red Social</label>
 				<input type="text" id="socialid" name="socialid" value="<?php echo set_value('socialid');?>">
 			</div>
 		</div>
@@ -42,13 +42,13 @@
 		<div class="row">
 			<div class="input-field col m6 s12">
 			<select id="logintype" name="logintype" id="" value="<?php echo set_value('logintype');?>">
-			    <option value="Email">Email</option>
+			    <option value="Email">Correo</option>
 			    <option value="Facebook">Facebook</option>
 			    <option value="Google">Google</option>
 			    <option value="Twitter">Twitter</option>
 			    <option value="Instagram">Instagram</option>
 			</select>
-				<label for="logintype">Tipo de Login</label>
+				<label for="logintype">Tipo de Inicio</label>
 			</div>
 		</div>
 		<div class="row">
@@ -64,18 +64,18 @@
 					<input name="image" type="file" multiple>
 				</div>
 				<div class="file-path-wrapper">
-					<input class="file-path validate" type="text" placeholder="Upload one or more files" value="<?php echo set_value('image');?>">
+					<input class="file-path validate" type="text" placeholder="Sube uno o más archivos" value="<?php echo set_value('image');?>">
 				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="file-field input-field col m6 s12">
 				<div class="btn blue darken-4">
-					<span>Imagen Cover</span>
+					<span>Imagen Portada</span>
 					<input name="coverimage" type="file" multiple>
 				</div>
 				<div class="file-path-wrapper">
-					<input class="file-path validate" type="text" placeholder="Upload one or more files" value="<?php echo set_value('coverimage');?>">
+					<input class="file-path validate" type="text" placeholder="Sube uno o más archivos" value="<?php echo set_value('coverimage');?>">
 				</div>
 			</div>
 		</div>
@@ -93,14 +93,14 @@
 		</div>
 		<div class="row">
 			<div class="col m3 s6">
-				<label for="filled-in-box" class="form-checkbox">Notificacion sobre Eventos</label>
+				<label for="filled-in-box" class="form-checkbox">Notificacion de Eventos</label>
 			</div>
 			<div class="col m3 s6">
 				<div class="switch">
 					<label>
-						Off
+						No
 						<input type="checkbox" name="eventnotification" value="true">
-						<span class="lever"></span> On
+						<span class="lever"></span> Si
 					</label>
 				</div>
 			</div>
@@ -108,14 +108,14 @@
 
 		<div class="row">
 			<div class="col m3 s6">
-				<label for="filled-in-box" class="form-checkbox">Notificacion sobre Fotos</label>
+				<label for="filled-in-box" class="form-checkbox">Notificacion de Fotos</label>
 			</div>
 			<div class="col m3 s6">
 				<div class="switch">
 					<label>
-						Off
+						No
 						<input type="checkbox" name="photonotification" value="true">
-						<span class="lever"></span> On
+						<span class="lever"></span> Si
 					</label>
 				</div>
 			</div>
@@ -123,14 +123,14 @@
 
 		<div class="row">
 			<div class="col m3 s6">
-				<label for="filled-in-box" class="form-checkbox">Notificacion sobre Videos</label>
+				<label for="filled-in-box" class="form-checkbox">Notificacion de Videos</label>
 			</div>
 			<div class="col m3 s6">
 				<div class="switch">
 					<label>
-						Off
+						No
 						<input type="checkbox" name="videonotification" value="true">
-						<span class="lever"></span> On
+						<span class="lever"></span> Si
 					</label>
 				</div>
 			</div>
@@ -138,14 +138,14 @@
 
 		<div class="row">
 			<div class="col m3 s6">
-				<label for="filled-in-box" class="form-checkbox">Notificacion sobre Blogs</label>
+				<label for="filled-in-box" class="form-checkbox">Notificacion de Blog</label>
 			</div>
 			<div class="col m3 s6">
 				<div class="switch">
 					<label>
-						Off
+						No
 						<input type="checkbox" name="blognotification" value="true">
-						<span class="lever"></span> On
+						<span class="lever"></span> Si
 					</label>
 				</div>
 			</div>

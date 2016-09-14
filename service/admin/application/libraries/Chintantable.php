@@ -133,8 +133,8 @@ class Chintantable
         </div>
         <div class="col m12 l6">
             <div class="row margintop15">
-                <div class="col s8 m6"><input class="form-control chintantablesearch" type="text" placeholder="Search"></div>
-                <div class="col s4 m3"><button class="btn blue darken-4 chintantablesearchgo waves-effect waves-light" type="button">Go!</button></div>
+                <div class="col s8 m6"><input class="form-control chintantablesearch" type="text" placeholder="Buscar..."></div>
+                <div class="col s4 m3"><button class="btn blue darken-4 chintantablesearchgo waves-effect waves-light" type="button">Buscar</button></div>
                 <div class="col s12 m3">
                 <select class="maxrow form-control">
                     <option value="10">10</option>

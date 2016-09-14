@@ -35,7 +35,7 @@
                             <tr>
                                 <th>ID</th>
                                 <th>Nombre</th>
-                                <th>Email</th>
+                                <th>Correo</th>
                                 <th>Fecha</th>
                                 <th>Accion</th>
                             </tr>

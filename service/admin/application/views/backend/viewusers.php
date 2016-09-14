@@ -2,16 +2,16 @@
     <div class="col s12">
         <div class="row">
             <div class="col s12 drawchintantable">
-                 <?php $this->chintantable->createsearch('List of Users');?>
+                 <?php $this->chintantable->createsearch('Lista de Usuarios');?>
                 <table class="highlight responsive-table">
                     <thead>
                         <tr>
                             <th data-field="id" data-selectall='true' data-delete-selected="<?php echo $deleteselected;?>">Id</th>
-                            <th data-field="name">Name</th>
-                            <th data-field="email">Item Name</th>
-                            <th data-field="logintype">Login Type</th>
-                            <th data-field="accesslevelname">Item Name</th>
-                            <th data-field="">Action</th>
+                            <th data-field="name">Nombre</th>
+                            <th data-field="email">Correo</th>
+                            <th data-field="logintype">Tipo Inicio</th>
+                            <th data-field="accesslevelname">Nivel Acceso</th>
+                            <th data-field="">Accion</th>
                         </tr>
                     </thead>
                     <tbody>
