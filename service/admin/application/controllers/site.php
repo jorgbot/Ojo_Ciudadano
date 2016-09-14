@@ -116,7 +116,7 @@ class Site extends CI_Controller
             $data['videonotification'] = $this->user_model->getVideoNotificationDropDown();
             $data['blognotification'] = $this->user_model->getBlogNotificationDropDown();
             $data['page'] = 'createuser';
-            $data['title'] = 'Create User';
+            $data['title'] = 'Crear usuario';
             $this->load->view('template', $data);
         } else {
             $name = $this->input->post('name');
@@ -347,9 +347,9 @@ class Site extends CI_Controller
             $data['before'] = $this->user_model->beforeEdit($this->input->post('id'));
             $data['page'] = 'edituser';
 
-            //			$data['page2']='block/userblock';
+            //          $data['page2']='block/userblock';
 
-            $data['title'] = 'Edit User';
+            $data['title'] = 'Editar Usuario';
             $this->load->view('template', $data);
         } else {
             $id = $this->input->get_post('id');
@@ -474,7 +474,7 @@ class Site extends CI_Controller
         $this->checkAccess($access);
         $this->user_model->deleteUser($this->input->get('id'));
 
-        //		$data['table']=$this->user_model->viewUsers();
+        //      $data['table']=$this->user_model->viewUsers();
 
         $data['alertsuccess'] = 'Usuario eliminado con éxito';
         $data['redirect'] = 'site/viewUsers';
@@ -492,7 +492,7 @@ class Site extends CI_Controller
         $this->checkAccess($access);
         $this->user_model->changeStatus($this->input->get('id'));
 
-        //		$data['table']=$this->user_model->viewUsers();
+        //      $data['table']=$this->user_model->viewUsers();
 
         $data['alertsuccess'] = 'El estado ha cambiado con éxito';
         $data['redirect'] = 'site/viewUsers';
@@ -510,7 +510,7 @@ class Site extends CI_Controller
         $data['status'] = $this->user_model->getStatusDropDown();
         $data['base_url'] = site_url('site/viewArticlesjson');
         $data['deleteselected'] = site_url('site/deleteSelectedArticles');
-        $data['title'] = 'View Pages';
+        $data['title'] = 'Ver páginas';
         $data['activemenu'] = 'pages';
         $this->load->view('template', $data);
     }
@@ -581,7 +581,7 @@ class Site extends CI_Controller
         $data['page'] = 'createarticles';
         $data['activemenu'] = 'pages';
         $data['status'] = $this->user_model->getStatusDropDown();
-        $data['title'] = 'Create Page';
+        $data['title'] = 'Crear página';
         $this->load->view('template', $data);
     }
 
@@ -599,7 +599,7 @@ class Site extends CI_Controller
             $data['alerterror'] = validation_errors();
             $data['page'] = 'createarticles';
             $data['status'] = $this->user_model->getStatusDropDown();
-            $data['title'] = 'Create Page';
+            $data['title'] = 'Crear página';
             $this->load->view('template', $data);
         } else {
             $status = $this->input->get_post('status');
@@ -649,7 +649,7 @@ class Site extends CI_Controller
         $data['page'] = 'editarticles';
         $data['activemenu'] = 'pages';
         $data['status'] = $this->user_model->getStatusDropDown();
-        $data['title'] = 'Edit Page';
+        $data['title'] = 'Editar página';
         $data['before'] = $this->articles_model->beforeEdit($this->input->get('id'));
         $this->load->view('template', $data);
     }
@@ -669,7 +669,7 @@ class Site extends CI_Controller
             $data['alerterror'] = validation_errors();
             $data['page'] = 'editarticles';
             $data['status'] = $this->user_model->getStatusDropDown();
-            $data['title'] = 'Edit Page';
+            $data['title'] = 'Editar página';
             $data['before'] = $this->articles_model->beforeEdit($this->input->get('id'));
             $this->load->view('template', $data);
         } else {
@@ -733,7 +733,7 @@ class Site extends CI_Controller
         $data['status'] = $this->user_model->getStatusDropDown();
         $data['base_url'] = site_url('site/viewFrontmenuJson');
         $data['deleteselected'] = site_url('site/deleteSelectedFrontmenu');
-        $data['title'] = 'View Navigation';
+        $data['title'] = 'Vista de navegación';
         $data['activemenu'] = 'navigations';
         $this->load->view('template', $data);
     }
@@ -828,7 +828,7 @@ class Site extends CI_Controller
         $data['article'] = $this->user_model->getArticleDropDown();
         $data['gallery'] = $this->user_model->getGalleryDropDown();
         $data['icon'] = $this->user_model->getLinkDropDown();
-        $data['title'] = 'Create Navigation';
+        $data['title'] = 'Crear navegación';
         $this->load->view('template', $data);
     }
 
@@ -854,7 +854,7 @@ class Site extends CI_Controller
             $data['article'] = $this->user_model->getArticleDropDown();
             $data['gallery'] = $this->user_model->getGalleryDropDown();
             $data['icon'] = $this->user_model->getLinkDropDown();
-            $data['title'] = 'Create Navigation';
+            $data['title'] = 'Crear navegación';
             $this->load->view('template', $data);
         } else {
             $order = $this->input->get_post('order');
@@ -908,7 +908,7 @@ class Site extends CI_Controller
         $data['article'] = $this->user_model->getArticleDropDown();
         $data['gallery'] = $this->user_model->getGalleryDropDown();
         $data['icon'] = $this->user_model->getLinkDropDown();
-        $data['title'] = 'Edit Navigation';
+        $data['title'] = 'Editar navegación';
         $data['before'] = $this->frontmenu_model->beforeEdit($this->input->get('id'));
         $this->load->view('template', $data);
     }
@@ -936,7 +936,7 @@ class Site extends CI_Controller
             $data['article'] = $this->user_model->getArticleDropDown();
             $data['gallery'] = $this->user_model->getGalleryDropDown();
             $data['icon'] = $this->user_model->getLinkDropDown();
-            $data['title'] = 'Edit Navigation';
+            $data['title'] = 'Editar navegación';
             $data['before'] = $this->frontmenu_model->beforeEdit($this->input->get('id'));
             $this->load->view('template', $data);
         } else {
@@ -1005,7 +1005,7 @@ class Site extends CI_Controller
         $data['deleteselected'] = site_url('site/deleteSelectedGallery');
         $data["tablename"] = 'webapp_gallery';
         $data["orderfield"] = 'order';
-        $data['title'] = 'View Image Gallery';
+        $data['title'] = 'Ver galería de imágenes';
         $data['activemenu'] = 'image gallery';
         $this->load->view('template', $data);
     }
@@ -1083,7 +1083,7 @@ class Site extends CI_Controller
         $data['page'] = 'creategallery';
         $data['activemenu'] = 'image gallery';
         $data['status'] = $this->user_model->getStatusDropDown();
-        $data['title'] = 'Create Image Gallery';
+        $data['title'] = 'Crear galería de imágenes';
         $this->load->view('template', $data);
     }
 
@@ -1101,7 +1101,7 @@ class Site extends CI_Controller
             $data['alerterror'] = validation_errors();
             $data['status'] = $this->user_model->getStatusDropDown();
             $data['page'] = 'creategallery';
-            $data['title'] = 'Create Image Gallery';
+            $data['title'] = 'Crear galería de imágenes';
             $this->load->view('template', $data);
         } else {
             $order = $this->input->get_post('order');
@@ -1126,7 +1126,7 @@ class Site extends CI_Controller
                 $this->load->view('redirect', $data);
             }
             else{
-                $data['alerterror'] = 'Image Upload is Mandatory!';
+                $data['alerterror'] = 'Cargar imagen es obligatorio!';
                 $data['redirect'] = 'site/createGallerySubmit';
                 $this->load->view('redirect', $data);
             }
@@ -1147,7 +1147,7 @@ class Site extends CI_Controller
         $data['status'] = $this->user_model->getStatusDropDown();
         $data['before1'] = $this->input->get('id');
         $data['before2'] = $this->input->get('id');
-        $data['title'] = 'Edit Image Gallery';
+        $data['title'] = 'Galería Editar imagen';
         $data['before'] = $this->gallery_model->beforeEdit($this->input->get('id'));
         $this->load->view('templatewith2', $data);
     }
@@ -1167,7 +1167,7 @@ class Site extends CI_Controller
             $data['alerterror'] = validation_errors();
             $data['page'] = 'editgallery';
             $data['status'] = $this->user_model->getStatusDropDown();
-            $data['title'] = 'Edit Image Gallery';
+            $data['title'] = 'Galería Editar imagen';
             $data['before'] = $this->gallery_model->beforeEdit($this->input->get('id'));
             $this->load->view('template', $data);
         } else {
@@ -1233,7 +1233,7 @@ class Site extends CI_Controller
         $data['gallery'] = $this->user_model->getGalleryDropDown();
         $data['base_url'] = site_url('site/viewGalleryImageJson?id='.$this->input->get('id'));
         $data['deleteselected'] = site_url('site/deleteSelectedGalleryImage');
-        $data['title'] = 'View Image Gallery';
+        $data['title'] = 'Ver galería de imágenes';
         $this->load->view('templatewith2', $data);
     }
 
@@ -1310,7 +1310,7 @@ class Site extends CI_Controller
         $data['gallery'] = $this->user_model->getGalleryDropDown();
         $data['before1'] = $this->input->get('id');
         $data['before2'] = $this->input->get('id');
-        $data['title'] = 'Create Image Gallery';
+        $data['title'] = 'Crear galería de imágenes';
         $this->load->view('templatewith2', $data);
     }
 
@@ -1330,7 +1330,7 @@ class Site extends CI_Controller
             $data['page'] = 'creategalleryimage';
             $data['gallery'] = $this->user_model->getGalleryDropDown();
             $data['status'] = $this->user_model->getStatusDropDown();
-            $data['title'] = 'Create Image Gallery';
+            $data['title'] = 'Crear galería de imágenes';
             $this->load->view('template', $data);
         } else {
             $gallery = $this->input->get_post('gallery');
@@ -1405,7 +1405,7 @@ class Site extends CI_Controller
         $data['before1'] = $this->input->get('galleryid');
         $data['before2'] = $this->input->get('galleryid');
         $data['gallery'] = $this->user_model->getGalleryDropDown();
-        $data['title'] = 'Edit Image Gallery';
+        $data['title'] = 'Galería Editar imagen';
         $data['before'] = $this->galleryimage_model->beforeEdit($this->input->get('id'));
         $this->load->view('templatewith2', $data);
     }
@@ -1426,7 +1426,7 @@ class Site extends CI_Controller
             $data['page'] = 'editgalleryimage';
             $data['gallery'] = $this->user_model->getGalleryDropDown();
             $data['status'] = $this->user_model->getStatusDropDown();
-            $data['title'] = 'Edit Image Gallery';
+            $data['title'] = 'Galería Editar imagen';
             $data['before'] = $this->galleryimage_model->beforeEdit($this->input->get('id'));
             $this->load->view('template', $data);
         } else {
@@ -1512,7 +1512,7 @@ class Site extends CI_Controller
         $data["tablename"] = 'webapp_videogallery';
         $data["orderfield"] = 'order';
         $data['deleteselected'] = site_url('site/deleteSelectedVideoGallery');
-        $data['title'] = 'View Video Gallery';
+        $data['title'] = 'Ver galeria';
         $data['activemenu'] = 'video gallery';
         $this->load->view('template', $data);
     }
@@ -1585,7 +1585,7 @@ class Site extends CI_Controller
         $data['activemenu'] = 'video gallery';
         $data['status'] = $this->user_model->getStatusDropDown();
         $data['videogallery'] = $this->user_model->getVideoGalleryDropDown();
-        $data['title'] = 'Create Video Gallery';
+        $data['title'] = 'Crear galeria';
         $this->load->view('template', $data);
     }
 
@@ -1604,7 +1604,7 @@ class Site extends CI_Controller
             $data['page'] = 'createvideogallery';
             $data['videogallery'] = $this->user_model->getVideoGalleryDropDown();
             $data['status'] = $this->user_model->getStatusDropDown();
-            $data['title'] = 'Create Video Gallery';
+            $data['title'] = 'Crear galeria';
             $this->load->view('template', $data);
         } else {
             $order = $this->input->get_post('order');
@@ -1635,7 +1635,7 @@ class Site extends CI_Controller
         $data['before2'] = $this->input->get('id');
         $data['videogallery'] = $this->user_model->getVideoGalleryDropDown();
         $data['status'] = $this->user_model->getStatusDropDown();
-        $data['title'] = 'Edit Video Gallery';
+        $data['title'] = 'Editar galeria';
         $data['before'] = $this->videogallery_model->beforeEdit($this->input->get('id'));
         $this->load->view('templatewith2', $data);
     }
@@ -1656,7 +1656,7 @@ class Site extends CI_Controller
             $data['videogallery'] = $this->user_model->getVideoGalleryDropDown();
             $data['status'] = $this->user_model->getStatusDropDown();
             $data['page'] = 'editvideogallery';
-            $data['title'] = 'Edit Video Gallery';
+            $data['title'] = 'Editar galeria';
             $data['before'] = $this->videogallery_model->beforeEdit($this->input->get('id'));
             $this->load->view('template', $data);
         } else {
@@ -1703,7 +1703,7 @@ class Site extends CI_Controller
         $data['before2'] = $this->input->get('id');
         $data['base_url'] = site_url('site/viewVideoGalleryVideoJson?id=').$this->input->get('id');
         $data['deleteselected'] = site_url('site/deleteSelectedVideoGalleryVideo');
-        $data['title'] = 'View Video Gallery Video';
+        $data['title'] = 'Ver Galería Vídeo';
         $this->load->view('templatewith2', $data);
     }
     
@@ -1779,7 +1779,7 @@ class Site extends CI_Controller
         $data['before2'] = $this->input->get('id');
         $data['status'] = $this->user_model->getStatusDropDown();
         $data['videogallery'] = $this->user_model->getVideoGalleryDropDown();
-        $data['title'] = 'Create Video Gallery Video';
+        $data['title'] = 'Crear video galeria';
         $this->load->view('templatewith2', $data);
     }
 
@@ -1798,7 +1798,7 @@ class Site extends CI_Controller
             $data['page'] = 'createvideogalleryvideo';
             $data['status'] = $this->user_model->getStatusDropDown();
             $data['videogallery'] = $this->user_model->getVideoGalleryDropDown();
-            $data['title'] = 'Create Video Gallery Video';
+            $data['title'] = 'Crear video galeria';
             $this->load->view('template', $data);
         } else {
             $order = $this->input->get_post('order');
@@ -1829,7 +1829,7 @@ class Site extends CI_Controller
         $data['before2'] = $this->input->get('videoid');
         $data['status'] = $this->user_model->getStatusDropDown();
         $data['videogallery'] = $this->user_model->getVideoGalleryDropDown();
-        $data['title'] = 'Edit Video Gallery Video';
+        $data['title'] = 'Editar vídeo Galería de vídeo';
         $data['before'] = $this->videogalleryvideo_model->beforeEdit($this->input->get('id'));
         $this->load->view('templatewith2', $data);
     }
@@ -1850,7 +1850,7 @@ class Site extends CI_Controller
             $data['videogallery'] = $this->user_model->getVideoGalleryDropDown();
             $data['page'] = 'editvideogalleryvideo';
             $data['status'] = $this->user_model->getStatusDropDown();
-            $data['title'] = 'Edit Video Gallery Video';
+            $data['title'] = 'Editar vídeo Galería de vídeo';
             $data['before'] = $this->videogalleryvideo_model->beforeEdit($this->input->get('id'));
             $this->load->view('template', $data);
         } else {
@@ -1891,7 +1891,7 @@ class Site extends CI_Controller
         $data['activemenu'] = 'events';
         $data['base_url'] = site_url('site/viewEventsJson');
          $data['deleteselected'] = site_url('site/deleteSelectedEvents');
-        $data['title'] = 'View Events';
+        $data['title'] = 'Ver Eventos';
         $this->load->view('template', $data);
     }
     
@@ -1957,7 +1957,7 @@ class Site extends CI_Controller
         $data['page'] = 'createevents';
         $data['status'] = $this->user_model->getStatusDropDown();
         $data['activemenu'] = 'events';
-        $data['title'] = 'Create Event';
+        $data['title'] = 'Crear evento';
         $this->load->view('template', $data);
     }
 
@@ -1975,7 +1975,7 @@ class Site extends CI_Controller
             $data['alerterror'] = validation_errors();
             $data['page'] = 'createevents';
             $data['status'] = $this->user_model->getStatusDropDown();
-            $data['title'] = 'Create Event';
+            $data['title'] = 'Crear evento';
             $this->load->view('template', $data);
         } else {
             $status = $this->input->get_post('status');
@@ -2026,7 +2026,7 @@ class Site extends CI_Controller
         $data['before1'] = $this->input->get('id');
         $data['before2'] = $this->input->get('id');
         $data['before3'] = $this->input->get('id');
-        $data['title'] = 'Edit Event';
+        $data['title'] = 'Editar Evento';
         $data['status'] = $this->user_model->getStatusDropDown();
         $data['before'] = $this->events_model->beforeEdit($this->input->get('id'));
         $data['exp'] = explode(':', $data['before']->starttime);
@@ -2048,7 +2048,7 @@ class Site extends CI_Controller
             $data['alerterror'] = validation_errors();
             $data['status'] = $this->user_model->getStatusDropDown();
             $data['page'] = 'editevents';
-            $data['title'] = 'Edit Event';
+            $data['title'] = 'Editar Evento';
             $data['before'] = $this->events_model->beforeEdit($this->input->get('id'));
             $this->load->view('template', $data);
         } else {
@@ -2118,7 +2118,7 @@ class Site extends CI_Controller
         $data['before3'] = $this->input->get('id');
         $data['base_url'] = site_url('site/viewEventVideoJson?id=').$this->input->get('id');
         $data['deleteselected'] = site_url('site/deleteSelectedEventsVideo');
-        $data['title'] = 'View Event Videos';
+        $data['title'] = 'Videos Ver eventos';
         $this->load->view('templatewith2', $data);
     }
 
@@ -2202,7 +2202,7 @@ class Site extends CI_Controller
         $data['status'] = $this->user_model->getStatusDropDown();
         $data['event'] = $this->user_model->getEventsDropDown();
         $data['videogallery'] = $this->user_model->getVideoGalleryDropDown();
-        $data['title'] = 'Create Event Video';
+        $data['title'] = 'Crear evento de vídeo';
         $this->load->view('templatewith2', $data);
     }
 
@@ -2222,7 +2222,7 @@ class Site extends CI_Controller
             $data['status'] = $this->user_model->getStatusDropDown();
             $data['videogallery'] = $this->user_model->getVideoGalleryDropDown();
             $data['event'] = $this->user_model->getEventsDropDown();
-            $data['title'] = 'Create Event Video';
+            $data['title'] = 'Crear evento de vídeo';
             $this->load->view('template', $data);
         } else {
             $event = $this->input->get_post('event');
@@ -2255,7 +2255,7 @@ class Site extends CI_Controller
         $data['videogallery'] = $this->user_model->getVideoGalleryDropDown();
         $data['event'] = $this->user_model->getEventsDropDown();
         $data['status'] = $this->user_model->getStatusDropDown();
-        $data['title'] = 'Edit Event Video';
+        $data['title'] = 'Editar evento de vídeo';
         $data['before'] = $this->eventvideo_model->beforeEdit($this->input->get('id'));
         $this->load->view('templatewith2', $data);
     }
@@ -2277,7 +2277,7 @@ class Site extends CI_Controller
             $data['videogallery'] = $this->user_model->getVideoGalleryDropDown();
             $data['status'] = $this->user_model->getStatusDropDown();
             $data['event'] = $this->user_model->getEventsDropDown();
-            $data['title'] = 'Edit Event Video';
+            $data['title'] = 'Editar evento de vídeo';
             $data['before'] = $this->eventvideo_model->beforeEdit($this->input->get('id'));
             $this->load->view('template', $data);
         } else {
@@ -2324,7 +2324,7 @@ class Site extends CI_Controller
         $data['before3'] = $this->input->get('id');
         $data['base_url'] = site_url('site/viewEventImagesJson?id=').$this->input->get('id');
         $data['deleteselected'] = site_url('site/deleteSelectedEventsImages');
-        $data['title'] = 'View Event Images';
+        $data['title'] = 'Ver Imágenes del Evento';
         $this->load->view('templatewith2', $data);
     }
     public function deleteSelectedEventsImages(){
@@ -2399,7 +2399,7 @@ class Site extends CI_Controller
         $data['before3'] = $this->input->get('id');
         $data['event'] = $this->user_model->getEventsDropDown();
         $data['status'] = $this->user_model->getStatusDropDown();
-        $data['title'] = 'Create Event Image';
+        $data['title'] = 'Crear imagen de sucesos';
         $this->load->view('templatewith2', $data);
     }
 
@@ -2418,7 +2418,7 @@ class Site extends CI_Controller
             $data['status'] = $this->user_model->getStatusDropDown();
             $data['page'] = 'createeventimages';
             $data['event'] = $this->user_model->getEventsDropDown();
-            $data['title'] = 'Create Event Image';
+            $data['title'] = 'Crear imagen de sucesos';
             $this->load->view('template', $data);
         } else {
             $event = $this->input->get_post('event');
@@ -2490,7 +2490,7 @@ class Site extends CI_Controller
         $data['before3'] = $this->input->get('eventid');
         $data['status'] = $this->user_model->getStatusDropDown();
         $data['event'] = $this->user_model->getEventsDropDown();
-        $data['title'] = 'Edit Event Image';
+        $data['title'] = 'Imagen de edición de eventos';
         $data['before'] = $this->eventimages_model->beforeEdit($this->input->get('id'));
         $this->load->view('templatewith2', $data);
     }
@@ -2511,7 +2511,7 @@ class Site extends CI_Controller
             $data['page'] = 'editeventimages';
             $data['event'] = $this->user_model->getEventsDropDown();
             $data['status'] = $this->user_model->getStatusDropDown();
-            $data['title'] = 'Edit Event Image';
+            $data['title'] = 'Imagen de edición de eventos';
             $data['before'] = $this->eventimages_model->beforeEdit($this->input->get('id'));
             $this->load->view('template', $data);
         } else {
@@ -2593,7 +2593,7 @@ class Site extends CI_Controller
         $this->checkAccess($access);
         $data['page'] = 'viewenquiry';
         $data['base_url'] = site_url('site/viewEnquiryJson');
-        $data['title'] = 'View Enquiry';
+        $data['title'] = 'Ver solicitud';
         $data['activemenu'] = 'enquiries';
         $this->load->view('template', $data);
     }
@@ -2663,7 +2663,7 @@ class Site extends CI_Controller
         $data['page'] = 'createenquiry';
         $data['activemenu'] = 'enquiries';
         $data['user'] = $this->user_model->getUserDropDown();
-        $data['title'] = 'Create Enquiry';
+        $data['title'] = 'Crear una solicitud';
         $this->load->view('template', $data);
     }
 
@@ -2683,7 +2683,7 @@ class Site extends CI_Controller
             $data['alerterror'] = validation_errors();
             $data['user'] = $this->user_model->getUserDropDown();
             $data['page'] = 'createenquiry';
-            $data['title'] = 'Create Enquiry';
+            $data['title'] = 'Crear una solicitud';
             $this->load->view('template', $data);
         } else {
             $user = $this->input->get_post('user');
@@ -2711,7 +2711,7 @@ class Site extends CI_Controller
         $data['page'] = 'editenquiry';
         $data['activemenu'] = 'enquiries';
         $data['user'] = $this->user_model->getUserDropDown();
-        $data['title'] = 'Edit Enquiry';
+        $data['title'] = 'Editar Consulta';
         $data['before'] = $this->enquiry_model->beforeEdit($this->input->get('id'));
         $this->load->view('template', $data);
     }
@@ -2733,7 +2733,7 @@ class Site extends CI_Controller
             $data['alerterror'] = validation_errors();
             $data['page'] = 'editenquiry';
             $data['user'] = $this->user_model->getUserDropDown();
-            $data['title'] = 'Edit Enquiry';
+            $data['title'] = 'Editar Consulta';
             $data['before'] = $this->enquiry_model->beforeEdit($this->input->get('id'));
             $this->load->view('template', $data);
         } else {
@@ -2774,7 +2774,7 @@ class Site extends CI_Controller
         $data['page'] = 'viewnotification';
         $data['deleteselected'] = site_url('site/deleteSelectedNotification');
         $data['base_url'] = site_url('site/viewNotificationJson');
-        $data['title'] = 'View Notifications';
+        $data['title'] = 'Ver notificaciones';
         $data['activemenu'] = 'notifications';
         $this->load->view('template', $data);
     }
@@ -2843,7 +2843,7 @@ class Site extends CI_Controller
         $data['article'] = $this->user_model->getArticleDropDown();
         $data['gallery'] = $this->user_model->getGalleryDropDown();
         $data['status'] = $this->user_model->getStatusDropDown();
-        $data['title'] = 'Create Notification';
+        $data['title'] = 'Crear Notificación';
         $this->load->view('template', $data);
     }
 
@@ -2928,7 +2928,7 @@ class Site extends CI_Controller
         $data['article'] = $this->user_model->getArticleDropDown();
         $data['gallery'] = $this->user_model->getGalleryDropDown();
         $data['status'] = $this->user_model->getStatusDropDown();
-        $data['title'] = 'Edit Notification';
+        $data['title'] = 'Editar notificación';
         $data['activemenu'] = 'notifications';
         $data['before'] = $this->notification_model->beforeEdit($this->input->get('id'));
         $this->load->view('template', $data);
@@ -2961,7 +2961,7 @@ class Site extends CI_Controller
             $data['article'] = $this->user_model->getArticleDropDown();
             $data['gallery'] = $this->user_model->getGalleryDropDown();
             $data['status'] = $this->user_model->getStatusDropDown();
-            $data['title'] = 'Edit Notification';
+            $data['title'] = 'Editar notificación';
             $data['before'] = $this->notification_model->beforeEdit($this->input->get('id'));
             $this->load->view('template', $data);
         } else {
@@ -3051,7 +3051,7 @@ class Site extends CI_Controller
         $data['before2'] = $this->input->get('id');
         $data['notification'] = $this->user_model->getNotificationDropDown();
         $data['base_url'] = site_url('site/viewNotificationUserJson?id=').$this->input->get('id');
-        $data['title'] = 'View Notification Users';
+        $data['title'] = 'Ver usuarios de notificación';
         $this->load->view('templatewith2', $data);
     }
 
@@ -3118,7 +3118,7 @@ class Site extends CI_Controller
         $data['before1'] = $this->input->get('id');
         $data['before2'] = $this->input->get('id');
         $data['notification'] = $this->user_model->getNotificationDropDown();
-        $data['title'] = 'Create Notification User';
+        $data['title'] = 'Crear usuario Notificación';
         $data['notification'] = $this->user_model->getNotificationDropDown();
         $data['user'] = $this->user_model->getUserDropDown();
         $this->load->view('templatewith2', $data);
@@ -3140,7 +3140,7 @@ class Site extends CI_Controller
             $data['page'] = 'createnotificationuser';
             $data['notification'] = $this->user_model->getNotificationDropDown();
             $data['user'] = $this->user_model->getUserDropDown();
-            $data['title'] = 'Create Notification User';
+            $data['title'] = 'Crear usuario Notificación';
             $this->load->view('template', $data);
         } else {
             $notification = $this->input->get_post('notification');
@@ -3170,7 +3170,7 @@ class Site extends CI_Controller
         $data['notification'] = $this->user_model->getNotificationDropDown();
         $data['notification'] = $this->user_model->getNotificationDropDown();
         $data['user'] = $this->user_model->getUserDropDown();
-        $data['title'] = 'Edit Notification User';
+        $data['title'] = 'Editar usuario Notificación';
         $data['before'] = $this->notificationuser_model->beforeEdit($this->input->get('id'));
         $this->load->view('templatewith2', $data);
     }
@@ -3192,7 +3192,7 @@ class Site extends CI_Controller
             $data['notification'] = $this->user_model->getNotificationDropDown();
             $data['user'] = $this->user_model->getUserDropDown();
             $data['page'] = 'editnotificationuser';
-            $data['title'] = 'Edit Notification User';
+            $data['title'] = 'Editar usuario Notificación';
             $data['before'] = $this->notificationuser_model->beforeEdit($this->input->get('id'));
             $this->load->view('template', $data);
         } else {
@@ -3232,7 +3232,7 @@ class Site extends CI_Controller
         $data['activemenu'] = 'blog';
         $data['base_url'] = site_url('site/viewBlogJson');
          $data['deleteselected'] = site_url('site/deleteSelectedBlog');
-        $data['title'] = 'View Blog';
+        $data['title'] = 'Ver Blog';
         $this->load->view('template', $data);
     }
     
@@ -3297,7 +3297,7 @@ class Site extends CI_Controller
         $this->checkAccess($access);
         $data['page'] = 'createblog';
         $data['activemenu'] = 'blogs';
-        $data['title'] = 'Create Blog';
+        $data['title'] = 'Crear Blog';
         $this->load->view('template', $data);
     }
 
@@ -3314,7 +3314,7 @@ class Site extends CI_Controller
         if ($this->form_validation->run() == false) {
             $data['alerterror'] = validation_errors();
             $data['page'] = 'createblog';
-            $data['title'] = 'Create Blog';
+            $data['title'] = 'Crear Blog';
             $this->load->view('template', $data);
         } else {
             $title = $this->input->get_post('title');
@@ -3379,7 +3379,7 @@ class Site extends CI_Controller
         $data['before1'] = $this->input->get('id');
         $data['before2'] = $this->input->get('id');
         $data['before3'] = $this->input->get('id');
-        $data['title'] = 'Edit Blog';
+        $data['title'] = 'Editar Blog';
         $data['before'] = $this->blog_model->beforeEdit($this->input->get('id'));
         $this->load->view('template', $data);
     }
@@ -3398,7 +3398,7 @@ class Site extends CI_Controller
         if ($this->form_validation->run() == false) {
             $data['alerterror'] = validation_errors();
             $data['page'] = 'editblog';
-            $data['title'] = 'Edit Blog';
+            $data['title'] = 'Editar Blog';
             $data['before'] = $this->blog_model->beforeEdit($this->input->get('id'));
             $this->load->view('template', $data);
         } else {
@@ -3483,7 +3483,7 @@ class Site extends CI_Controller
         $data['before2'] = $this->input->get('id');
         $data['before3'] = $this->input->get('id');
         $data['base_url'] = site_url('site/viewBlogVideoJson?id=').$this->input->get('id');
-        $data['title'] = 'View Blog Videos';
+        $data['title'] = 'Ver Blog Videos';
         $this->load->view('templatewith2', $data);
     }
 
@@ -3552,7 +3552,7 @@ class Site extends CI_Controller
         $data['before3'] = $this->input->get('id');
         $data['blog'] = $this->user_model->getBlogDropDown();
         $data['status'] = $this->user_model->getStatusDropDown();
-        $data['title'] = 'Create Blog Video';
+        $data['title'] = 'Crear Blog de vídeo';
         $this->load->view('templatewith2', $data);
     }
 
@@ -3571,7 +3571,7 @@ class Site extends CI_Controller
             $data['blog'] = $this->user_model->getBlogDropDown();
             $data['page'] = 'createblogvideo';
             $data['status'] = $this->user_model->getStatusDropDown();
-            $data['title'] = 'Create Blog Video';
+            $data['title'] = 'Crear Blog de vídeo';
             $this->load->view('template', $data);
         } else {
             $blog = $this->input->get_post('blog');
@@ -3601,7 +3601,7 @@ class Site extends CI_Controller
         $data['before3'] = $this->input->get('id');
         $data['status'] = $this->user_model->getStatusDropDown();
         $data['blog'] = $this->user_model->getBlogDropDown();
-        $data['title'] = 'Edit Blog Video';
+        $data['title'] = 'Editar Video Blog';
         $data['before'] = $this->blogvideo_model->beforeEdit($this->input->get('id'));
         $this->load->view('templatewith2', $data);
     }
@@ -3622,7 +3622,7 @@ class Site extends CI_Controller
             $data['page'] = 'editblogvideo';
             $data['status'] = $this->user_model->getStatusDropDown();
             $data['blog'] = $this->user_model->getBlogDropDown();
-            $data['title'] = 'Edit Blog Video';
+            $data['title'] = 'Editar Video Blog';
             $data['before'] = $this->blogvideo_model->beforeEdit($this->input->get('id'));
             $this->load->view('template', $data);
         } else {
@@ -3664,7 +3664,7 @@ class Site extends CI_Controller
         $data['before2'] = $this->input->get('id');
         $data['before3'] = $this->input->get('id');
         $data['base_url'] = site_url('site/viewBlogImagesJson?id=').$this->input->get('id');
-        $data['title'] = 'View Blog Images';
+        $data['title'] = 'Ver blog Imágenes';
         $this->load->view('templatewith2', $data);
     }
 
@@ -3733,7 +3733,7 @@ class Site extends CI_Controller
         $data['before3'] = $this->input->get('id');
         $data['status'] = $this->user_model->getStatusDropDown();
         $data['blog'] = $this->user_model->getBlogDropDown();
-        $data['title'] = 'Create Blog Image';
+        $data['title'] = 'Crear Blog Imagen';
         $this->load->view('templatewith2', $data);
     }
 
@@ -3752,7 +3752,7 @@ class Site extends CI_Controller
             $data['page'] = 'createblogimages';
             $data['status'] = $this->user_model->getStatusDropDown();
             $data['blog'] = $this->user_model->getBlogDropDown();
-            $data['title'] = 'Create Blog Image';
+            $data['title'] = 'Crear Blog Imagen';
             $this->load->view('template', $data);
         } else {
             $blog = $this->input->get_post('blog');
@@ -3818,7 +3818,7 @@ class Site extends CI_Controller
         $data['before3'] = $this->input->get('id');
         $data['status'] = $this->user_model->getStatusDropDown();
         $data['blog'] = $this->user_model->getBlogDropDown();
-        $data['title'] = 'Edit Blog Image';
+        $data['title'] = 'Editar imagen Blog';
         $data['before'] = $this->blogimages_model->beforeEdit($this->input->get('id'));
         $this->load->view('templatewith2', $data);
     }
@@ -3839,7 +3839,7 @@ class Site extends CI_Controller
             $data['page'] = 'editblogimages';
             $data['status'] = $this->user_model->getStatusDropDown();
             $data['blog'] = $this->user_model->getBlogDropDown();
-            $data['title'] = 'Edit Blog Image';
+            $data['title'] = 'Editar imagen Blog';
             $data['before'] = $this->blogimages_model->beforeEdit($this->input->get('id'));
             $this->load->view('template', $data);
         } else {
@@ -3926,7 +3926,7 @@ class Site extends CI_Controller
         $data['deleteselected'] = site_url('site/deleteSelectedSliders');
         $data["tablename"] = 'slider';
         $data["orderfield"] = 'order';
-        $data['title'] = 'View Sliders';
+        $data['title'] = 'Ver Sliders';
         $data['activemenu'] = 'home slides';
         $this->load->view('template', $data);
     }
@@ -3992,7 +3992,7 @@ class Site extends CI_Controller
         $data['page'] = 'createslider';
         $data['activemenu'] = 'home slides';
         $data['status'] = $this->user_model->getStatusDropDown();
-        $data['title'] = 'Create Slider';
+        $data['title'] = 'Crear deslizante';
         $this->load->view('template', $data);
     }
 
@@ -4010,7 +4010,7 @@ class Site extends CI_Controller
             $data['alerterror'] = validation_errors();
             $data['page'] = 'createslider';
             $data['status'] = $this->user_model->getStatusDropDown();
-            $data['title'] = 'Create Slider';
+            $data['title'] = 'Crear deslizante';
             $this->load->view('template', $data);
         } else {
             $alt = $this->input->get_post('alt');
@@ -4057,7 +4057,7 @@ class Site extends CI_Controller
         $data['page'] = 'editslider';
         $data['activemenu'] = 'home slides';
         $data['status'] = $this->user_model->getStatusDropDown();
-        $data['title'] = 'Edit Slider';
+        $data['title'] = 'Editar deslizante';
         $data['before'] = $this->slider_model->beforeEdit($this->input->get('id'));
         $this->load->view('template', $data);
     }
@@ -4077,7 +4077,7 @@ class Site extends CI_Controller
             $data['alerterror'] = validation_errors();
             $data['page'] = 'editslider';
             $data['status'] = $this->user_model->getStatusDropDown();
-            $data['title'] = 'Edit slider';
+            $data['title'] = 'Editar deslizante';
             $data['before'] = $this->slider_model->beforeEdit($this->input->get('id'));
             $this->load->view('template', $data);
         } else {
@@ -4137,7 +4137,7 @@ class Site extends CI_Controller
         $this->checkAccess($access);
         $data['page'] = 'viewconfig';
         $data['base_url'] = site_url('site/viewConfigJson');
-        $data['title'] = 'View Config';
+        $data['title'] = 'Ver config';
         $data['activemenu'] = 'config';
         $this->load->view('template', $data);
     }
@@ -4195,7 +4195,7 @@ class Site extends CI_Controller
         $this->checkAccess($access);
         $data['page'] = 'createconfig';
         $data['type'] = $this->user_model->getTypeDropDown();
-        $data['title'] = 'Create Config';
+        $data['title'] = 'Crear Config';
         $this->load->view('template', $data);
     }
 
@@ -4213,7 +4213,7 @@ class Site extends CI_Controller
             $data['alerterror'] = validation_errors();
             $data['page'] = 'createconfig';
             $data['type'] = $this->user_model->getTypeDropDown();
-            $data['title'] = 'Create Config';
+            $data['title'] = 'Crear Config';
             $this->load->view('template', $data);
         } else {
             $text = $this->input->get_post('text');
@@ -4245,7 +4245,7 @@ class Site extends CI_Controller
         case 1:
             {
                 $data['page'] = 'editconfigtext';
-                $data['title'] = 'Edit Config';
+                $data['title'] = 'Editar Config';
             }
 
             break;
@@ -4253,7 +4253,7 @@ class Site extends CI_Controller
         case 2:
             {
                 $data['page'] = 'editconfigimage';
-                $data['title'] = 'Edit Config Image';
+                $data['title'] = 'Editar Config Imagen';
             }
 
             break;
@@ -4261,7 +4261,7 @@ class Site extends CI_Controller
         case 3:
             {
                 $data['page'] = 'dropdown';
-                $data['title'] = 'Drop Down';
+                $data['title'] = 'Desplegable';
             }
 
             break;
@@ -4269,7 +4269,7 @@ class Site extends CI_Controller
         case 4:
             {
                 $data['page'] = 'login';
-                $data['title'] = 'Login';
+                $data['title'] = 'Iniciar sesión';
             }
 
             break;
@@ -4285,7 +4285,7 @@ class Site extends CI_Controller
         case 6:
             {
                 $data['page'] = 'gallery';
-                $data['title'] = 'Gallery';
+                $data['title'] = 'Galería';
             }
 
             break;
@@ -4293,7 +4293,7 @@ class Site extends CI_Controller
         case 7:
             {
                 $data['page'] = 'videogallery';
-                $data['title'] = 'Video Gallery';
+                $data['title'] = 'Galeria de videos';
             }
 
             break;
@@ -4301,7 +4301,7 @@ class Site extends CI_Controller
         case 8:
             {
                 $data['page'] = 'configevents';
-                $data['title'] = 'Config Events';
+                $data['title'] = 'Config Eventos';
             }
 
             break;
@@ -4317,7 +4317,7 @@ class Site extends CI_Controller
         case 10:
             {
                 $data['page'] = 'backgroundimage';
-                $data['title'] = 'Background Image';
+                $data['title'] = 'Imagen de fondo';
             }
 
             break;
@@ -4341,7 +4341,7 @@ class Site extends CI_Controller
         case 13:
             {
                 $data['page'] = 'editconfig';
-                $data['title'] = 'Notification';
+                $data['title'] = 'Notificación';
             }
 
             break;
@@ -4357,7 +4357,7 @@ class Site extends CI_Controller
         case 15:
             {
                 $data['page'] = 'editconfigtext';
-                $data['title'] = 'Meta Keyword';
+                $data['title'] = 'Meta de palabras clave';
             }
 
             break;
@@ -4365,7 +4365,7 @@ class Site extends CI_Controller
         case 16:
             {
                 $data['page'] = 'editconfigtext';
-                $data['title'] = 'Meta Decription';
+                $data['title'] = 'Meta de palabras clave';
             }
 
             break;
@@ -4403,9 +4403,9 @@ class Site extends CI_Controller
                     $controllerfile = read_file($urlcontrollertest);
                     $mnutext = explode('//google', $controllerfile);
                     $googletext = "'Google' => array (
-				'enabled' => true,
-				'keys'    => array ( 'id' => '".$newtext[$i]->appid."', 'secret' => '".$newtext[$i]->secret."' )
-			),";
+                'enabled' => true,
+                'keys'    => array ( 'id' => '".$newtext[$i]->appid."', 'secret' => '".$newtext[$i]->secret."' )
+            ),";
                     $googletext = $mnutext[0]."//google\n".$googletext.'//google'.$mnutext[2];
                     if (write_file($urlforcontrollertest.'application/config/hybridauthlib.php', $googletext)) {
                     }
@@ -4418,10 +4418,10 @@ class Site extends CI_Controller
                     $controllerfile = read_file($urlcontrollertest);
                     $mnutext = explode('//facebook', $controllerfile);
                     $googletext = "'Facebook' => array (
-				'enabled' => true,
-				'keys'    => array ( 'id' => '".$newtext[$i]->appid."', 'secret' => '".$newtext[$i]->secret."' ),
+                'enabled' => true,
+                'keys'    => array ( 'id' => '".$newtext[$i]->appid."', 'secret' => '".$newtext[$i]->secret."' ),
                 'scope'   => 'email, user_about_me, user_birthday, user_hometown, user_website,publish_actions'
-			),";
+            ),";
                     $googletext = $mnutext[0]."//facebook\n".$googletext."\n//facebook".$mnutext[2];
                     if (write_file($urlforcontrollertest.'application/config/hybridauthlib.php', $googletext)) {
                     }
@@ -4434,9 +4434,9 @@ class Site extends CI_Controller
                     $controllerfile = read_file($urlcontrollertest);
                     $mnutext = explode('//twitter', $controllerfile);
                     $googletext = "'Twitter' => array (
-				'enabled' => true,
-				'keys'    => array ( 'key' => '".$newtext[$i]->appid."', 'secret' =>'".$newtext[$i]->secret."' )
-			),";
+                'enabled' => true,
+                'keys'    => array ( 'key' => '".$newtext[$i]->appid."', 'secret' =>'".$newtext[$i]->secret."' )
+            ),";
                     $googletext = $mnutext[0]."//twitter\n".$googletext."\n//twitter".$mnutext[2];
                     if (write_file($urlforcontrollertest.'application/config/hybridauthlib.php', $googletext)) {
                     }
@@ -4449,9 +4449,9 @@ class Site extends CI_Controller
                     $controllerfile = read_file($urlcontrollertest);
                     $mnutext = explode('//instagram', $controllerfile);
                     $googletext = "'Instagram' => array (
-				'enabled' => true,
-				'keys'    => array ( 'id' => '".$newtext[$i]->appid."', 'secret' => '".$newtext[$i]->secret."' )
-			),";
+                'enabled' => true,
+                'keys'    => array ( 'id' => '".$newtext[$i]->appid."', 'secret' => '".$newtext[$i]->secret."' )
+            ),";
                     $googletext = $mnutext[0]."//instagram\n".$googletext."\n//instagram".$mnutext[2];
                     if (write_file($urlforcontrollertest.'application/config/hybridauthlib.php', $googletext)) {
                     }
@@ -4518,7 +4518,7 @@ class Site extends CI_Controller
         );
         $this->checkAccess($access);
         $data['page'] = 'edithome';
-        $data['title'] = 'Edit Home';
+        $data['title'] = 'Editar Inicio';
         $data['before'] = $this->slider_model->beforeEditHome('1');
         $this->load->view('template', $data);
     }
