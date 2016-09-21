@@ -667,6 +667,12 @@ class Json extends CI_Controller
         $elements[3]->header = 'Json';
         $elements[3]->alias = 'json';
 
+        $elements[4] = new stdClass();
+        $elements[4]->field = '`webapp_blog`.`image`';
+        $elements[4]->sort = '1';
+        $elements[4]->header = 'Image';
+        $elements[4]->alias = 'image';
+
         $elements[5] = new stdClass();
         $elements[5]->field = 'date(`webapp_blog`.`timestamp`)';
         $elements[5]->sort = '1';

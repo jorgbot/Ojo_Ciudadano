@@ -11,6 +11,33 @@ class Site extends CI_Controller
         $this->is_logged_in();
     }
 
+    private function upload_image_file(){
+
+            $config['upload_path'] = './uploads/';
+            $config['allowed_types'] = 'gif|jpg|png|jpeg';
+            $config['width'] = 800;
+            $config['height'] = 800;
+            $config['quality'] = 100;
+            $data = array();
+            $image = 'cover.jpg';
+
+            $this->load->library('upload', $config);
+            $filename = 'image';
+            
+            if ($this->upload->do_upload($filename)) {
+                
+                // end of configs
+                $data = array('upload_data' => $this->upload->data());
+                $image = $this->upload->file_name;
+            }
+            else
+            {
+                 $error = array('error' => $this->upload->display_errors());
+                 $data['alerterror'] = 'Ha Fallado'.$error;
+            }
+            return array('data'=>$data,'file_name'=>$image);
+    }
+
     public function is_logged_in()
     {
         $is_logged_in = $this->session->userdata('logged_in');
@@ -3321,39 +3348,11 @@ class Site extends CI_Controller
             $json = $this->input->get_post('json');
             $content = $this->input->get_post('content');
             $url = $this->input->get_post('url');
-            $config['upload_path'] = './uploads/';
-            $config['allowed_types'] = 'gif|jpg|png|jpeg';
-            $this->load->library('upload', $config);
-            $filename = 'image';
-            $image = '';
-            if ($this->upload->do_upload($filename)) {
-                $uploaddata = $this->upload->data();
-                $image = $uploaddata['file_name'];
-                $config_r['source_image'] = './uploads/'.$uploaddata['file_name'];
-                $config_r['maintain_ratio'] = true;
-                $config_t['create_thumb'] = false; ///add this
-                $config_r['width'] = 800;
-                $config_r['height'] = 800;
-                $config_r['quality'] = 100;
-
-                // end of configs
-
-                $this->load->library('image_lib', $config_r);
-                $this->image_lib->initialize($config_r);
-                if (!$this->image_lib->resize()) {
-                    $data['alerterror'] = 'Ha fallado.'.$this->image_lib->display_errors();
-
-                    // return false;
-                } else {
-
-                    // print_r($this->image_lib->dest_image);
-                    // dest_image
-
-                    $image = $this->image_lib->dest_image;
-
-                    // return false;
-                }
-            }
+            //todo
+            $upload_image = $this->upload_image_file();
+            $image = $upload_image['file_name'];
+            $data = $upload_image['data'];
+            
 
             if ($this->blog_model->create($title, $json, $content, $url, $image) == 0) {
                 $data['alerterror'] = 'Nuevo blog no se pudo crear.';
