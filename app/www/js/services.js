@@ -199,7 +199,7 @@ angular.module('starter.services', [])
 				}).success(callback);
 			},
 			getTumblrPosts: function (tmb, callback) {
-				$http.get('http://wohlig.co.in/tumblr/?url=http://api.tumblr.com/v2/blog/' + tmb + '/posts', {
+				$http.get('http://xxx.co.in/tumblr/?url=http://api.tumblr.com/v2/blog/' + tmb + '/posts', {
 					withCredentials: false
 				}).success(callback);
 			},

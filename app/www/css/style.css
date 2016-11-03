@@ -1,1 +1,26 @@
 /* Empty. Add your own CSS if you like */
+.item.item-icon-left.assertive {
+    background: #01a0e2;
+    color: white;
+    font-weight: bolder;
+}
+
+/** logo login **/
+.login-logo {
+
+  margin-top: 15%;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 300;
+
+  background: url("../img/logo.png") no-repeat center center;
+    -webkit-background-size: 240px;
+    -moz-background-size: 240px;
+    -o-background-size: 240px;
+    background-size: 240px;
+    height: 148px;
+}
+
+.login-tab {
+    margin-top: 25px;
+}

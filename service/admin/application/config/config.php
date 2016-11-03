@@ -19,7 +19,7 @@
 */
 $myserver = $_SERVER['SERVER_NAME'];
 
-//if($myserver=="www.mafiawarloots.com" || $myserver=="www.wohlig.biz" || $myserver=="mafiawarloots.com" || $myserver=="wohlig.biz")
+//if($myserver=="www.mafiawarloots.com" || $myserver=="www.xxx.biz" || $myserver=="mafiawarloots.com" || $myserver=="xxx.biz")
 //if($myserver!="localhost")
 //{
 //$myconfig= base64_decode(file_get_contents("/home/mafiawarloots/config/createo.png"));

@@ -2,13 +2,13 @@
     <div class="col s12">
         <div class="row">
             <div class="col s12 drawchintantable">
-               <?php $this->chintantable->createsearch('Lista de Navegacion');?>
+               <?php $this->chintantable->createsearch('Lista de Menu');?>
                 <table class="highlight responsive-table">
                     <thead>
                         <tr>
                           <th data-field="id" data-selectall='true' data-delete-selected="<?php echo $deleteselected;?>">Id</th>
-                          <th data-field="name">Nombre</th>
-                          <th data-field="status">Estado</th>
+                          <th data-field="name">Name</th>
+                          <th data-field="status">Status</th>
                           <th data-field="action">Action</th>
                         </tr>
                     </thead>

@@ -355,7 +355,7 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 		}
 	};
 	$scope.facebooklogin = function () {
-		ref = cordova.InAppBrowser.open(adminhauth + 'login/Facebook?returnurl=http://www.wohlig.com', '_blank', 'location=no');
+		ref = cordova.InAppBrowser.open(adminhauth + 'login/Facebook?returnurl=http://www.xxx.com', '_blank', 'location=no');
 		stopinterval = $interval(callAtIntervaltwitter, 2000);
 		ref.addEventListener('exit', function (event) {
 			MyServices.authenticate().success(authenticatesuccess);
@@ -373,7 +373,7 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 	}
 
 	$scope.instagramlogin = function () {
-		ref = cordova.InAppBrowser.open(adminhauth + 'login/Instagram?returnurl=http://www.wohlig.com', '_blank', 'location=no');
+		ref = cordova.InAppBrowser.open(adminhauth + 'login/Instagram?returnurl=http://www.xxx.com', '_blank', 'location=no');
 		stopinterval = $interval(callAtIntervaltwitter, 2000);
 		ref.addEventListener('exit', function (event) {
 			MyServices.authenticate().success(authenticatesuccess);
@@ -383,7 +383,7 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 
 	$scope.googlelogin = function () {
 
-			ref = cordova.InAppBrowser.open(adminhauth + 'login/Google?returnurl=http://www.wohlig.com', '_blank', 'location=no');
+			ref = cordova.InAppBrowser.open(adminhauth + 'login/Google?returnurl=http://www.xxx.com', '_blank', 'location=no');
 			stopinterval = $interval(callAtIntervaltwitter, 2000);
 			ref.addEventListener('exit', function (event) {
 				MyServices.authenticate().success(authenticatesuccess);

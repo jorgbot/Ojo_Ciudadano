@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `businessapp`
+-- Database: `ojo_ciudadano`
 --
 
 -- --------------------------------------------------------
@@ -66,7 +66,7 @@ INSERT INTO `config` (`id`, `title`, `content`, `text`, `type`, `image`, `descri
 (6, 'Galleria', '																																								Gallery Content                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                																																', 'true', '3', '', '0'),
 (7, 'Videos', '																									want Video Gallery                                                                                                                                                                                                																				', 'true', '3', '', '0'),
 (8, 'Eventos', '										Event content  for evtn                                                                                                                                                                                                                                                                                           								', 'true', '3', '', '0'),
-(11, 'Contactanos', 'Plot no. 3, Flat no. A/30 Laxmi Nivas , 3rd Floor , Near Sadhana School , Sion (W) , Mumbai 400022.', '9819222221', 'info@wohlig.com', '', '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7543.043871128432!2d72.8626547!3d19.04077635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf2cc4000001%3A0xc683a42662527334!2sSadhana+English+Primary+School!5e0!3m2!1sen!2sin!4v1443430462486" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>'),
+(11, 'Contactanos', 'Plot no. 3, Flat no. A/30 Laxmi Nivas , 3rd Floor , Near Sadhana School , Sion (W) , Mumbai 400022.', '9819222221', 'info@xxx.com', '', '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7543.043871128432!2d72.8626547!3d19.04077635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf2cc4000001%3A0xc683a42662527334!2sSadhana+English+Primary+School!5e0!3m2!1sen!2sin!4v1443430462486" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>'),
 (12, 'Redes Sociales', '0', '[{"name":"facebookappid","value":"https://www.facebook.com/Facebook"},{"name":"twitterappid","value":"http://twitter.com/twitter"},{"name":"instagramappid","value":"https://instagram.com/instagram/"},{"name":"googleplusappid","value":"https://plus.google.com/+googleplus/"},{"name":"youtubeappid","value":"https://www.youtube.com/user/YouTube"},{"name":"tumblrappid","value":"https://www.tumblr.com/"}]', '0', '', '0');
 
 -- --------------------------------------------------------
