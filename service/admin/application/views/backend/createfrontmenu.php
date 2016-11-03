@@ -1,6 +1,6 @@
 <div class="row">
 	<div class="col 12">
-		<h4 class="pad-left-15">Crear Navegacion</h4>
+		<h4 class="pad-left-15">Crear Menu</h4>
 	</div>
 	<form class="col s12" method="post" action="<?php echo site_url('site/createFrontMenusubmit');?>" enctype="multipart/form-data">
 		<div class="row">
@@ -27,7 +27,7 @@
 		<div class="row">
 			<div class="input-field col m6 s12">
 				<?php echo form_dropdown('linktype', $linktype, set_value('linktype')); ?>
-					<label>Tipo de Link</label>
+					<label>Link</label>
 			</div>
 		</div>
 
@@ -52,7 +52,7 @@
 		<div class="row drop">
 			<div class="input-field col m6 s12">
 				<?php echo form_dropdown('video', $video, set_value('video')); ?>
-					<label>Galeria de Videos</label>
+					<label>Video Galeria</label>
 
 			</div>
 		</div>
@@ -61,7 +61,7 @@
 		<div class="row drop">
 			<div class="input-field col m6 s12">
 				<?php echo form_dropdown('gallery', $gallery, set_value('gallery')); ?>
-					<label>Galeria de Imagenes</label>
+					<label>Imagen Galeria</label>
 
 			</div>
 		</div>
@@ -84,8 +84,8 @@
 		<div class=" form-group">
 			<div class="row">
 				<div class="col s12">
-					<button type="submit" class="btn btn-primary jsonsubmit waves-effect waves-light blue darken-4">Cancelar</button>
-					<a href="<?php echo site_url('site/viewFrontmenu'); ?>" class="btn btn-secondary waves-effect waves-light red">Guardar</a>
+					<button type="submit" class="btn btn-primary jsonsubmit waves-effect waves-light blue darken-4">Guardar</button>
+					<a href="<?php echo site_url('site/viewFrontmenu'); ?>" class="btn btn-secondary waves-effect waves-light red">Cancelar</a>
 				</div>
 			</div>
 		</div>
