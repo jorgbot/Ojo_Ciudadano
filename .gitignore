@@ -4,3 +4,6 @@ service/admin/uploads
 .DS_Store
 ionic.project
 prepros.cfg
+plugins
+hooks
+platforms
