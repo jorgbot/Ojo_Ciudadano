@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.blazen.businessapp" version="1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" versionCode="1">
-  <name>BusinessApp</name>
+<widget id="com.Ojo.Ciudadano" version="1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" versionCode="1">
+  <name>Ojo Ciudadano</name>
   <description>
-            A Template for Business.
+            Ojo_Ciudadano
         </description>
-  <author email="info@wohlig.com" href="http://www.wohlig.com/">
-            wohlig
+  <author email="info@xxx.com" href="http://www.xxx.com/">
+            Ojo Ciudadano
         </author>
   <content src="index.html"/>
   <access origin="*"/>
