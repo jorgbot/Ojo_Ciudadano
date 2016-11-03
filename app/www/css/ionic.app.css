@@ -3896,14 +3896,14 @@ a.subdued {
     .bar.bar-stable.bar-footer {
       background-image: linear-gradient(180deg, #b2b2b2, #b2b2b2 50%, transparent 50%); }
   .bar.bar-positive {
-    border-color: #e10f0f;
+    border-color: #1e8065;
     background-color: #90c684;
-    background-image: linear-gradient(0deg, #e10f0f, #e10f0f 50%, transparent 50%);
+    background-image: linear-gradient(0deg, #1e8065, #1e8065 50%, transparent 50%);
     color: #fff; }
     .bar.bar-positive .title {
       color: #fff; }
     .bar.bar-positive.bar-footer {
-      background-image: linear-gradient(180deg, #e10f0f, #e10f0f 50%, transparent 50%); }
+      background-image: linear-gradient(180deg, #1e8065, #1e8065 50%, transparent 50%); }
   .bar.bar-calm {
     border-color: #0a9dc7;
     background-color: #11c1f3;
@@ -3930,7 +3930,7 @@ a.subdued {
     .bar.bar-balanced .title {
       color: #fff; }
     .bar.bar-balanced.bar-footer {
-      background-image: linear-gradient(180deg, #28a54c, #e10f0f 50%, transparent 50%); }
+      background-image: linear-gradient(180deg, #28a54c, #1e8065 50%, transparent 50%); }
   .bar.bar-energized {
     border-color: #e6b500;
     background-color: #ffc900;
@@ -4110,7 +4110,7 @@ a.subdued {
     background: none; }
 
 .bar-positive .button {
-  border-color: #e10f0f;
+  border-color: #1e8065;
   background-color: #90c684;
   color: #fff; }
   .bar-positive .button:hover {
@@ -4118,8 +4118,8 @@ a.subdued {
     text-decoration: none; }
   .bar-positive .button.active,
   .bar-positive .button.activated {
-    border-color: #e10f0f;
-    background-color: #e10f0f;
+    border-color: #1e8065;
+    background-color: #1e8065;
     box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1); }
   .bar-positive .button.button-clear {
     border-color: transparent;
@@ -4386,9 +4386,9 @@ a.subdued {
 
 .tabs-positive > .tabs,
 .tabs.tabs-positive {
-  border-color: #e10f0f;
+  border-color: #1e8065;
   background-color: #90c684;
-  background-image: linear-gradient(0deg, #e10f0f, #e10f0f 50%, transparent 50%);
+  background-image: linear-gradient(0deg, #1e8065, #1e8065 50%, transparent 50%);
   color: #fff; }
   .tabs-positive > .tabs .tab-item .badge,
   .tabs.tabs-positive .tab-item .badge {
@@ -4892,8 +4892,8 @@ a.subdued {
 .tabs-background-positive .tabs,
 .tabs-background-positive > .tabs {
   background-color: #90c684;
-  background-image: linear-gradient(0deg, #e10f0f, #e10f0f 50%, transparent 50%);
-  border-color: #e10f0f; }
+  background-image: linear-gradient(0deg, #1e8065, #1e8065 50%, transparent 50%);
+  border-color: #1e8065; }
 
 .tabs-background-calm .tabs,
 .tabs-background-calm > .tabs {
@@ -5842,7 +5842,7 @@ ion-tabs.tabs-color-active-dark .tab-item {
     background-color: #ccc;
     color: #444; }
   .item.item-positive {
-    border-color: #e10f0f;
+    border-color: #1e8065;
     background-color: #90c684;
     color: #fff; }
   .item.item-calm {
@@ -5906,8 +5906,8 @@ ion-tabs.tabs-color-active-dark .tab-item {
   .item-complex.activated .item-content.item-positive,
   .item .item-content.active.item-positive,
   .item .item-content.activated.item-positive {
-    border-color: #e10f0f;
-    background-color: #e10f0f; }
+    border-color: #1e8065;
+    background-color: #1e8065; }
   .item.active.item-calm,
   .item.activated.item-calm,
   .item-complex.active .item-content.item-calm,
@@ -6060,12 +6060,12 @@ a.item-content {
     background-color: #e5e5e5; }
 
 .item-complex.item-positive > .item-content {
-  border-color: #e10f0f;
+  border-color: #1e8065;
   background-color: #90c684;
   color: #fff; }
   .item-complex.item-positive > .item-content.active, .item-complex.item-positive > .item-content:active {
-    border-color: #e10f0f;
-    background-color: #e10f0f; }
+    border-color: #1e8065;
+    background-color: #1e8065; }
 
 .item-complex.item-calm > .item-content {
   border-color: #0a9dc7;
@@ -8136,7 +8136,7 @@ progress {
         box-shadow: none;
         color: #fff; }
   .button.button-positive {
-    border-color: #e10f0f;
+    border-color: #1e8065;
     background-color: #90c684;
     color: #fff; }
     .button.button-positive:hover {
@@ -8144,8 +8144,8 @@ progress {
       text-decoration: none; }
     .button.button-positive.active,
     .button.button-positive.activated {
-      border-color: #e10f0f;
-      background-color: #e10f0f;
+      border-color: #1e8065;
+      background-color: #1e8065;
       box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1); }
     .button.button-positive.button-clear {
       border-color: transparent;
@@ -8970,7 +8970,7 @@ a.button {
   background-color: #90c684; }
 
 .positive-border {
-  border-color: #e10f0f; }
+  border-color: #1e8065; }
 
 .calm, a.calm {
   color: #11c1f3; }
