@@ -49,3 +49,8 @@ ion-view.municipios.pane .item {
 
 ion-view.municipios.pane .item h2 {
     color: #2c2c2c;
+}
+
+ion-view.municipios.pane img.icono {
+    width: 100px;
+}
