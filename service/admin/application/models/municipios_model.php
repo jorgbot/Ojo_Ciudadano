@@ -1,13 +1,12 @@
 <?php
-
 if (!defined('BASEPATH')) {
     exit('No direct script access allowed');
 }
-class blog_model extends CI_Model
+class municipios_model extends CI_Model
 {
-    public function create($name, $blog_id, $isactive, $image_id)
+    public function create($name, $blog_id, $isactive)
     {
-        $query = $this->db->query('INSERT INTO `webapp_municipios`( `name`, `blog_id`, `isactive`, `image_id`) VALUES ('.$this->db->escape($name).','.$this->db->escape($blog_id).','.$this->db->escape($isactive).','.$this->db->escape($image_id).')');
+        $query = $this->db->query('INSERT INTO `webapp_municipios`( `name`, `blog_id`, `isactive`) VALUES ('.$this->db->escape($name).','.$this->db->escape($blog_id).','.$this->db->escape($isactive).')');
         $id = $this->db->insert_id();
         if (!$query) {
             return  0;
@@ -17,20 +16,20 @@ class blog_model extends CI_Model
     }
     public function beforeEdit($id)
     {
-        $query = $this->db->query('SELECT * FROM `webapp_municipios` WHERE `id`=('.$this->db->escape($id).')')->row();
+        $query = $this->db->query('SELECT * FROM `webapp_municipios` as m JOIN `webapp_blog` as blog ON blog.id = m.blog_id WHERE m.id =('.$this->db->escape($id).')')->row();
 
         return $query;
     }
     public function getSingleMunicipio($id)
     {
-        $query = $this->db->query('SELECT `id`, `name`, `blog_id`, `isactive`,`image_id` FROM `webapp_municipios` WHERE `id`=('.$this->db->escape($id).')')->row();
+        $query = $this->db->query('SELECT * FROM `webapp_municipios` as m JOIN `webapp_blog` as blog ON blog.id = m.blog_id WHERE m.id =('.$this->db->escape($id).')')->row();
 
         return $query;
     }
-    public function edit($id, $name, $blog_id, $isactive, $image_id)
+    public function edit($id, $name, $blog_id, $isactive)
     {
         $query = $this->db->query('UPDATE `webapp_municipios`
-        SET `name` = '.$this->db->escape($name).', `blog_id` = '.$this->db->escape($blog_id).',`isactive` = '.$this->db->escape($isactive).',`image_id` = '.$this->db->escape($image_id).' WHERE id = ('.$this->db->escape($id).')');
+        SET `name` = '.$this->db->escape($name).', `blog_id` = '.$this->db->escape($blog_id).',`isactive` = '.$this->db->escape($isactive).' WHERE id = ('.$this->db->escape($id).')');
 
         return 1;
     }

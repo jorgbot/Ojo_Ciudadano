@@ -3508,11 +3508,16 @@ class Site extends CI_Controller
         $elements[2]->sort = '1';
         $elements[2]->header = 'Blog';
         $elements[2]->alias = 'blog_id';
-         $elements[3] = new stdClass();
-        $elements[3]->field = '`webapp_municipios`.`isactive`';
+        $elements[3] = new stdClass();
+        $elements[3]->field = '`webapp_blog`.`image`';
         $elements[3]->sort = '1';
-        $elements[3]->header = 'IsActive';
-        $elements[3]->alias = 'isactive';
+        $elements[3]->header = 'Image';
+        $elements[3]->alias = 'image';
+        $elements[4] = new stdClass();
+        $elements[4]->field = '`webapp_municipios`.`isactive`';
+        $elements[4]->sort = '1';
+        $elements[4]->header = 'IsActive';
+        $elements[4]->alias = 'isactive';
         $search = $this->input->get_post('search');
         $pageno = $this->input->get_post('pageno');
         $orderby = $this->input->get_post('orderby');
@@ -3527,7 +3532,7 @@ class Site extends CI_Controller
             $orderorder = 'DESC';
         }
 
-        $data['message'] = $this->chintantable->query($pageno, $maxrow, $orderby, $orderorder, $search, $elements, 'FROM `webapp_municipios`');
+        $data['message'] = $this->chintantable->query($pageno, $maxrow, $orderby, $orderorder, $search, $elements, 'FROM `webapp_municipios`,`webapp_blog`');
         $this->load->view('json', $data);
     }
 
@@ -3554,7 +3559,7 @@ class Site extends CI_Controller
         $this->form_validation->set_rules('isactive', 'IsActive', 'trim');
         if ($this->form_validation->run() == false) {
             $data['alerterror'] = validation_errors();
-            $data['page'] = 'createMunicipios';
+            $data['page'] = 'createmunicipios';
             $data['title'] = 'Crear Municipios';
             $this->load->view('template', $data);
         } else {
@@ -3586,7 +3591,7 @@ class Site extends CI_Controller
         $data['before2'] = $this->input->get('id');
         $data['before3'] = $this->input->get('id');
         $data['title'] = 'Editar Municipio';
-        $data['before'] = $this->municipios_model->beforeEdit($this->input->get('id'));
+         $data['before'] = $this->municipios_model->beforeEdit($this->input->get('id'));
         $this->load->view('template', $data);
     }
 
