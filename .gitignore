@@ -7,3 +7,5 @@ prepros.cfg
 plugins
 hooks
 platforms
+*.keystore
+*.jks
