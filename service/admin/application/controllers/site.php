@@ -3470,6 +3470,174 @@ class Site extends CI_Controller
         $this->load->view('redirect', $data);
     }
 
+    public function viewMunicipios()
+    {
+        $access = array(
+            '1',
+        );
+        $this->checkAccess($access);
+        $data['page'] = 'viewmunicipios';
+        $data['activemenu'] = 'municipios';
+        $data['base_url'] = site_url('site/viewMunicipiosJson');
+         $data['deleteselected'] = site_url('site/deleteSelectedMunicipios');
+        $data['title'] = 'Ver Municipios';
+        $this->load->view('template', $data);
+    }
+    
+    public function deleteSelectedMunicipios(){
+        $selected = $this->input->get('selected');
+        $data['todelete']=$this->blog_model->multipleDelete($selected);
+        $data['message'] = 'true';
+        $this->load->view('json', $data);
+    }
+    public function viewMunicipiosJson()
+    {
+        $elements = array();
+        $elements[0] = new stdClass();
+        $elements[0]->field = '`webapp_municipios`.`id`';
+        $elements[0]->sort = '1';
+        $elements[0]->header = 'ID';
+        $elements[0]->alias = 'id';
+        $elements[1] = new stdClass();
+        $elements[1]->field = '`webapp_municipios`.`name`';
+        $elements[1]->sort = '1';
+        $elements[1]->header = 'Nombre';
+        $elements[1]->alias = 'name';
+        $elements[2] = new stdClass();
+        $elements[2]->field = '`webapp_municipios`.`blog_id`';
+        $elements[2]->sort = '1';
+        $elements[2]->header = 'Blog';
+        $elements[2]->alias = 'blog_id';
+        $elements[3] = new stdClass();
+        $elements[3]->field = '`webapp_blog`.`image`';
+        $elements[3]->sort = '1';
+        $elements[3]->header = 'Image';
+        $elements[3]->alias = 'image';
+        $elements[4] = new stdClass();
+        $elements[4]->field = '`webapp_municipios`.`isactive`';
+        $elements[4]->sort = '1';
+        $elements[4]->header = 'IsActive';
+        $elements[4]->alias = 'isactive';
+        $search = $this->input->get_post('search');
+        $pageno = $this->input->get_post('pageno');
+        $orderby = $this->input->get_post('orderby');
+        $orderorder = $this->input->get_post('orderorder');
+        $maxrow = $this->input->get_post('maxrow');
+        if ($maxrow == '') {
+            $maxrow = 20;
+        }
+
+        if ($orderby == '') {
+            $orderby = 'id';
+            $orderorder = 'DESC';
+        }
+
+        $data['message'] = $this->chintantable->query($pageno, $maxrow, $orderby, $orderorder, $search, $elements, 'FROM `webapp_municipios`,`webapp_blog`');
+        $this->load->view('json', $data);
+    }
+
+    public function createMunicipios()
+    {
+        $access = array(
+            '1',
+        );
+        $this->checkAccess($access);
+        $data['page'] = 'createmunicipios';
+        $data['activemenu'] = 'municipios';
+        $data['title'] = 'Crear Municipios';
+        $this->load->view('template', $data);
+    }
+
+    public function createMunicipiosSubmit()
+    {
+        $access = array(
+            '1',
+        );
+        $this->checkAccess($access);
+        $this->form_validation->set_rules('name', 'Name', 'trim');
+        $this->form_validation->set_rules('blog_id', 'Blog_id', 'trim');
+        $this->form_validation->set_rules('isactive', 'IsActive', 'trim');
+        if ($this->form_validation->run() == false) {
+            $data['alerterror'] = validation_errors();
+            $data['page'] = 'createmunicipios';
+            $data['title'] = 'Crear Municipios';
+            $this->load->view('template', $data);
+        } else {
+            $name = $this->input->get_post('name');
+            $blog_id = $this->input->get_post('blog_id');
+            $isactive = $this->input->get_post('isactive');
+            //todo
+            
+            if ($this->municipios_model->create($name, $blog_id, $isactive) == 0) {
+                $data['alerterror'] = 'Nuevo Municipio no se pudo crear.';
+            } else {
+                $data['alertsuccess'] = 'Municipio creado con éxito.';
+            }
+            $data['redirect'] = 'site/viewMunicipios';
+            $this->load->view('redirect', $data);
+        }
+    }
+
+    public function editMunicipios()
+    {
+        $access = array(
+            '1',
+        );
+        $this->checkAccess($access);
+        $data['page'] = 'editmunicipios';
+        $data['activemenu'] = 'municipios';
+
+        $data['before1'] = $this->input->get('id');
+        $data['before2'] = $this->input->get('id');
+        $data['before3'] = $this->input->get('id');
+        $data['title'] = 'Editar Municipio';
+         $data['before'] = $this->municipios_model->beforeEdit($this->input->get('id'));
+        $this->load->view('template', $data);
+    }
+
+    public function editMunicipiosSubmit()
+    {
+        $access = array(
+            '1',
+        );
+        $this->checkAccess($access);
+        $this->form_validation->set_rules('id', 'ID', 'trim');
+        $this->form_validation->set_rules('name', 'Name', 'trim');
+        $this->form_validation->set_rules('blog_id', 'Blog_id', 'trim');
+        $this->form_validation->set_rules('isactive', 'IsActive', 'trim');
+        if ($this->form_validation->run() == false) {
+            $data['alerterror'] = validation_errors();
+            $data['page'] = 'editMunicipios';
+            $data['title'] = 'Editar Municipio';
+            $data['before'] = $this->blog_model->beforeEdit($this->input->get('id'));
+            $this->load->view('template', $data);
+        } else {
+            $id = $this->input->get_post('id');
+            $name = $this->input->get_post('name');
+            $blog_id = $this->input->get_post('blog_id');
+            $isactive = $this->input->get_post('isactive');
+        
+            if ($this->municipios_model->edit($id, $name, $blog_id, $isactive) == 0) {
+                $data['alerterror'] = 'Nuevo municipio no se pudo actualizar.';
+            } else {
+                $data['alertsuccess'] = 'Municipio actualizado con éxito.';
+            }
+            $data['redirect'] = 'site/viewMunicipios';
+            $this->load->view('redirect', $data);
+        }
+    }
+
+    public function deleteMunicipios()
+    {
+        $access = array(
+            '1',
+        );
+        $this->checkAccess($access);
+        $this->municipios_model->delete($this->input->get('id'));
+        $data['redirect'] = 'site/viewMunicipios';
+        $this->load->view('redirect', $data);
+    }
+
     public function viewBlogVideo()
     {
         $access = array(

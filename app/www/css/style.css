@@ -24,3 +24,33 @@
 .login-tab {
     margin-top: 25px;
 }
+
+/** input login **/
+.ng-dirty.ng-invalid {
+    color: white !important;
+}
+.ng-dirty.ng-invalid-email {
+    color: white !important;
+}
+
+/**listado municipios **/
+ion-view.municipios.pane {
+    background-image: url('../img/blur.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+ion-view.municipios.pane .item {
+    border-color: rgba(91, 189, 95, 0.48);
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #fff;
+}
+
+ion-view.municipios.pane .item h2 {
+    color: #2c2c2c;
+}
+
+ion-view.municipios.pane img.icono {
+    width: 100px;
+}

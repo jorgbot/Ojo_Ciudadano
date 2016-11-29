@@ -1015,4 +1015,58 @@ class Json extends CI_Controller
         $this->RestApi_model->sendNotificationAndroid($title, $message, $image, $icon);
         $this->RestApi_model->sendNotificationIos($title);
     }
+
+  public function getAllMunicipios()
+    {
+        $elements = array();
+        $elements[0] = new stdClass();
+        $elements[0]->field = '`webapp_municipios`.`id`';
+        $elements[0]->sort = '1';
+        $elements[0]->header = 'ID';
+        $elements[0]->alias = 'id';
+
+        $elements[1] = new stdClass();
+        $elements[1]->field = '`webapp_municipios`.`isactive`';
+        $elements[1]->sort = '1';
+        $elements[1]->header = 'Isactive';
+        $elements[1]->alias = 'isactive';
+
+        $elements[2] = new stdClass();
+        $elements[2]->field = '`webapp_municipios`.`name`';
+        $elements[2]->sort = '1';
+        $elements[2]->header = 'Name';
+        $elements[2]->alias = 'name';
+
+        $elements[3] = new stdClass();
+        $elements[3]->field = '`webapp_municipios`.`blog_id`';
+        $elements[3]->sort = '1';
+        $elements[3]->header = 'Blog_id';
+        $elements[3]->alias = 'blog_id';
+
+        $search = $this->input->get_post('search');
+        $pageno = $this->input->get_post('pageno');
+        $orderby = $this->input->get_post('orderby');
+        $orderorder = $this->input->get_post('orderorder');
+        $maxrow = $this->input->get_post('maxrow');
+        if ($maxrow == '') {
+        }
+        if ($orderby == '') {
+            $orderby = 'name';
+            $orderorder = 'DESC';
+        }
+        $data['message'] = $this->chintantable->query($pageno, $maxrow, $orderby, $orderorder, $search, $elements, 'FROM `webapp_municipios`', 'WHERE `webapp_municipios`.`isactive`=1');
+        $this->load->view('json', $data);
+    }
+    public function getSingleMunicipios()
+    {
+        $data = json_decode(file_get_contents('php://input'), true);
+        $id = $data['id'];
+        if (empty($data)) {
+            $data['message'] = 0;
+        } else {
+            $data['message'] = $this->events_model->getSingleMunicipios($id);
+        }
+        $this->load->view('json', $data);
+    }
+
 }

@@ -254,5 +254,19 @@ angular.module('starter.services', [])
 					withCredentials: false
 				}).success(callback);
 			},
+			getsingleMunicipios: function (id, callback, err) {
+				return $http({
+					url: adminurl + 'getsingleMunicipios',
+					method: "POST",
+					data: {
+						'id': id
+					}
+				}).success(callback).error(err);
+			},
+			getallMunicipios: function (pageno, callback, err) {
+				return $http.get(adminurl + 'getallMunicipios?pageno=' + pageno + '&maxrow=' + 15, {
+					withCredentials: false
+				}).success(callback).error(err);
+			},
 		};
 	});

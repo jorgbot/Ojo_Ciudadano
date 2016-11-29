@@ -1857,4 +1857,56 @@ z
 		$scope.searchresults = [];
 	}
 
+})
+
+.controller('MunicipiosCtrl', function ($scope, MyServices, $location, $ionicLoading, $filter) {
+	addanalytics("Municipios page");
+	configreload.onallpage();
+	$ionicLoading.show();
+	$scope.pageno = 1;
+	$scope.municipios = [];
+	$scope.keepscrolling = true;
+	$scope.msg = "Cargando....";
+	$scope.showloading = function () {
+		$ionicLoading.show({
+			template: '<ion-spinner class="spinner-positive"></ion-spinner>'
+		});
+		$timeout(function () {
+			$ionicLoading.hide();
+		}, 5000);
+	};
+
+	$scope.loadmunicipios = function (pageno) {
+		MyServices.getallMunicipios(pageno, function (data) {
+			$ionicLoading.hide();
+			_.each(data.queryresult, function (n) {
+				$scope.municipios.push(n);
+			});
+
+			if ($scope.municipios.length == 0) {
+				$scope.msg = "Datos no encontrados.";
+			} else {
+				$scope.msg = "";
+			}
+
+			if (data.queryresult.length == 0) {
+				$scope.keepscrolling = false;
+			}
+		}, function (err) {
+			$location.url("/access/offline");
+		})
+		$scope.$broadcast('scroll.infiniteScrollComplete');
+		$scope.$broadcast('scroll.refreshComplete');
+	}
+
+	$scope.loadmunicipios(1);
+
+	$scope.loadMorePolls = function () {
+		$scope.loadmunicipios(++$scope.pageno);
+	}
+
+	$scope.getmunicipiodetails = function (id) {
+		$location.url("app/blogdetail/" + id);
+	}
+
 });

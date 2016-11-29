@@ -1,0 +1,21 @@
+<ion-view view-title="Listado Municipios" class="municipios">
+    <div class="text-center positive middle-align" ng-if="msg != ''">
+        {{msg}}
+    </div>
+    <ion-content> 
+        <div class="card">
+          <div class="item padding item-divider" style="text-align: center">
+          <img src="img/map.png" class="icono">
+            <h2>Selecciona un municipio</h2>
+            <p>para ver los detalles </p>
+          </div>
+        </div>
+        <ion-list>
+            <ion-item ng-click="getmunicipiodetails(municipio.blog_id);" ng-repeat="municipio in municipios">
+                <h2>{{municipio.name}}</h2>
+            </ion-item>
+         </ion-list>
+        <ion-infinite-scroll on-infinite="loadMorePolls()" ng-if="keepscrolling" distance="25%">
+        </ion-infinite-scroll>
+    </ion-content>
+</ion-view>
