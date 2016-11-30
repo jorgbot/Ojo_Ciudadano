@@ -330,6 +330,16 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 		}
 	})
 
+	.state('app.denuncias', {
+		url: '/denuncias',
+		views: {
+			'menuContent': {
+				templateUrl: 'templates/appView/denuncias.html',
+				controller: "DenunciasCtrl"
+			}
+		}
+	})
+
 	.state('app.search', {
 		url: '/search',
 		views: {
