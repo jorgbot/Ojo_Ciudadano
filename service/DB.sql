@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 29-11-2016 a las 16:16:21
+-- Tiempo de generación: 30-11-2016 a las 16:30:36
 -- Versión del servidor: 5.6.34
 -- Versión de PHP: 5.6.20
 
@@ -85,7 +85,7 @@ CREATE TABLE IF NOT EXISTS `linktype` (
   `order` varchar(255) NOT NULL,
   `link` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
 
 --
 -- Volcado de datos para la tabla `linktype`
@@ -109,7 +109,8 @@ INSERT INTO `linktype` (`id`, `name`, `status`, `order`, `link`) VALUES
 (15, 'Perfil', '1', '', 'profile'),
 (17, 'Link Externo', '0', '', ''),
 (18, 'Ninguno', '0', '', ''),
-(19, 'Municipios', '1', '19', 'municipios');
+(19, 'Municipios', '1', '19', 'municipios'),
+(20, 'Denuncias', '1', '', 'denuncias');
 
 -- --------------------------------------------------------
 
@@ -222,7 +223,14 @@ CREATE TABLE IF NOT EXISTS `notificationtoken` (
   `token` varchar(255) DEFAULT NULL,
   `os` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Volcado de datos para la tabla `notificationtoken`
+--
+
+INSERT INTO `notificationtoken` (`id`, `user`, `token`, `os`) VALUES
+(1, 4, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -324,7 +332,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `coverimage` varchar(255) NOT NULL,
   `forgotpassword` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Volcado de datos para la tabla `user`
@@ -333,7 +341,8 @@ CREATE TABLE IF NOT EXISTS `user` (
 INSERT INTO `user` (`id`, `name`, `password`, `email`, `accesslevel`, `timestamp`, `status`, `image`, `username`, `socialid`, `logintype`, `json`, `dob`, `street`, `address`, `city`, `state`, `pincode`, `facebook`, `twitter`, `google`, `country`, `instagram`, `contact`, `eventnotification`, `photonotification`, `videonotification`, `blognotification`, `coverimage`, `forgotpassword`) VALUES
 (1, 'Admin', '0192023a7bbd73250516f069df18b500', 'admin@admin.com', 1, '2015-10-02 06:05:05', 1, '', '', '', '', '', NULL, NULL, 'Sion', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, '9896251463', 'false', 'true', 'false', 'true', '', ''),
 (2, 'Jorge Botello', 'aca81a817965c29d211ceec7c9934754', 'jbotelloangarita@hotmail.com', 3, '2016-11-03 22:14:58', NULL, NULL, '', '', 'Email', '', '1992-11-23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, '', 'false', 'false', 'false', 'false', '', ''),
-(3, 'Syrus', 'b1892776ecb63cde4994bbe054644407', 'syruspacheco@gmail.com', 3, '2016-11-03 22:35:00', NULL, NULL, '', '', 'Email', '', '1993-02-22', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, '', 'false', 'false', 'false', 'false', '', '');
+(3, 'Syrus', 'b1892776ecb63cde4994bbe054644407', 'syruspacheco@gmail.com', 3, '2016-11-03 22:35:00', NULL, NULL, '', '', 'Email', '', '1993-02-22', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, '', 'false', 'false', 'false', 'false', '', ''),
+(4, 'Syrus', 'e10adc3949ba59abbe56e057f20f883e', 'ing@gmail.com', 3, '2016-11-30 13:01:38', NULL, NULL, '', '', 'Email', '', '1995-11-30', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, '', 'false', 'false', 'false', 'false', '', '');
 
 -- --------------------------------------------------------
 
@@ -396,7 +405,7 @@ CREATE TABLE IF NOT EXISTS `webapp_blog` (
 --
 
 INSERT INTO `webapp_blog` (`id`, `title`, `json`, `content`, `timestamp`, `image`) VALUES
-(1, 'Lorem Ipsum is simply dummy text', '0', '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>', '2015-10-09 22:12:36', 'cover4.jpg');
+(1, 'Cucuta', '0', '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>', '2015-10-09 22:12:36', 'cover4.jpg');
 
 -- --------------------------------------------------------
 
@@ -443,7 +452,14 @@ CREATE TABLE IF NOT EXISTS `webapp_enquiry` (
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `content` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Volcado de datos para la tabla `webapp_enquiry`
+--
+
+INSERT INTO `webapp_enquiry` (`id`, `user`, `name`, `email`, `title`, `timestamp`, `content`) VALUES
+(1, NULL, 'Jorge Botello', 'jbotelloangarita@hotmail.com', 'Test', '2016-11-30 21:28:30', 'Esto es una prueba para el formulario de Denuncias');
 
 -- --------------------------------------------------------
 
@@ -543,7 +559,7 @@ INSERT INTO `webapp_frontmenu` (`id`, `order`, `parent`, `status`, `name`, `json
 (9, 8, 0, 1, 'Mi Perfil', '0', '', '15', 'ln-profile', '', '', '1', '', '', '0'),
 (10, 0, 0, 2, 'Configuracion', '0', '', '14', 'ln-gear2', '', '', '1', '', '', '0'),
 (11, 6, 0, 1, 'Contáctenos', '0', '', '12', 'ln-phone2', '', '', '1', '', '', '0'),
-(12, 5, 0, 1, 'Denuncias', '0', '', '12', 'ln-aim', '', '', '1', '', '', '0');
+(12, 5, 0, 1, 'Denuncias', '0', '', '20', 'ln-aim', '', '', '1', '', '', '0');
 
 -- --------------------------------------------------------
 
