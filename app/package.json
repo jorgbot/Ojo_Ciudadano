@@ -37,7 +37,5 @@
     "ionic-plugin-keyboard",
     "pushwoosh-cordova-plugin"
   ],
-  "cordovaPlatforms": [
-    "android"
-  ]
+  "cordovaPlatforms": []
 }
